@@ -2,6 +2,14 @@ import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
 const font = "'Plus Jakarta Sans', sans-serif";
 
+export const pallete = {
+  black: "#000",
+  primaryBlack: "#030303",
+  primaryPink: "#DC0155",
+  parimayBlue: "#6800D7",
+  primaryWhite: '#FFFFFF'
+};
+
 let theme = createTheme({
   palette: {
     primary: { main: "#00B5B8" },
