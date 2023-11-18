@@ -7,13 +7,14 @@ export const pallete = {
   primaryBlack: "#030303",
   primaryPink: "#DC0155",
   parimayBlue: "#6800D7",
-  primaryWhite: '#FFFFFF'
+  primaryWhite: "#FFFFFF",
+  primaryPurple: "#6800D7",
 };
 
 let theme = createTheme({
   palette: {
-    primary: { main: "#00B5B8" },
-    secondary: { main: "#00B5B8" },
+    primary: { main: pallete.primaryPurple },
+    secondary: { main: pallete.primaryPurple },
     error: { main: "#6E353A" },
     warning: { main: "#F5EE9E" },
     info: { main: "#645FF2" },

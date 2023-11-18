@@ -1,4 +1,12 @@
-import { Container, Grid, Typography, Box, Button } from "@mui/material";
+import {
+  Container,
+  Grid,
+  Typography,
+  Box,
+  Button,
+  Card,
+  Divider,
+} from "@mui/material";
 import React from "react";
 import { makeStyles } from "tss-react/mui";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -38,7 +46,7 @@ const Home = () => {
           <Typography align="center" className={classes.serveceBelo}>
             <Typography
               className={classes.serveceBelo}
-              style={{ color: "#6800D7" }}
+              style={{ color: pallete.primaryPurple }}
             >
               Experience the power of
             </Typography>{" "}
@@ -53,8 +61,8 @@ const Home = () => {
             Contact Us
           </Button>
           <Typography align="center" className={classes.serveceBelo}>
-            <span style={{ color: "#6800D7" }}>Trusted by</span> thousands of{" "}
-            <br />
+            <span style={{ color: pallete.primaryPurple }}>Trusted by</span>{" "}
+            thousands of <br />
             businesses
           </Typography>
           <Grid container md={8} xs={10}>
@@ -103,7 +111,9 @@ const Home = () => {
                 Our Services
               </Typography>
               <Typography className={classes.serveceBelo}>
-                <span style={{ color: "#6800D7" }}>Simplify your </span>{" "}
+                <span style={{ color: pallete.primaryPurple }}>
+                  Simplify your{" "}
+                </span>{" "}
                 Business <br />
                 operations.
               </Typography>
@@ -128,7 +138,9 @@ const Home = () => {
                 Efficiency is
               </Typography>
               <Typography className={classes.serveceBelo}>
-                <span style={{ color: "#6800D7" }}>Streamlined solutions </span>{" "}
+                <span style={{ color: pallete.primaryPurple }}>
+                  Streamlined solutions{" "}
+                </span>{" "}
                 For <br />
                 your business.
               </Typography>
@@ -168,7 +180,9 @@ const Home = () => {
                 Tailored solutions for every business
               </Typography>
               <Typography className={classes.serveceBelo}>
-                <span style={{ color: "#6800D7" }}>We cater to </span>{" "}
+                <span style={{ color: pallete.primaryPurple }}>
+                  We cater to{" "}
+                </span>{" "}
                 businesses of <br />
                 all sizes.
               </Typography>
@@ -184,6 +198,154 @@ const Home = () => {
           </Grid>
         </Grid>
       </Container>
+      <Container maxWidth={false}>
+        <Box>
+          <Typography align="center" className={classes.serveceBelo}>
+            <span style={{ color: pallete.primaryPurple }}>Read our</span> blog
+            for insights
+          </Typography>
+          <Typography
+            sx={{ margin: "20px 0" }}
+            align="center"
+            className={classes.serviceText}
+          >
+            Stay Updated with our latest articles.
+          </Typography>
+        </Box>
+        <Grid container className={classes.blogsGrid}>
+          <Grid container md={10}>
+            <Grid item md={4} lg={3} sm={6} xs={12}>
+              <Box className={classes.blogsBox}>
+                <img
+                  alt=""
+                  src="assets/images/blog1.png"
+                  className={classes.blogimg}
+                />
+                <Box className={classes.bolgNameTagBox}>
+                  <Typography className={classes.blogtagH}>
+                    John Smith
+                  </Typography>
+                  <Typography className={classes.blogTagp}>
+                    Content Writer
+                  </Typography>
+                </Box>
+                <Typography className={classes.blogHeading}>
+                  How to optimize your business operations?
+                </Typography>
+                <Typography>
+                  Lorem ipsum is a placeholder text commonly used to demonstrate
+                  the visual form of a document or a typeface without relying on
+                  meaningful content.
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item md={4} lg={3} sm={6} xs={12}>
+              <Box className={classes.blogsBox}>
+                <img
+                  alt=""
+                  src="assets/images/blog2.png"
+                  className={classes.blogimg}
+                />
+                <Box className={classes.bolgNameTagBox}>
+                  <Typography className={classes.blogtagH}>
+                    John Smith
+                  </Typography>
+                  <Typography className={classes.blogTagp}>
+                    Content Writer
+                  </Typography>
+                </Box>
+                <Typography className={classes.blogHeading}>
+                  How to optimize your business operations?
+                </Typography>
+                <Typography>
+                  Lorem ipsum is a placeholder text commonly used to demonstrate
+                  the visual form of a document or a typeface without relying on
+                  meaningful content.
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item md={4} lg={3} sm={6} xs={12}>
+              <Box className={classes.blogsBox}>
+                <img
+                  alt=""
+                  src="assets/images/blog3.png"
+                  className={classes.blogimg}
+                />
+                <Box className={classes.bolgNameTagBox}>
+                  <Typography className={classes.blogtagH}>
+                    John Smith
+                  </Typography>
+                  <Typography className={classes.blogTagp}>
+                    Content Writer
+                  </Typography>
+                </Box>
+                <Typography className={classes.blogHeading}>
+                  How to optimize your business operations?
+                </Typography>
+                <Typography>
+                  Lorem ipsum is a placeholder text commonly used to demonstrate
+                  the visual form of a document or a typeface without relying on
+                  meaningful content.
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item md={4} lg={3} sm={6} xs={12}>
+              <Box className={classes.blogsBox}>
+                <img
+                  alt=""
+                  src="assets/images/blog2.png"
+                  className={classes.blogimg}
+                />
+                <Box className={classes.bolgNameTagBox}>
+                  <Typography className={classes.blogtagH}>
+                    John Smith
+                  </Typography>
+                  <Typography className={classes.blogTagp}>
+                    Content Writer
+                  </Typography>
+                </Box>
+                <Typography className={classes.blogHeading}>
+                  How to optimize your business operations?
+                </Typography>
+                <Typography>
+                  Lorem ipsum is a placeholder text commonly used to demonstrate
+                  the visual form of a document or a typeface without relying on
+                  meaningful content.
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Container>
+      <Container maxWidth={false} className={classes.expertContainer}>
+        <Grid container className={classes.blogsGrid}>
+          <Grid
+            container
+            md={8}
+            sx={{
+              backgroundColor: pallete.primaryPurple,
+              borderRadius: "12px",
+            }}
+          >
+            <Grid item md={10}>
+              <Box className={classes.expertLeftBox}>
+                <Typography className={classes.expetText}>
+                  Take your business to new heights
+                </Typography>
+                <Divider variant="inset" className={classes.dividerMain} />
+                <Typography className={classes.expectPara}>
+                  Meet our experts and elevate your business.
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item md={2} className={classes.experBtnGrod}>
+              <Button variant="contained" className={classes.expertBtns}>
+                Get Started
+              </Button>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Container>
     </div>
   );
 };
@@ -192,6 +354,103 @@ export default Home;
 
 const useStyles = makeStyles()((theme) => {
   return {
+    expertBtns: {
+      ...styles.buttonMain,
+      backgroundColor: "#fff",
+      color: "#737373",
+      "&:hover": {
+        backgroundColor: "#fff",
+        color: "#737373",
+      },
+    },
+    experBtnGrod: {
+      margin: "auto",
+    },
+    dividerMain: {
+      width: "48px",
+      height: "4px",
+      backgroundColor: "#fff", // Replace with your desired color
+      margin: theme.spacing(1, 0),
+      borderRadius: "2px",
+    },
+    expectPara: {
+      color: "#FFFFFF",
+      fontSize: "16px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal",
+    },
+    expetText: {
+      color: "#FFFFFF",
+      fontSize: "26px",
+      fontStyle: "normal",
+      fontWeight: 600,
+      lineHeight: "normal",
+    },
+    expertLeftBox: {
+      padding: "40px 40px",
+    },
+    expertGrid: {
+      padding: "200px 50px",
+      height: "300px",
+    },
+    expertContainer: {
+      margin: "50px 0",
+    },
+    blogsGrid: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
+      alignItems: "center",
+      alignContent: "center",
+    },
+    blogimg: {
+      // width: "332px",
+      // height: "281px",
+    },
+    blogTagp: {
+      color: "#6A6A6A",
+      fontSize: "12px",
+      fontStyle: "normal",
+      fontWeight: 500,
+      lineHeight: "normal",
+    },
+    blogtagH: {
+      color: "#000",
+      fontSize: "14px",
+      fontStyle: "normal",
+      fontWeight: 500,
+      lineHeight: "normal",
+    },
+    bolgNameTagBox: {
+      backgroundColor: "#FFFFFF",
+      position: "absolute",
+      padding: "10px 20px",
+      borderRadius: "8px 0px 0px 8px",
+      right: "10px",
+      top: "180px",
+    },
+    blogPara: {
+      color: "#2E2E2E",
+      fontSize: "16px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal",
+    },
+    blogHeading: {
+      color: "#2E2E2E",
+      fontSize: "18px",
+      fontStyle: "normal",
+      fontWeight: 600,
+      lineHeight: "normal",
+      padding: "15px 0",
+    },
+    blogsBox: {
+      display: "flex",
+      flexDirection: "column",
+      padding: "10px",
+      position: "relative",
+    },
     efficiencyBoxLeft: {
       padding: "100px 20px",
     },
@@ -258,10 +517,6 @@ const useStyles = makeStyles()((theme) => {
       alignItems: "center",
     },
     serveceBelo: {
-      // color: '#6800D7',
-      // textAlign: "center",
-      // fontVariantNumeric: 'lining-nums proportional-nums',
-      // fontFamily: 'Montserrat',
       fontSize: "40px",
       fontStyle: "normal",
       fontWeight: 600,
@@ -307,7 +562,8 @@ const useStyles = makeStyles()((theme) => {
       height: "100%",
     },
     mainText: {
-      background: "linear-gradient(93deg, #6800D7 0.68%, #DC0155 65.41%)",
+      background:
+        "linear-gradient(93deg,pallete.primaryPurple0.68%, #DC0155 65.41%)",
       backgroundClip: "text",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
