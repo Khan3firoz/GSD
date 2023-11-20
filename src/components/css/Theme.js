@@ -19,7 +19,7 @@ let theme = createTheme({
     warning: { main: "#F5EE9E" },
     info: { main: "#645FF2" },
     success: { main: "#645FF2" },
-    background: { default: "#F3F4FD" },
+    background: { default: "#fff" },
   },
   breakpoints: {
     values: { xs: 600, sm: 800, md: 1000, lg: 1200, xl: 1536 },

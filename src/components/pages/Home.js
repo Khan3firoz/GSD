@@ -6,15 +6,49 @@ import {
   Button,
   Card,
   Divider,
+  IconButton,
 } from "@mui/material";
 import React from "react";
 import { makeStyles } from "tss-react/mui";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { pallete } from "../css/Theme";
 import { styles } from "../css/CommonCSS";
+import VerticalCarousel from "../common/VerticalCarousel";
+import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
+import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
 
 const Home = () => {
   const { classes } = useStyles();
+
+  const whyGsdArr = [
+    {
+      id: 1,
+      title: "Quick Results",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+      img: "rocket.png", // public\assets\images\rocket.png
+      elips: "elips1.svg",
+      borderColor: "4px solid #ECDAFF",
+    },
+    {
+      id: 2,
+      title: "Satisfaction Guarantee",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+      img: "yoyo.png",
+      elips: "elips2.svg",
+      borderColor: "4px solid #B8B9FD",
+    },
+    {
+      id: 3,
+      title: "Experienced Support Staff",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+      img: "ig.png",
+      elips: "elips3.svg",
+      borderColor: "4px solid #FFA3CA",
+    },
+  ];
   return (
     <div>
       <Container maxWidth={false} className={classes.mainContainer}>
@@ -34,7 +68,7 @@ const Home = () => {
             </Box>
           </Grid>
           <Grid item md={7} xs={12} className={classes.columnsGridRight}>
-            <img alt="boy" src="/assets/images/homemen.png" />
+            <img alt="boy" src="assets/images/homemen.png" />
           </Grid>
         </Grid>
       </Container>
@@ -327,7 +361,7 @@ const Home = () => {
               borderRadius: "12px",
             }}
           >
-            <Grid item md={10}>
+            <Grid item md={9.5}>
               <Box className={classes.expertLeftBox}>
                 <Typography className={classes.expetText}>
                   Take your business to new heights
@@ -338,11 +372,118 @@ const Home = () => {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item md={2} className={classes.experBtnGrod}>
+            <Grid item md={2.5} className={classes.experBtnGrod}>
               <Button variant="contained" className={classes.expertBtns}>
                 Get Started
               </Button>
             </Grid>
+          </Grid>
+        </Grid>
+      </Container>
+      <Container maxWidth={false} className={classes.welcomCOntainer}>
+        <Box>
+          <Typography align="center" className={classes.serveceBelo}>
+            <span style={{ color: pallete.primaryPurple }}>Welcome to</span> GSD
+          </Typography>
+          <Typography
+            sx={{ margin: "20px 0" }}
+            align="center"
+            className={classes.serviceText}
+          >
+            Your Virtual Assistant Solution
+          </Typography>
+        </Box>
+        <Grid container>
+          <Grid item md={6}>
+            <Box sx={{ display: "flex", flexDirection: "row" }}>
+              <Box className={classes.corosalClientCOntrols}>
+                <IconButton sx={{ backgroundColor: "#fff", margin: "4px 0" }}>
+                  <KeyboardArrowUpRoundedIcon />
+                </IconButton>
+                <IconButton sx={{ backgroundColor: "#fff", margin: "4px 0" }}>
+                  <KeyboardArrowDownRoundedIcon />
+                </IconButton>
+              </Box>
+              <Box sx={{ display: "flex", flexDirection: "column" }}>
+                {[...Array(3)].map((x) => (
+                  <Box key={x} className={classes.carosalBox}>
+                    <img
+                      alt=""
+                      src="assets/icons/Quotes.svg"
+                      className={classes.quotIcon}
+                    />
+                    <Card className={classes.caroselCards}>
+                      <Typography>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book. It has
+                        survived not only five centuries.
+                      </Typography>
+                    </Card>
+                  </Box>
+                ))}
+              </Box>
+            </Box>
+          </Grid>
+          <Grid item md={6} sx={{ display: "flex", justifyContent: "center" }}>
+            <Box className={classes.happyClientBox}>
+              <img
+                src="assets/images/client.png"
+                alt=""
+                className={classes.clintImg}
+              />
+              <Typography className={classes.cName}>John Smith</Typography>
+              <Typography className={classes.cTitle}>Happy Client</Typography>
+            </Box>
+          </Grid>
+        </Grid>
+      </Container>
+      <Container maxWidth={false} className={classes.whyGsdContainer}>
+        <Grid container md={10}>
+          <Grid item md={6}>
+            <Typography className={classes.serveceBelo}>
+              <span style={{ color: pallete.primaryPurple }}>Why</span> GSD
+            </Typography>
+            <Typography>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries.when an unknown printer took a
+              galley of type and scrambled it to make a type specimen book. It
+              has survived not only five centuries,It has survived not only five
+              centuries.when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book. It has survived not
+              only five centuries.
+            </Typography>
+          </Grid>
+          <Grid item md={6}>
+            <Box>
+              {whyGsdArr.map((x) => (
+                <Grid container key={x.id}>
+                  <Grid item xs={8}>
+                    <Typography>{x.title}</Typography>
+                    <Typography>{x.description}</Typography>
+                  </Grid>
+                  <Grid item xs={4}>
+                    <Box className={classes.rocketBox}>
+                      <img
+                        src={`/assets/images/${x.img}`}
+                        alt=""
+                        className={classes.rocketImg}
+                      />
+                      <img
+                        src={`/assets/images/${x.elips}`}
+                        alt=""
+                        className={classes.rocketElips}
+                      />
+                    </Box>
+                  </Grid>
+                </Grid>
+              ))}
+            </Box>
           </Grid>
         </Grid>
       </Container>
@@ -354,6 +495,77 @@ export default Home;
 
 const useStyles = makeStyles()((theme) => {
   return {
+    rocketElips: {
+      // position:'absolute',
+    },
+    rocketImg: {
+      position: "absolute",
+      bottom: "31px",
+      left: "23px",
+    },
+    rocketBox: {
+      position: "relative",
+    },
+    whyGsdContainer: {
+      margin: "100px 0",
+      display: "flex",
+      justifyContent: "center",
+    },
+    corosalClientCOntrols: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    quotIcon: {
+      top: "-3px",
+      left: "60px",
+      position: "absolute",
+    },
+    carosalBox: {
+      position: "relative",
+      padding: "0 20px",
+    },
+    caroselCards: {
+      padding: "40px",
+      margin: "20px",
+    },
+    cTitle: {
+      color: "#2E2E2E",
+      textAlign: "center",
+      fontSize: "16px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal",
+      padding: "0px 0 20px 0",
+    },
+    cName: {
+      padding: "10px 0",
+      color: "#2E2E2E",
+      fontSize: "22px",
+      fontStyle: "normal",
+      fontWeight: 600,
+      lineHeight: "normal",
+    },
+    clintImg: {
+      width: "575px",
+      height: "446.25px",
+    },
+    happyClientBox: {
+      width: "595px",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      backgroundColor: "#FFF",
+      alignContent: "center",
+      alignItems: "center",
+      // margin: "10px 70px",
+      // paddingTop: "10px",
+    },
+    welcomCOntainer: {
+      backgroundColor: "#F0E6FB",
+      padding: "40px 60px",
+    },
     expertBtns: {
       ...styles.buttonMain,
       backgroundColor: "#fff",
@@ -427,7 +639,7 @@ const useStyles = makeStyles()((theme) => {
       position: "absolute",
       padding: "10px 20px",
       borderRadius: "8px 0px 0px 8px",
-      right: "10px",
+      right: "14.5px",
       top: "180px",
     },
     blogPara: {
@@ -448,7 +660,7 @@ const useStyles = makeStyles()((theme) => {
     blogsBox: {
       display: "flex",
       flexDirection: "column",
-      padding: "10px",
+      padding: "10px 15px",
       position: "relative",
     },
     efficiencyBoxLeft: {
@@ -562,8 +774,7 @@ const useStyles = makeStyles()((theme) => {
       height: "100%",
     },
     mainText: {
-      background:
-        "linear-gradient(93deg,pallete.primaryPurple0.68%, #DC0155 65.41%)",
+      background: "linear-gradient(93deg, #6800D7 0.68%, #DC0155 65.41%)",
       backgroundClip: "text",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",

@@ -6,6 +6,10 @@ export const styles = {
         flexDirection: "row",
         justifyContent: "space-between",
     },
+    flexDC:{
+        display: "flex",
+        flexDirection: "column",
+    },
     buttonMain:{
         backgroundColor: pallete.parimayBlue,
         color: pallete.primaryWhite,
