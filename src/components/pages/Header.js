@@ -14,9 +14,11 @@ import {
   ListItemText,
   Divider,
   Button,
+  IconButton,
 } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 
 export default function ButtonAppBar() {
   const { classes } = useStyles();
@@ -219,6 +221,11 @@ export default function ButtonAppBar() {
                 Get Started
               </Button>
             </Box>
+            <Box className={classes.btnBoxMobile}>
+              <IconButton>
+                <MenuRoundedIcon sx={{fontSize:'30px'}}/>
+              </IconButton>
+            </Box>
           </Box>
         </Toolbar>
       </AppBar>
@@ -228,8 +235,17 @@ export default function ButtonAppBar() {
 
 const useStyles = makeStyles()((theme) => {
   return {
-    btnBox:{
-      margin: 'auto 2px'
+    btnBox: {
+      margin: "auto 2px",
+      [theme.breakpoints.down("sm")]: {
+        display: "none",
+      },
+    },
+    btnBoxMobile: {
+      margin: "auto 2px",
+      [theme.breakpoints.up("sm")]: {
+        display: "none",
+      },
     },
     mainBtn: {
       backgroundColor: pallete.parimayBlue,
@@ -260,6 +276,11 @@ const useStyles = makeStyles()((theme) => {
       width: "183px",
       height: "76px",
       flexShrink: 0,
+      [theme.breakpoints.down("sm")]: {
+        paddingTop: '20px',
+        width: "140px",
+        height: "70px",
+      },
     },
     logoTExt: {
       color: pallete.primaryBlack,
@@ -299,6 +320,9 @@ const useStyles = makeStyles()((theme) => {
     },
     menuBoxParent: {
       ...styles.flexDRS,
+      [theme.breakpoints.down("sm")]: {
+        display: "none",
+      },
     },
     menuBoxPopver: {
       ...styles.flexDRS,
@@ -324,6 +348,9 @@ const useStyles = makeStyles()((theme) => {
     mainBox: {
       ...styles.flexDRS,
       width: "100%",
+      [theme.breakpoints.down("sm")]: {
+        width: "100%",
+      },
     },
     appBar: {
       background: "transparent",

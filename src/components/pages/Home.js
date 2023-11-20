@@ -68,7 +68,11 @@ const Home = () => {
             </Box>
           </Grid>
           <Grid item md={7} xs={12} className={classes.columnsGridRight}>
-            <img alt="boy" src="assets/images/homemen.png" />
+            <img
+              alt="boy"
+              src="assets/images/homemen.png"
+              className={classes.homemenImg}
+            />
           </Grid>
         </Grid>
       </Container>
@@ -99,7 +103,12 @@ const Home = () => {
             thousands of <br />
             businesses
           </Typography>
-          <Grid container md={8} xs={10}>
+          <Grid
+            container
+            md={8}
+            xs={10}
+            sx={{ display: "flex", justifyContent: "center" }}
+          >
             <Grid item md={3} sm={6} xs={12}>
               <img alt="" src="assets/images/c1.svg" />
             </Grid>
@@ -205,8 +214,12 @@ const Home = () => {
       </Container>
       <Container maxWidth={false} className={classes.service2Conatiner}>
         <Grid container sx={{ height: "100%" }}>
-          <Grid item md={6} className={classes.serviceLftGrid}>
-            <img alt="dots" src="assets/images/coolboys.png" />
+          <Grid item md={6} className={classes.serviceLftGrid1}>
+            <img
+              alt="dots"
+              src="assets/images/coolboys.png"
+              className={classes.coolbuysImg}
+            />
           </Grid>
           <Grid item md={6} className={classes.serviceRightTextBox}>
             <Box>
@@ -360,6 +373,7 @@ const Home = () => {
               backgroundColor: pallete.primaryPurple,
               borderRadius: "12px",
             }}
+            className={classes.takeYourBusiness}
           >
             <Grid item md={9.5}>
               <Box className={classes.expertLeftBox}>
@@ -495,6 +509,21 @@ export default Home;
 
 const useStyles = makeStyles()((theme) => {
   return {
+    takeYourBusiness: {
+      [theme.breakpoints.down("sm")]: {
+        padding: "50px 0",
+      },
+    },
+    coolbuysImg: {
+      width: "350px",
+      height: "250px",
+    },
+    homemenImg: {
+      [theme.breakpoints.down("sm")]: {
+        height: "00px",
+        width: "300px",
+      },
+    },
     rocketElips: {
       // position:'absolute',
     },
@@ -521,14 +550,26 @@ const useStyles = makeStyles()((theme) => {
       top: "-3px",
       left: "60px",
       position: "absolute",
+      [theme.breakpoints.down("sm")]: {
+        padding: "0",
+        top: "-3px",
+        left: "30px",
+      },
     },
     carosalBox: {
       position: "relative",
       padding: "0 20px",
+      [theme.breakpoints.down("sm")]: {
+        padding: "0",
+      },
     },
     caroselCards: {
       padding: "40px",
       margin: "20px",
+      [theme.breakpoints.down("sm")]: {
+        padding: "30px",
+        margin: "10px",
+      },
     },
     cTitle: {
       color: "#2E2E2E",
@@ -550,6 +591,10 @@ const useStyles = makeStyles()((theme) => {
     clintImg: {
       width: "575px",
       height: "446.25px",
+      [theme.breakpoints.down("sm")]: {
+        width: "90%",
+        height: "250px",
+      },
     },
     happyClientBox: {
       width: "595px",
@@ -561,6 +606,9 @@ const useStyles = makeStyles()((theme) => {
       alignItems: "center",
       // margin: "10px 70px",
       // paddingTop: "10px",
+      [theme.breakpoints.down("sm")]: {
+        width: "80%",
+      },
     },
     welcomCOntainer: {
       backgroundColor: "#F0E6FB",
@@ -668,9 +716,17 @@ const useStyles = makeStyles()((theme) => {
     },
     teamImg01: {
       padding: "0 10px",
+      [theme.breakpoints.down("sm")]: {
+        width: "350px",
+        height: "250px",
+      },
     },
     teamImg02: {
       padding: "0 10px",
+      [theme.breakpoints.down("sm")]: {
+        width: "350px",
+        height: "250px",
+      },
     },
     efficiencyCon: {},
     serviceRightTextBox: {
@@ -705,11 +761,22 @@ const useStyles = makeStyles()((theme) => {
     serviceLftGrid: {
       position: "relative",
       padding: "30px 15px",
+      [theme.breakpoints.down("sm")]: {
+        display: "none",
+      },
+    },
+    serviceLftGrid1: {
+      position: "relative",
+      padding: "30px 15px",
     },
     service2Conatiner: {
       backgroundColor: "#F0E6FB",
       height: "590px",
       margin: "50px 0",
+      [theme.breakpoints.down("sm")]: {
+        padding: "50px 0",
+        height: "800px",
+      },
     },
     contactUsBtn: {
       ...styles.buttonMain,
@@ -721,6 +788,10 @@ const useStyles = makeStyles()((theme) => {
       height: "500px",
       width: "1000px",
       margin: "20px 0",
+      [theme.breakpoints.down("sm")]: {
+        height: "200px",
+        width: "250px",
+      },
     },
     serviceBox: {
       display: "flex",
@@ -734,6 +805,9 @@ const useStyles = makeStyles()((theme) => {
       fontWeight: 600,
       lineHeight: "normal",
       textTransform: "capitalize",
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "20px",
+      },
     },
     serviceText: {
       color: "#2E2E2E",
@@ -782,6 +856,10 @@ const useStyles = makeStyles()((theme) => {
       fontStyle: "normal",
       fontWeight: 600,
       lineHeight: "normal",
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "25px",
+        // padding:'20px'
+      },
     },
     mainContainer: {
       marginTop: "110px",
