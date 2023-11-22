@@ -65,11 +65,11 @@ export default function ButtonAppBar() {
               <img
                 className={classes.mainLogoSize}
                 alt="logo"
-                src="assets/logos/mainlogoGSD.png"
+                src="assets/logos/gsdnewLogo.png"
               />
-              <Typography align="center" className={classes.logoTExt}>
+              {/* <Typography align="center" className={classes.logoTExt}>
                 GET. STUFF. DONE.
-              </Typography>
+              </Typography> */}
             </Box>
             <Box className={classes.menuBoxParent}>
               <Box className={classes.menuBoxPopver}>
@@ -273,9 +273,8 @@ const useStyles = makeStyles()((theme) => {
       },
     },
     mainLogoSize: {
-      width: "183px",
-      height: "76px",
-      flexShrink: 0,
+      width: "80px",
+      height: "60px",
       [theme.breakpoints.down("sm")]: {
         paddingTop: '20px',
         width: "140px",

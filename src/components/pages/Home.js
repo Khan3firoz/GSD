@@ -13,7 +13,6 @@ import { makeStyles } from "tss-react/mui";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { pallete } from "../css/Theme";
 import { styles } from "../css/CommonCSS";
-import VerticalCarousel from "../common/VerticalCarousel";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
 
@@ -455,7 +454,11 @@ const Home = () => {
         </Grid>
       </Container>
       <Container maxWidth={false} className={classes.whyGsdContainer}>
-        <Grid container md={10} sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Grid
+          container
+          md={10}
+          sx={{ display: "flex", justifyContent: "space-between" }}
+        >
           <Grid item md={5}>
             <Typography className={classes.serveceBelo}>
               <span style={{ color: pallete.primaryPurple }}>Why</span> GSD
@@ -476,12 +479,23 @@ const Home = () => {
           <Grid item md={6}>
             <Box>
               {whyGsdArr.map((x) => (
-                <Grid container key={x.id} className={classes.gsdArrCard} sx={{border: `${x.borderColor}`}}>
+                <Grid
+                  container
+                  key={x.id}
+                  className={classes.gsdArrCard}
+                  sx={{ border: `${x.borderColor}` }}
+                >
                   <Grid item xs={8}>
-                    <Typography className={classes.gsdArrTitle}>{x.title}</Typography>
+                    <Typography className={classes.gsdArrTitle}>
+                      {x.title}
+                    </Typography>
                     <Typography>{x.description}</Typography>
                   </Grid>
-                  <Grid item xs={4} sx={{display:'flex', justifyContent: 'center'}}>
+                  <Grid
+                    item
+                    xs={4}
+                    sx={{ display: "flex", justifyContent: "center" }}
+                  >
                     <Box className={classes.rocketBox}>
                       <img
                         src={`/assets/images/${x.img}`}
@@ -501,6 +515,155 @@ const Home = () => {
           </Grid>
         </Grid>
       </Container>
+      <Container maxWidth={false} className={classes.appCOntainder}>
+        <img
+          alt=""
+          src="assets/icons/appbg.png"
+          className={classes.appbgleft}
+        />
+        <Grid
+          container
+          md={12}
+          sx={{ display: "flex", justifyContent: "space-around" }}
+        >
+          <Grid item md={4} sx={{ margin: "auto 0" }}>
+            <Typography className={classes.serveceBelo}>
+              <span style={{ color: pallete.primaryPurple }}>
+                Connect With Your
+              </span>
+              <br /> Favorite Apps
+            </Typography>
+            <Button variant="contained" className={classes.contactUsBtn}>
+              Contact Us
+            </Button>
+          </Grid>
+          <Grid item md={6}>
+            <Box className={classes.allPppsGrdBox}>
+              <Grid container>
+                <Grid item={4}>
+                  <Box className={classes.amazonBox}>
+                    <Typography className={classes.amzonText}>
+                      amazon
+                    </Typography>
+                    <img
+                      alt=""
+                      src="assets/icons/amazn.svg"
+                      className={classes.amzonIcs}
+                    />
+                  </Box>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "end",
+                    }}
+                  >
+                    <Box className={classes.otherAppsBox}>
+                      <Typography align="center" className={classes.uberText}>
+                        uber
+                      </Typography>
+                    </Box>
+                  </div>
+                </Grid>
+                <Grid item={4}>
+                  <Box className={classes.otherAppsBox}>
+                    <img
+                      alt=""
+                      src="assets/icons/nbc.png"
+                      className={classes.otherappsicons}
+                    />
+                  </Box>
+                  <Box className={classes.otherAppsBox}>
+                    <img
+                      alt=""
+                      src="assets/icons/app.svg"
+                      className={classes.otherappsicons125}
+                    />
+                  </Box>
+                  <Box className={classes.otherAppsBox}>
+                    <img
+                      alt=""
+                      src="assets/icons/app2.svg"
+                      className={classes.otherappsicons125}
+                    />
+                  </Box>
+                  <Box className={classes.otherAppsBox}>
+                    <img
+                      alt=""
+                      src="assets/icons/app5.svg"
+                      className={classes.otherappsicons125}
+                    />
+                  </Box>
+                </Grid>
+                <Grid item={4}>
+                  <Box className={classes.otherAppsBoxYtube}>
+                    <img
+                      alt=""
+                      src="assets/icons/ytube.svg"
+                      className={classes.otherappsicons125}
+                    />
+                    <Typography
+                      sx={{ position: "absolute", top: "75px", right: "50px" }}
+                    >
+                      YouTube
+                    </Typography>
+                  </Box>
+                  <Box className={classes.otherAppsBox}>
+                    <img
+                      alt=""
+                      src="assets/icons/app3.svg"
+                      className={classes.otherappsicons125}
+                    />
+                    <img
+                      alt=""
+                      src="assets/icons/app4.svg"
+                      className={classes.otherappsicons4}
+                    />
+                  </Box>
+                </Grid>
+              </Grid>
+            </Box>
+          </Grid>
+        </Grid>
+        <img
+          alt=""
+          src="assets/icons/appbg2.png"
+          className={classes.appbgright}
+        />
+      </Container>
+      <Container maxWidth={false} className={classes.expertContainer}>
+        <Grid container className={classes.blogsGrid}>
+          <Grid
+            container
+            md={8}
+            sx={{
+              backgroundColor: pallete.primaryPurple,
+              borderRadius: "12px",
+            }}
+            className={classes.takeYourBusiness}
+          >
+            <Grid item md={6}>
+              <Box className={classes.expertLeftBox}>
+                <Typography className={classes.expetText}>
+                  Try GSD For Free
+                </Typography>
+                <Divider variant="inset" className={classes.dividerMain} />
+                <Typography className={classes.expectPara}>
+                  No Credit Card Required. Start Your 14-Day Free Trial Today.
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item md={6} className={classes.experBtnGrodBottom}>
+              <Button variant="contained" className={classes.expertBtns}>
+                Start Free Trial
+              </Button>
+              <Button variant="contained" className={classes.expertBtns}>
+                Contact Us
+              </Button>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Container>
     </div>
   );
 };
@@ -509,36 +672,120 @@ export default Home;
 
 const useStyles = makeStyles()((theme) => {
   return {
-    whyGsdPARA:{
-      color: '#2E2E2E',
-      fontSize: '16px',
-      fontStyle: 'normal',
-      fontWeight: 400,
-      lineHeight: '26px',
+    otherappsicons125: {
+      // width: "84.18px",
+      // height: "101.378px",
     },
-    gsdArrCard:{
-      borderRadius: '12px',
-      // border: '4px solid #ECDAFF',
-      background: 'rgba(255, 255, 255, 0.32)',
-      backdropFilter: 'blur(12px)',
-      padding: "40px 20px",
-      marginBottom: '20px'
-      
+    otherappsicons4: {
+      position: "absolute",
     },
-    gsdArrTitle:{
-      color: '#1A2128',
-      fontSize: '20px',
-      fontStyle: 'normal',
+    otherappsicons: {
+      width: "84.18px",
+      height: "101.378px",
+    },
+    uberText: {
+      color: "#000",
+      fontSize: "24px",
+      fontStyle: "normal",
+      fontWeight: 500,
+      lineHeight: "normal",
+    },
+    amzonIcs: {
+      width: "75.334px",
+      height: "15.924px",
+      position: "absolute",
+      bottom: "90px",
+      left: "90px",
+    },
+    amzonText: {
+      color: "#000",
+      fontSize: "32px",
+      fontStyle: "normal",
       fontWeight: 600,
-      lineHeight: 'normal',
-      letterSpacing: '0.2px'
+      lineHeight: "20px",
+      position: "absolute",
+      left: "35px",
     },
-    gsdArrPara:{
-      color: '#434D56',
-      fontSize: '16px',
-      fontStyle: 'normal',
+    allPppsGrdBox: {
+      padding: "40px",
+    },
+    amazonBox: {
+      borderRadius: "35px",
+      backgroundColor: "#FFFFFF",
+      width: "269.1px",
+      height: " 260.115px",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      position: "relative",
+      margin: "15px 0 0 0",
+    },
+    otherAppsBox: {
+      borderRadius: "35px",
+      backgroundColor: "#FFFFFF",
+      width: "131.1px",
+      height: "130.725px",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      margin: "15px 0 15px 15px",
+      alignItems: "center",
+    },
+    otherAppsBoxYtube: {
+      borderRadius: "35px",
+      backgroundColor: "#FFFFFF",
+      width: "131.1px",
+      height: "130.725px",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      margin: "15px",
+      alignItems: "center",
+      position: "relative",
+    },
+    appbgleft: {
+      position: "absolute",
+      left: 0,
+      top: "25px",
+    },
+    appbgright: {
+      position: "absolute",
+      right: 0,
+      top: "50px",
+    },
+    appCOntainder: {
+      backgroundColor: "#F4F5F9",
+      position: "relative",
+    },
+    whyGsdPARA: {
+      color: "#2E2E2E",
+      fontSize: "16px",
+      fontStyle: "normal",
       fontWeight: 400,
-      lineHeight: '28px',
+      lineHeight: "26px",
+    },
+    gsdArrCard: {
+      borderRadius: "12px",
+      // border: '4px solid #ECDAFF',
+      background: "rgba(255, 255, 255, 0.32)",
+      backdropFilter: "blur(12px)",
+      padding: "40px 20px",
+      marginBottom: "20px",
+    },
+    gsdArrTitle: {
+      color: "#1A2128",
+      fontSize: "20px",
+      fontStyle: "normal",
+      fontWeight: 600,
+      lineHeight: "normal",
+      letterSpacing: "0.2px",
+    },
+    gsdArrPara: {
+      color: "#434D56",
+      fontSize: "16px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "28px",
     },
     takeYourBusiness: {
       [theme.breakpoints.down("sm")]: {
@@ -562,8 +809,8 @@ const useStyles = makeStyles()((theme) => {
       position: "absolute",
       bottom: "31px",
       left: "23px",
-      width: '93.73px',
-      height: '93.73px'
+      width: "93.73px",
+      height: "93.73px",
     },
     rocketBox: {
       position: "relative",
@@ -657,7 +904,13 @@ const useStyles = makeStyles()((theme) => {
       },
     },
     experBtnGrod: {
+      margin: "auto ",
+    },
+    experBtnGrodBottom: {
       margin: "auto",
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-around",
     },
     dividerMain: {
       width: "48px",

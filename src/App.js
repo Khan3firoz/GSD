@@ -5,7 +5,7 @@ import NotFound from "./components/pages/NotFound";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import theme from "./components/css/Theme";
 import Header from "./components/pages/Header";
-import Footer from "./components/pages/Footer";
+import Footer from "./components/pages/Footer"
 import { makeStyles } from "tss-react/mui";
 
 const useStyles = makeStyles((theme) => ({
@@ -29,7 +29,7 @@ export default function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
       <CssBaseline />
     </ThemeProvider>
