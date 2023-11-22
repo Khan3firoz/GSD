@@ -19,8 +19,10 @@ import {
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import { useNavigate } from "react-router-dom";
 
 export default function ButtonAppBar() {
+  const navigate = useNavigate()
   const { classes } = useStyles();
   const [anchorElServices, setAnchorElServices] = React.useState(null);
   const [anchorElCompany, setAnchorElCompany] = React.useState(null);
@@ -81,15 +83,12 @@ export default function ButtonAppBar() {
       >
         <Toolbar className={classes.toolbar}>
           <Box className={classes.mainBox}>
-            <Box>
+            <Box className={classes.gsdLogoBox} onClick={() => navigate("/")}>
               <img
                 className={classes.mainLogoSize}
                 alt="logo"
                 src="assets/logos/gsdnewLogo.png"
               />
-              {/* <Typography align="center" className={classes.logoTExt}>
-                GET. STUFF. DONE.
-              </Typography> */}
             </Box>
             <Box className={classes.menuBoxParent}>
               <Box className={classes.menuBoxPopver}>
@@ -270,6 +269,9 @@ export default function ButtonAppBar() {
 
 const useStyles = makeStyles()((theme) => {
   return {
+    gsdLogoBox:{
+      cursor :'pointer',
+    },
     btnBox: {
       margin: "auto 2px",
       [theme.breakpoints.down("sm")]: {

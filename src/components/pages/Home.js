@@ -18,7 +18,6 @@ import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRound
 
 const Home = () => {
   const { classes } = useStyles();
-
   const whyGsdArr = [
     {
       id: 1,
@@ -96,11 +95,20 @@ const Home = () => {
             </Typography>{" "}
             Virtual Assistance
           </Typography>
-          <img
-            alt="service"
-            src="assets/images/service.png"
-            className={classes.serviceImg}
-          />
+          <Box 
+          // sx={{position:'relative'}}
+          >
+            <img
+              alt="service"
+              src="assets/images/service.png"
+              className={classes.serviceImg}
+            />
+            {/* <img
+              alt="service"
+              src="assets/icons/playIcon.svg"
+              className={classes.servicePlayIcon}
+            /> */}
+          </Box>
           <Button variant="contained" className={classes.contactUsBtn}>
             Contact Us
           </Button>
@@ -880,7 +888,7 @@ const useStyles = makeStyles()((theme) => {
     homemenImgBG: {
       // width: "839.763px",
       height: "560.465px",
-      position: 'absolute',
+      position: "absolute",
       [theme.breakpoints.down("sm")]: {
         height: "00px",
         width: "300px",
@@ -889,7 +897,7 @@ const useStyles = makeStyles()((theme) => {
     homemenImg: {
       // width: "839.763px",
       height: "560.465px",
-      position: 'absolute',
+      position: "absolute",
       [theme.breakpoints.down("sm")]: {
         height: "00px",
         width: "300px",

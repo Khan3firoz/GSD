@@ -7,6 +7,7 @@ import theme from "./components/css/Theme";
 import Header from "./components/pages/Header";
 import Footer from "./components/pages/Footer"
 import { makeStyles } from "tss-react/mui";
+import AboutUs from "./components/pages/AboutUs";
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -26,6 +27,7 @@ export default function App() {
         <div className={classes.content}>
           <Routes>
             <Route exact path="/" element={<Home />} />
+            <Route exact path="/about-us" element={<AboutUs />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

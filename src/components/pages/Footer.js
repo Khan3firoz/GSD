@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid, Box, Typography, IconButton } from "@mui/material";
+import { Container, Grid, Box, Typography, IconButton, Divider } from "@mui/material";
 import { makeStyles } from "tss-react/mui";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import { pallete } from "../css/Theme";
@@ -74,6 +74,8 @@ const Footer = () => {
           </Grid>
         </Grid>
       </Grid>
+      <Divider sx={{border: '1px solid #FFF', margin: '30px 0'}}/>
+      <Typography className={classes.foorterAllrights} align="center">Copyright ® 2023 Lorem All rights Rcerved</Typography>
     </Container>
   );
 };
@@ -82,6 +84,13 @@ export default Footer;
 
 const useStyles = makeStyles()((theme) => {
   return {
+    foorterAllrights:{
+      color: "#686868",
+      fontSize: "13px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "190.6%"
+    },
     socialIconsBox:{
       [theme.breakpoints.down("sm")]: {
       marginTop: '20px'
