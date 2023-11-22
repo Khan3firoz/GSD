@@ -1,6 +1,6 @@
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
-const font = "'Plus Jakarta Sans', sans-serif";
+const font = "'Montserrat', sans-serif";
 
 export const pallete = {
   black: "#000",

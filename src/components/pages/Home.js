@@ -52,7 +52,7 @@ const Home = () => {
     <div>
       <Container maxWidth={false} className={classes.mainContainer}>
         <Grid container className={classes.mainGrid}>
-          <Grid item md={5} xs={12} className={classes.columnsGrid}>
+          <Grid item md={6} className={classes.columnsGrid}>
             <Typography className={classes.mainText}>
               Virtual Private Assistant Services
             </Typography>
@@ -66,12 +66,19 @@ const Home = () => {
               />
             </Box>
           </Grid>
-          <Grid item md={7} xs={12} className={classes.columnsGridRight}>
-            <img
-              alt="boy"
-              src="assets/images/homemen.png"
-              className={classes.homemenImg}
-            />
+          <Grid item md={6} className={classes.columnsGridRight}>
+            <Box className={classes.homemenBox}>
+              <img
+                alt="boybg"
+                src="assets/images/hommenebg.png"
+                className={classes.homemenImgBG}
+              />
+              <img
+                alt="boy"
+                src="assets/images/homemen.png"
+                className={classes.homemenImg}
+              />
+            </Box>
           </Grid>
         </Grid>
       </Container>
@@ -464,20 +471,16 @@ const Home = () => {
               <span style={{ color: pallete.primaryPurple }}>Why</span> GSD
             </Typography>
             <Typography className={classes.whyGsdPARA}>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries.when an unknown printer took a
-              galley of type and scrambled it to make a type specimen book. It
-              has survived not only five centuries,It has survived not only five
-              centuries.when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. It has survived not
-              only five centuries.
+              We go beyond conventional solutions. At GSD, our unwavering
+              commitment to excellence, tailored services, and a
+              forward-thinking approach sets us apart. We're not just about
+              meeting your needs; we're dedicated to exceeding your
+              expectations. Choose GSD and experience the difference that sets
+              us apart in the world of outsourcing.
             </Typography>
           </Grid>
           <Grid item md={6}>
-            <Box>
+            <Box className={classes.gsdArrouterBox}>
               {whyGsdArr.map((x) => (
                 <Grid
                   container
@@ -489,13 +492,11 @@ const Home = () => {
                     <Typography className={classes.gsdArrTitle}>
                       {x.title}
                     </Typography>
-                    <Typography>{x.description}</Typography>
+                    <Typography className={classes.gsdArrPara}>
+                      {x.description}
+                    </Typography>
                   </Grid>
-                  <Grid
-                    item
-                    xs={4}
-                    sx={{ display: "flex", justifyContent: "center" }}
-                  >
+                  <Grid item xs={4} className={classes.rocketBoxouter}>
                     <Box className={classes.rocketBox}>
                       <img
                         src={`/assets/images/${x.img}`}
@@ -540,7 +541,7 @@ const Home = () => {
           <Grid item md={6}>
             <Box className={classes.allPppsGrdBox}>
               <Grid container>
-                <Grid item={4}>
+                <Grid item md={5}>
                   <Box className={classes.amazonBox}>
                     <Typography className={classes.amzonText}>
                       amazon
@@ -565,7 +566,7 @@ const Home = () => {
                     </Box>
                   </div>
                 </Grid>
-                <Grid item={4}>
+                <Grid item md={3}>
                   <Box className={classes.otherAppsBox}>
                     <img
                       alt=""
@@ -577,34 +578,32 @@ const Home = () => {
                     <img
                       alt=""
                       src="assets/icons/app.svg"
-                      className={classes.otherappsicons125}
+                      className={classes.otherappsicons125Middle}
                     />
                   </Box>
                   <Box className={classes.otherAppsBox}>
                     <img
                       alt=""
                       src="assets/icons/app2.svg"
-                      className={classes.otherappsicons125}
+                      className={classes.otherappsicons125Middle}
                     />
                   </Box>
                   <Box className={classes.otherAppsBox}>
                     <img
                       alt=""
                       src="assets/icons/app5.svg"
-                      className={classes.otherappsicons125}
+                      className={classes.otherappsicons125Middle}
                     />
                   </Box>
                 </Grid>
-                <Grid item={4}>
+                <Grid item md={3}>
                   <Box className={classes.otherAppsBoxYtube}>
                     <img
                       alt=""
                       src="assets/icons/ytube.svg"
                       className={classes.otherappsicons125}
                     />
-                    <Typography
-                      sx={{ position: "absolute", top: "75px", right: "50px" }}
-                    >
+                    <Typography className={classes.ytubeTextApps}>
                       YouTube
                     </Typography>
                   </Box>
@@ -672,16 +671,51 @@ export default Home;
 
 const useStyles = makeStyles()((theme) => {
   return {
+    ytubeTextApps: {
+      position: "absolute",
+      top: "75px",
+      right: "50px",
+      [theme.breakpoints.down("sm")]: {
+        display: "none",
+      },
+    },
+    rocketBoxouter: {
+      display: "flex",
+      justifyContent: "center",
+      [theme.breakpoints.down("sm")]: {
+        paddingTop: "40px",
+      },
+    },
     otherappsicons125: {
       // width: "84.18px",
       // height: "101.378px",
+      [theme.breakpoints.down("sm")]: {
+        width: "40.18px",
+        height: "50.378px",
+      },
+    },
+    otherappsicons125Middle: {
+      // width: "84.18px",
+      // height: "101.378px",
+      [theme.breakpoints.down("sm")]: {
+        width: "60.18px",
+        height: "80.378px",
+      },
     },
     otherappsicons4: {
       position: "absolute",
+      [theme.breakpoints.down("sm")]: {
+        width: "40.18px",
+        height: "50.378px",
+      },
     },
     otherappsicons: {
       width: "84.18px",
       height: "101.378px",
+      [theme.breakpoints.down("sm")]: {
+        width: "40.18px",
+        height: "50.378px",
+      },
     },
     uberText: {
       color: "#000",
@@ -689,6 +723,9 @@ const useStyles = makeStyles()((theme) => {
       fontStyle: "normal",
       fontWeight: 500,
       lineHeight: "normal",
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "12px",
+      },
     },
     amzonIcs: {
       width: "75.334px",
@@ -696,6 +733,10 @@ const useStyles = makeStyles()((theme) => {
       position: "absolute",
       bottom: "90px",
       left: "90px",
+      [theme.breakpoints.down("sm")]: {
+        width: "37.334px",
+        height: "7.924px",
+      },
     },
     amzonText: {
       color: "#000",
@@ -705,9 +746,15 @@ const useStyles = makeStyles()((theme) => {
       lineHeight: "20px",
       position: "absolute",
       left: "35px",
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "16px",
+      },
     },
     allPppsGrdBox: {
       padding: "40px",
+      [theme.breakpoints.down("sm")]: {
+        padding: "20px 0",
+      },
     },
     amazonBox: {
       borderRadius: "35px",
@@ -719,6 +766,10 @@ const useStyles = makeStyles()((theme) => {
       justifyContent: "center",
       position: "relative",
       margin: "15px 0 0 0",
+      [theme.breakpoints.down("sm")]: {
+        width: "130.1px",
+        height: "120.115px",
+      },
     },
     otherAppsBox: {
       borderRadius: "35px",
@@ -730,6 +781,11 @@ const useStyles = makeStyles()((theme) => {
       justifyContent: "center",
       margin: "15px 0 15px 15px",
       alignItems: "center",
+      [theme.breakpoints.down("sm")]: {
+        width: "65.1px",
+        height: "65.725px",
+        borderRadius: "15px",
+      },
     },
     otherAppsBoxYtube: {
       borderRadius: "35px",
@@ -742,6 +798,11 @@ const useStyles = makeStyles()((theme) => {
       margin: "15px",
       alignItems: "center",
       position: "relative",
+      [theme.breakpoints.down("sm")]: {
+        width: "65.1px",
+        height: "65.725px",
+        borderRadius: "15px",
+      },
     },
     appbgleft: {
       position: "absolute",
@@ -753,9 +814,15 @@ const useStyles = makeStyles()((theme) => {
       right: 0,
       top: "50px",
     },
+    homemenBox: {
+      position: "relative",
+    },
     appCOntainder: {
       backgroundColor: "#F4F5F9",
       position: "relative",
+      [theme.breakpoints.down("sm")]: {
+        padding: "40px 0",
+      },
     },
     whyGsdPARA: {
       color: "#2E2E2E",
@@ -763,14 +830,25 @@ const useStyles = makeStyles()((theme) => {
       fontStyle: "normal",
       fontWeight: 400,
       lineHeight: "26px",
+      [theme.breakpoints.down("sm")]: {
+        padding: "20px",
+      },
+    },
+    gsdArrouterBox: {
+      [theme.breakpoints.down("sm")]: {
+        padding: "20px",
+      },
     },
     gsdArrCard: {
       borderRadius: "12px",
       // border: '4px solid #ECDAFF',
       background: "rgba(255, 255, 255, 0.32)",
-      backdropFilter: "blur(12px)",
+      // backdropFilter: "blur(12px)",
       padding: "40px 20px",
       marginBottom: "20px",
+      [theme.breakpoints.down("sm")]: {
+        padding: "20px",
+      },
     },
     gsdArrTitle: {
       color: "#1A2128",
@@ -781,11 +859,12 @@ const useStyles = makeStyles()((theme) => {
       letterSpacing: "0.2px",
     },
     gsdArrPara: {
+      paddingTop: "10px",
       color: "#434D56",
       fontSize: "16px",
       fontStyle: "normal",
       fontWeight: 400,
-      lineHeight: "28px",
+      lineHeight: "22px",
     },
     takeYourBusiness: {
       [theme.breakpoints.down("sm")]: {
@@ -793,10 +872,24 @@ const useStyles = makeStyles()((theme) => {
       },
     },
     coolbuysImg: {
-      width: "350px",
-      height: "250px",
+      [theme.breakpoints.down("sm")]: {
+        width: "350px",
+        height: "250px",
+      },
+    },
+    homemenImgBG: {
+      // width: "839.763px",
+      height: "560.465px",
+      position: 'absolute',
+      [theme.breakpoints.down("sm")]: {
+        height: "00px",
+        width: "300px",
+      },
     },
     homemenImg: {
+      // width: "839.763px",
+      height: "560.465px",
+      position: 'absolute',
       [theme.breakpoints.down("sm")]: {
         height: "00px",
         width: "300px",
@@ -902,6 +995,12 @@ const useStyles = makeStyles()((theme) => {
         backgroundColor: "#fff",
         color: "#737373",
       },
+      [theme.breakpoints.down("sm")]: {
+        padding: "5px 15px",
+        fontSize: "12px",
+        fontWeight: "400",
+        margin: "0 5px",
+      },
     },
     experBtnGrod: {
       margin: "auto ",
@@ -953,6 +1052,9 @@ const useStyles = makeStyles()((theme) => {
     blogimg: {
       // width: "332px",
       // height: "281px",
+      [theme.breakpoints.down("sm")]: {
+        // width :'80%'
+      },
     },
     blogTagp: {
       color: "#6A6A6A",
@@ -1075,8 +1177,8 @@ const useStyles = makeStyles()((theme) => {
       width: "1000px",
       margin: "20px 0",
       [theme.breakpoints.down("sm")]: {
-        height: "200px",
-        width: "250px",
+        height: "300px",
+        width: "300px",
       },
     },
     serviceBox: {

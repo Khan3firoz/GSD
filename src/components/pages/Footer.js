@@ -11,8 +11,8 @@ const Footer = () => {
   const { classes } = useStyles();
   return (
     <Container maxWidth={false} className={classes.mainContainer}>
-      <Grid container>
-        <Grid item md={3}>
+      <Grid container sx={{display:'flex', flexDirection:'row', justifyContent:'center'}}>
+        <Grid item md={3} xs={12} >
           <Box className={classes.logoBox}>
             <img
               className={classes.mainLogoSize}
@@ -27,26 +27,36 @@ const Footer = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid item md={9}>
+        <Grid item md={9} xs={12}>
           <Grid container>
-            <Grid item md={3}>
-              <Typography>Home</Typography>
-              <Typography>Pricing</Typography>
-              <Typography>About</Typography>
-              <Typography>Contact</Typography>
+            <Grid item md={3} xs={12} className={classes.fotterLinksGrid}>
+              <Typography className={classes.mainTextLinks}>Home</Typography>
+              <Typography className={classes.mainTextLinks}>Pricing</Typography>
+              <Typography className={classes.mainTextLinks}>About</Typography>
+              <Typography className={classes.mainTextLinks}>Contact</Typography>
             </Grid>
-            <Grid item md={3}>
-              <Typography>Facebook</Typography>
-              <Typography>Instagram</Typography>
-              <Typography>Twitter</Typography>
-              <Typography>Linkedin</Typography>
+            <Grid item md={3} xs={12} className={classes.fotterLinksGrid}>
+              <Typography className={classes.mainTextLinks}>
+                Facebook
+              </Typography>
+              <Typography className={classes.mainTextLinks}>
+                Instagram
+              </Typography>
+              <Typography className={classes.mainTextLinks}>Twitter</Typography>
+              <Typography className={classes.mainTextLinks}>
+                Linkedin
+              </Typography>
             </Grid>
-            <Grid item md={3}>
-              <Typography>Privacy Policy</Typography>
-              <Typography>Team of Service</Typography>
+            <Grid item md={3} xs={12} className={classes.fotterLinksGrid}>
+              <Typography className={classes.mainTextLinks}>
+                Privacy Policy
+              </Typography>
+              <Typography className={classes.mainTextLinks}>
+                Team of Service
+              </Typography>
             </Grid>
-            <Grid item md={3}>
-              <Box>
+            <Grid item md={3} xs={12} className={classes.fotterLinksGrid}>
+              <Box className={classes.socialIconsBox}>
                 <IconButton className={classes.iconsBtn}>
                   <FacebookOutlinedIcon className={classes.socialIcons} />
                 </IconButton>
@@ -72,6 +82,24 @@ export default Footer;
 
 const useStyles = makeStyles()((theme) => {
   return {
+    socialIconsBox:{
+      [theme.breakpoints.down("sm")]: {
+      marginTop: '20px'
+      }
+    },
+    mainTextLinks: {
+      color: "#2E2E2E",
+      fontSize: "16px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal",
+      padding: '5px 10px'
+    },
+    fotterLinksGrid: {
+      [theme.breakpoints.down("sm")]: {
+        width: "100%",
+      },
+    },
     iconsBtn: {
       backgroundColor: "#FFF",
       margin: "0 5px",
@@ -107,8 +135,8 @@ const useStyles = makeStyles()((theme) => {
       height: "60px",
       [theme.breakpoints.down("sm")]: {
         paddingTop: "20px",
-        width: "140px",
-        height: "70px",
+        width: "100px",
+        height: "80px",
       },
     },
   };

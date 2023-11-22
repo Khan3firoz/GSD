@@ -24,6 +24,23 @@ export default function ButtonAppBar() {
   const { classes } = useStyles();
   const [anchorElServices, setAnchorElServices] = React.useState(null);
   const [anchorElCompany, setAnchorElCompany] = React.useState(null);
+  const [scrolled, setScrolled] = React.useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 10) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleClickS = (event) => {
     setAnchorElServices(event.currentTarget);
@@ -56,8 +73,11 @@ export default function ButtonAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
         position="fixed"
-        className={classes.appBar}
-        style={{ boxShadow: "none" }}
+        style={{
+          backgroundColor: scrolled ? "#fff" : "transparent",
+          boxShadow: scrolled ? "0px 2px 4px -1px rgba(0,0,0,0.4)" : "none",
+          padding: scrolled ? "10px" : "15px 10px"
+        }}
       >
         <Toolbar className={classes.toolbar}>
           <Box className={classes.mainBox}>
@@ -123,19 +143,34 @@ export default function ButtonAppBar() {
                 <List>
                   <ListItem disablePadding>
                     <ListItemButton>
-                      <ListItemText primary="Service 1" />
+                      <ListItemText primary="Virtual Private Assistant" />
                     </ListItemButton>
                   </ListItem>
                   <Divider />
                   <ListItem disablePadding>
                     <ListItemButton>
-                      <ListItemText primary="Service 2" />
+                      <ListItemText primary="Healthcare Services" />
                     </ListItemButton>
                   </ListItem>
                   <Divider />
                   <ListItem disablePadding>
                     <ListItemButton>
-                      <ListItemText primary="Explor All" />
+                      <ListItemText primary="Sales Development" />
+                    </ListItemButton>
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <ListItemButton>
+                      <ListItemText primary="Virtual Receptionist" />
+                    </ListItemButton>
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <ListItemButton>
+                      <ListItemText primary="Spanish translation" />
+                    </ListItemButton>
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <ListItemButton>
+                      <ListItemText primary="Social Media Management" />
                     </ListItemButton>
                   </ListItem>
                 </List>
@@ -223,7 +258,7 @@ export default function ButtonAppBar() {
             </Box>
             <Box className={classes.btnBoxMobile}>
               <IconButton>
-                <MenuRoundedIcon sx={{fontSize:'30px'}}/>
+                <MenuRoundedIcon sx={{ fontSize: "30px" }} />
               </IconButton>
             </Box>
           </Box>
@@ -251,7 +286,7 @@ const useStyles = makeStyles()((theme) => {
       backgroundColor: pallete.parimayBlue,
       color: pallete.primaryWhite,
       textTransform: "none",
-      padding: "10px 30px",
+      padding: "12px 40px",
       fontSize: "16px",
       fontWeight: "600",
     },
@@ -276,8 +311,8 @@ const useStyles = makeStyles()((theme) => {
       width: "80px",
       height: "60px",
       [theme.breakpoints.down("sm")]: {
-        paddingTop: '20px',
-        width: "140px",
+        paddingTop: "20px",
+        width: "90px",
         height: "70px",
       },
     },
