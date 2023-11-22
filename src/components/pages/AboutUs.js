@@ -6,6 +6,9 @@ import { styles } from "../css/CommonCSS";
 
 const AboutUs = () => {
   const { classes } = useStyles();
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Container maxWidth={false} className={classes.mainContainer}>
@@ -81,7 +84,7 @@ const AboutUs = () => {
       </Container>
       <Container maxWidth={false} sx={{ margin: "100px 0" }}>
         <Grid container>
-          <Grid item md={6} sx={{margin: 'auto', padding: '0 50px'}}>
+          <Grid item md={6} sx={{ margin: "auto", padding: "0 50px" }}>
             <Typography className={classes.serveceBelo}>
               <Typography
                 className={classes.serveceBelo}

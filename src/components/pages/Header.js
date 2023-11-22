@@ -251,7 +251,7 @@ export default function ButtonAppBar() {
               </Box>
             </Box>
             <Box className={classes.btnBox}>
-              <Button className={classes.mainBtn} variant="contained">
+              <Button onClick={() => navigate("about-us")} className={classes.mainBtn} variant="contained">
                 Get Started
               </Button>
             </Box>
