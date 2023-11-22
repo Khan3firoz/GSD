@@ -455,12 +455,12 @@ const Home = () => {
         </Grid>
       </Container>
       <Container maxWidth={false} className={classes.whyGsdContainer}>
-        <Grid container md={10}>
-          <Grid item md={6}>
+        <Grid container md={10} sx={{ display: "flex", justifyContent: "space-between" }}>
+          <Grid item md={5}>
             <Typography className={classes.serveceBelo}>
               <span style={{ color: pallete.primaryPurple }}>Why</span> GSD
             </Typography>
-            <Typography>
+            <Typography className={classes.whyGsdPARA}>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -476,12 +476,12 @@ const Home = () => {
           <Grid item md={6}>
             <Box>
               {whyGsdArr.map((x) => (
-                <Grid container key={x.id}>
+                <Grid container key={x.id} className={classes.gsdArrCard} sx={{border: `${x.borderColor}`}}>
                   <Grid item xs={8}>
-                    <Typography>{x.title}</Typography>
+                    <Typography className={classes.gsdArrTitle}>{x.title}</Typography>
                     <Typography>{x.description}</Typography>
                   </Grid>
-                  <Grid item xs={4}>
+                  <Grid item xs={4} sx={{display:'flex', justifyContent: 'center'}}>
                     <Box className={classes.rocketBox}>
                       <img
                         src={`/assets/images/${x.img}`}
@@ -509,6 +509,37 @@ export default Home;
 
 const useStyles = makeStyles()((theme) => {
   return {
+    whyGsdPARA:{
+      color: '#2E2E2E',
+      fontSize: '16px',
+      fontStyle: 'normal',
+      fontWeight: 400,
+      lineHeight: '26px',
+    },
+    gsdArrCard:{
+      borderRadius: '12px',
+      // border: '4px solid #ECDAFF',
+      background: 'rgba(255, 255, 255, 0.32)',
+      backdropFilter: 'blur(12px)',
+      padding: "40px 20px",
+      marginBottom: '20px'
+      
+    },
+    gsdArrTitle:{
+      color: '#1A2128',
+      fontSize: '20px',
+      fontStyle: 'normal',
+      fontWeight: 600,
+      lineHeight: 'normal',
+      letterSpacing: '0.2px'
+    },
+    gsdArrPara:{
+      color: '#434D56',
+      fontSize: '16px',
+      fontStyle: 'normal',
+      fontWeight: 400,
+      lineHeight: '28px',
+    },
     takeYourBusiness: {
       [theme.breakpoints.down("sm")]: {
         padding: "50px 0",
@@ -531,6 +562,8 @@ const useStyles = makeStyles()((theme) => {
       position: "absolute",
       bottom: "31px",
       left: "23px",
+      width: '93.73px',
+      height: '93.73px'
     },
     rocketBox: {
       position: "relative",
