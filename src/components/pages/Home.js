@@ -15,8 +15,10 @@ import { pallete } from "../css/Theme";
 import { styles } from "../css/CommonCSS";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate()
   const { classes } = useStyles();
   const whyGsdArr = [
     {
@@ -109,7 +111,7 @@ const Home = () => {
               className={classes.servicePlayIcon}
             /> */}
           </Box>
-          <Button variant="contained" className={classes.contactUsBtn}>
+          <Button onClick={() => navigate("about-us")} variant="contained" className={classes.contactUsBtn}>
             Contact Us
           </Button>
           <Typography align="center" className={classes.serveceBelo}>
@@ -180,7 +182,7 @@ const Home = () => {
                 services, healthcare admin services, and sales outsourcing
                 services.
               </Typography>
-              <Button variant="contained" className={classes.contactUsBtn}>
+              <Button onClick={() => navigate("about-us")} variant="contained" className={classes.contactUsBtn}>
                 Learn More
               </Button>
             </Box>
@@ -207,7 +209,7 @@ const Home = () => {
                 We focus on what’s important, and our client appreciate the
                 efficiency and effectiveness of our services.
               </Typography>
-              <Button variant="contained" className={classes.contactUsBtn}>
+              <Button onClick={() => navigate("about-us")} variant="contained" className={classes.contactUsBtn}>
                 Learn More
               </Button>
             </Box>
@@ -252,7 +254,7 @@ const Home = () => {
                 solutions that can help your business achieve its goals. We work
                 closely with our clients to understand their unique needs.
               </Typography>
-              <Button variant="contained" className={classes.contactUsBtn}>
+              <Button onClick={() => navigate("about-us")} variant="contained" className={classes.contactUsBtn}>
                 Contact Us
               </Button>
             </Box>
@@ -401,7 +403,7 @@ const Home = () => {
               </Box>
             </Grid>
             <Grid item md={2.5} className={classes.experBtnGrod}>
-              <Button variant="contained" className={classes.expertBtns}>
+              <Button onClick={() => navigate("about-us")} variant="contained" className={classes.expertBtns}>
                 Get Started
               </Button>
             </Grid>
@@ -542,7 +544,7 @@ const Home = () => {
               </span>
               <br /> Favorite Apps
             </Typography>
-            <Button variant="contained" className={classes.contactUsBtn}>
+            <Button onClick={() => navigate("about-us")} variant="contained" className={classes.contactUsBtn}>
               Contact Us
             </Button>
           </Grid>
@@ -661,10 +663,10 @@ const Home = () => {
               </Box>
             </Grid>
             <Grid item md={6} className={classes.experBtnGrodBottom}>
-              <Button variant="contained" className={classes.expertBtns}>
+              <Button onClick={() => navigate("about-us")} variant="contained" className={classes.expertBtns}>
                 Start Free Trial
               </Button>
-              <Button variant="contained" className={classes.expertBtns}>
+              <Button onClick={() => navigate("about-us")} variant="contained" className={classes.expertBtns}>
                 Contact Us
               </Button>
             </Grid>
