@@ -17,7 +17,7 @@ const AboutUs = () => {
             <Typography className={classes.serviceText}>About US</Typography>
             <Typography className={classes.serveceBelo}>
               <Typography
-              className={classes.serveceBelo}
+                className={classes.serveceBelo}
                 style={{ color: pallete.primaryPurple }}
               >
                 Your trusted partner
@@ -82,7 +82,15 @@ const AboutUs = () => {
           </Grid>
         </Grid>
       </Container>
-      <Container maxWidth={false} sx={{ margin: "100px 0" }}>
+      <Container
+        maxWidth={false}
+        sx={{ margin: "100px 0", position: "relative" }}
+      >
+        <img
+          alt=""
+          src="assets/icons/appbg.png"
+          className={classes.appbgleft}
+        />
         <Grid container>
           <Grid item md={6} sx={{ margin: "auto", padding: "0 50px" }}>
             <Typography className={classes.serveceBelo}>
@@ -94,7 +102,9 @@ const AboutUs = () => {
               </Typography>
               With GSD Today
             </Typography>
-            <Typography className={classes.paraText}>Start Optimizing Your Process Today</Typography>
+            <Typography className={classes.paraText}>
+              Start Optimizing Your Process Today
+            </Typography>
             <Button variant="contained" className={classes.contactUsBtn}>
               Contact Us
             </Button>
@@ -123,6 +133,11 @@ export default AboutUs;
 
 const useStyles = makeStyles()((theme) => {
   return {
+    appbgleft: {
+      position: "absolute",
+      left: 0,
+      top: "-15px",
+    },
     bbabdimg: {
       width: "532.388px",
       height: "580px",
@@ -150,7 +165,7 @@ const useStyles = makeStyles()((theme) => {
       fontStyle: "normal",
       fontWeight: 400,
       lineHeight: "normal",
-      fontFamily:'Roboto'
+      fontFamily: "Roboto",
     },
     playMidBox: {
       bottom: "10px",
@@ -172,7 +187,7 @@ const useStyles = makeStyles()((theme) => {
       fontStyle: "normal",
       fontWeight: 400,
       lineHeight: "24px",
-      fontFamily:'Roboto'
+      fontFamily: "Roboto",
     },
     midContainer: {
       padding: "50px 0",
@@ -185,7 +200,7 @@ const useStyles = makeStyles()((theme) => {
       fontWeight: 400,
       lineHeight: "24px",
       padding: "10px 70px 0 0",
-      fontFamily:'Roboto'
+      fontFamily: "Roboto",
     },
     sortImg: {
       position: "absolute",
@@ -206,7 +221,7 @@ const useStyles = makeStyles()((theme) => {
       color: "#2E2E2E",
       fontSize: "18px",
       fontStyle: "normal",
-      fontFamily:'Roboto',
+      fontFamily: "Roboto",
       fontWeight: 700,
       lineHeight: "24px",
     },

@@ -8,9 +8,11 @@ import Header from "./components/pages/Header";
 import Footer from "./components/pages/Footer"
 import { makeStyles } from "tss-react/mui";
 import AboutUs from "./components/pages/AboutUs";
+import Career from "./components/pages/Career";
 
 const useStyles = makeStyles((theme) => ({
   content: {
+    padding: "0 !importent",
     marginTop: "200px !importent", // Adjust this value to match the height of your AppBar
     [theme.breakpoints.up("md")]: {
       marginTop: "60px", // Adjust this value for larger screens if needed
@@ -27,6 +29,7 @@ export default function App() {
         <div className={classes.content}>
           <Routes>
             <Route exact path="/" element={<Home />} />
+            <Route exact path="/career" element={<Career />} />
             <Route exact path="/about-us" element={<AboutUs />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

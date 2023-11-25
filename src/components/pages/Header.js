@@ -63,7 +63,7 @@ export default function ButtonAppBar() {
   const openCompany = Boolean(anchorElCompany);
   const idServices = openCompany ? "simple-popover" : undefined;
   const idCompany = openCompany ? "simple-popover" : undefined;
-  console.log({ anchorElServices, anchorElCompany });
+  // console.log({ anchorElServices, anchorElCompany });
   const customPaperStyle = {
     borderRadius: "10px",
     width: "300px",
