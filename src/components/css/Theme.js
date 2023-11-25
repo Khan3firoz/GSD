@@ -1,6 +1,7 @@
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
-const font = "'Montserrat', sans-serif";
+const montserrat = "'Montserrat', sans-serif";
+const roboto = "'Roboto', sans-serif";
 
 export const pallete = {
   black: "#000",
@@ -25,14 +26,14 @@ let theme = createTheme({
     values: { xs: 600, sm: 800, md: 1000, lg: 1200, xl: 1536 },
   },
   typography: {
-    fontFamily: font,
+    fontFamily: montserrat,
     h5: { fontSize: 20, latterSpacing: "0.03rem", fontWeight: "400" },
     h6: {
       fontSize: 18,
       latterSpacing: "0.03rem",
       fontWeight: "400",
     },
-    h4: { fontSize: 16, latterSpacing: "0.02rem", fontWeight: "200" },
+    h4: { fontFamily: roboto },
     h3: { fontSize: 18, latterSpacing: "0.03rem", fontWeight: "600" },
     h2: {
       color: "#645FF2",

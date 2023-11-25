@@ -291,6 +291,7 @@ const useStyles = makeStyles()((theme) => {
       padding: "12px 40px",
       fontSize: "16px",
       fontWeight: "600",
+      fontFamily:'Roboto'
     },
     popoverBox: {
       top: "100px !importent",
@@ -330,7 +331,7 @@ const useStyles = makeStyles()((theme) => {
       margin: "auto",
       padding: "0 5px",
       color: pallete.primaryBlack,
-      //   fontFamily: 'Roboto',
+        fontFamily: 'Roboto',
       fontSize: "16px",
       fontStyle: "normal",
       fontWeight: 400,
@@ -344,7 +345,7 @@ const useStyles = makeStyles()((theme) => {
       margin: "auto",
       padding: "0 5px",
       color: pallete.primaryPink,
-      //   fontFamily: 'Roboto',
+        fontFamily: 'Roboto',
       fontSize: "16px",
       fontStyle: "normal",
       fontWeight: 400,

@@ -17,7 +17,7 @@ const AboutUs = () => {
             <Typography className={classes.serviceText}>About US</Typography>
             <Typography className={classes.serveceBelo}>
               <Typography
-                className={classes.serveceBelo}
+              className={classes.serveceBelo}
                 style={{ color: pallete.primaryPurple }}
               >
                 Your trusted partner
@@ -94,7 +94,7 @@ const AboutUs = () => {
               </Typography>
               With GSD Today
             </Typography>
-            <Typography>Start Optimizing Your Process Today</Typography>
+            <Typography className={classes.paraText}>Start Optimizing Your Process Today</Typography>
             <Button variant="contained" className={classes.contactUsBtn}>
               Contact Us
             </Button>
@@ -143,13 +143,14 @@ const useStyles = makeStyles()((theme) => {
       width: "70px",
     },
     servmissionBox: {
-      paddingTop: "30px 30px 0 30px",
+      padding: "10px 30px 0 30px",
       color: "#D4005B",
       textAlign: "center",
       fontSize: "16px",
       fontStyle: "normal",
       fontWeight: 400,
       lineHeight: "normal",
+      fontFamily:'Roboto'
     },
     playMidBox: {
       bottom: "10px",
@@ -171,6 +172,7 @@ const useStyles = makeStyles()((theme) => {
       fontStyle: "normal",
       fontWeight: 400,
       lineHeight: "24px",
+      fontFamily:'Roboto'
     },
     midContainer: {
       padding: "50px 0",
@@ -183,6 +185,7 @@ const useStyles = makeStyles()((theme) => {
       fontWeight: 400,
       lineHeight: "24px",
       padding: "10px 70px 0 0",
+      fontFamily:'Roboto'
     },
     sortImg: {
       position: "absolute",
@@ -203,6 +206,7 @@ const useStyles = makeStyles()((theme) => {
       color: "#2E2E2E",
       fontSize: "18px",
       fontStyle: "normal",
+      fontFamily:'Roboto',
       fontWeight: 700,
       lineHeight: "24px",
     },

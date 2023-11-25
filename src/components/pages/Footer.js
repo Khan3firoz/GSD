@@ -89,7 +89,8 @@ const useStyles = makeStyles()((theme) => {
       fontSize: "13px",
       fontStyle: "normal",
       fontWeight: 400,
-      lineHeight: "190.6%"
+      lineHeight: "190.6%",
+      fontFamily:'Roboto'
     },
     socialIconsBox:{
       [theme.breakpoints.down("sm")]: {
@@ -102,7 +103,8 @@ const useStyles = makeStyles()((theme) => {
       fontStyle: "normal",
       fontWeight: 400,
       lineHeight: "normal",
-      padding: '5px 10px'
+      padding: '5px 10px',
+      fontFamily:'Roboto'
     },
     fotterLinksGrid: {
       [theme.breakpoints.down("sm")]: {

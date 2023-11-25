@@ -17,5 +17,6 @@ export const styles = {
         padding: "10px 30px",
         fontSize: "16px",
         fontWeight: "600",
+        fontFamily:'Roboto',
     }
 }

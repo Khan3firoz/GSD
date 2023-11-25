@@ -18,7 +18,7 @@ import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRound
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { classes } = useStyles();
   const whyGsdArr = [
     {
@@ -97,7 +97,7 @@ const Home = () => {
             </Typography>{" "}
             Virtual Assistance
           </Typography>
-          <Box 
+          <Box
           // sx={{position:'relative'}}
           >
             <img
@@ -111,7 +111,11 @@ const Home = () => {
               className={classes.servicePlayIcon}
             /> */}
           </Box>
-          <Button onClick={() => navigate("about-us")} variant="contained" className={classes.contactUsBtn}>
+          <Button
+            onClick={() => navigate("about-us")}
+            variant="contained"
+            className={classes.contactUsBtn}
+          >
             Contact Us
           </Button>
           <Typography align="center" className={classes.serveceBelo}>
@@ -182,7 +186,11 @@ const Home = () => {
                 services, healthcare admin services, and sales outsourcing
                 services.
               </Typography>
-              <Button onClick={() => navigate("about-us")} variant="contained" className={classes.contactUsBtn}>
+              <Button
+                onClick={() => navigate("about-us")}
+                variant="contained"
+                className={classes.contactUsBtn}
+              >
                 Learn More
               </Button>
             </Box>
@@ -209,7 +217,11 @@ const Home = () => {
                 We focus on what’s important, and our client appreciate the
                 efficiency and effectiveness of our services.
               </Typography>
-              <Button onClick={() => navigate("about-us")} variant="contained" className={classes.contactUsBtn}>
+              <Button
+                onClick={() => navigate("about-us")}
+                variant="contained"
+                className={classes.contactUsBtn}
+              >
                 Learn More
               </Button>
             </Box>
@@ -254,7 +266,11 @@ const Home = () => {
                 solutions that can help your business achieve its goals. We work
                 closely with our clients to understand their unique needs.
               </Typography>
-              <Button onClick={() => navigate("about-us")} variant="contained" className={classes.contactUsBtn}>
+              <Button
+                onClick={() => navigate("about-us")}
+                variant="contained"
+                className={classes.contactUsBtn}
+              >
                 Contact Us
               </Button>
             </Box>
@@ -370,7 +386,7 @@ const Home = () => {
                 <Typography className={classes.blogHeading}>
                   How to optimize your business operations?
                 </Typography>
-                <Typography>
+                <Typography className={classes.articalsPara}>
                   Lorem ipsum is a placeholder text commonly used to demonstrate
                   the visual form of a document or a typeface without relying on
                   meaningful content.
@@ -403,7 +419,11 @@ const Home = () => {
               </Box>
             </Grid>
             <Grid item md={2.5} className={classes.experBtnGrod}>
-              <Button onClick={() => navigate("about-us")} variant="contained" className={classes.expertBtns}>
+              <Button
+                onClick={() => navigate("about-us")}
+                variant="contained"
+                className={classes.expertBtns}
+              >
                 Get Started
               </Button>
             </Grid>
@@ -443,7 +463,7 @@ const Home = () => {
                       className={classes.quotIcon}
                     />
                     <Card className={classes.caroselCards}>
-                      <Typography>
+                      <Typography className={classes.articalsPara}>
                         Lorem Ipsum is simply dummy text of the printing and
                         typesetting industry. Lorem Ipsum has been the
                         industry's standard dummy text ever since the 1500s,
@@ -544,7 +564,11 @@ const Home = () => {
               </span>
               <br /> Favorite Apps
             </Typography>
-            <Button onClick={() => navigate("about-us")} variant="contained" className={classes.contactUsBtn}>
+            <Button
+              onClick={() => navigate("about-us")}
+              variant="contained"
+              className={classes.contactUsBtn}
+            >
               Contact Us
             </Button>
           </Grid>
@@ -663,10 +687,18 @@ const Home = () => {
               </Box>
             </Grid>
             <Grid item md={6} className={classes.experBtnGrodBottom}>
-              <Button onClick={() => navigate("about-us")} variant="contained" className={classes.expertBtns}>
+              <Button
+                onClick={() => navigate("about-us")}
+                variant="contained"
+                className={classes.expertBtns}
+              >
                 Start Free Trial
               </Button>
-              <Button onClick={() => navigate("about-us")} variant="contained" className={classes.expertBtns}>
+              <Button
+                onClick={() => navigate("about-us")}
+                variant="contained"
+                className={classes.expertBtns}
+              >
                 Contact Us
               </Button>
             </Grid>
@@ -834,8 +866,20 @@ const useStyles = makeStyles()((theme) => {
         padding: "40px 0",
       },
     },
+    articalsPara: {
+      color: "#2E2E2E",
+      fontSize: "16px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "26px",
+      fontFamily: "Roboto",
+    },
+    carosalPara:{
+
+    },
     whyGsdPARA: {
       color: "#2E2E2E",
+      fontFamily:'Roboto',
       fontSize: "16px",
       fontStyle: "normal",
       fontWeight: 400,
@@ -863,6 +907,7 @@ const useStyles = makeStyles()((theme) => {
     gsdArrTitle: {
       color: "#1A2128",
       fontSize: "20px",
+      fontFamily:'Roboto',
       fontStyle: "normal",
       fontWeight: 600,
       lineHeight: "normal",
@@ -871,6 +916,7 @@ const useStyles = makeStyles()((theme) => {
     gsdArrPara: {
       paddingTop: "10px",
       color: "#434D56",
+      fontFamily:'Roboto',
       fontSize: "16px",
       fontStyle: "normal",
       fontWeight: 400,
@@ -1034,6 +1080,7 @@ const useStyles = makeStyles()((theme) => {
       fontStyle: "normal",
       fontWeight: 400,
       lineHeight: "normal",
+      fontFamily:'Roboto'
     },
     expetText: {
       color: "#FFFFFF",
@@ -1067,6 +1114,7 @@ const useStyles = makeStyles()((theme) => {
       },
     },
     blogTagp: {
+      fontFamily: "Roboto",
       color: "#6A6A6A",
       fontSize: "12px",
       fontStyle: "normal",
@@ -1075,6 +1123,7 @@ const useStyles = makeStyles()((theme) => {
     },
     blogtagH: {
       color: "#000",
+      fontFamily: "Roboto",
       fontSize: "14px",
       fontStyle: "normal",
       fontWeight: 500,
@@ -1096,6 +1145,7 @@ const useStyles = makeStyles()((theme) => {
       lineHeight: "normal",
     },
     blogHeading: {
+      fontFamily: "Roboto",
       color: "#2E2E2E",
       fontSize: "18px",
       fontStyle: "normal",
@@ -1132,6 +1182,7 @@ const useStyles = makeStyles()((theme) => {
       padding: "20px 60px",
     },
     paraText: {
+      fontFamily: "Roboto",
       color: "#030303",
       fontSize: "16px",
       fontStyle: "normal",
@@ -1208,6 +1259,7 @@ const useStyles = makeStyles()((theme) => {
       },
     },
     serviceText: {
+      fontFamily: "Roboto",
       color: "#2E2E2E",
       fontSize: "18px",
       fontStyle: "normal",
@@ -1215,6 +1267,7 @@ const useStyles = makeStyles()((theme) => {
       lineHeight: "24px",
     },
     exploreLink: {
+      fontFamily: "Roboto",
       fontSize: "18px",
       fontStyle: "normal",
       fontWeight: 600,
@@ -1225,6 +1278,7 @@ const useStyles = makeStyles()((theme) => {
     secondHeading: {
       fontSize: "18px",
       fontStyle: "normal",
+      fontFamily: "Roboto",
       fontWeight: 600,
       lineHeight: "40px",
       color: "#333333",
