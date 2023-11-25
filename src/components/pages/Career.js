@@ -1,7 +1,15 @@
-import { Container, Grid, Typography, Box, IconButton, Divider } from "@mui/material";
+import {
+  Container,
+  Grid,
+  Typography,
+  Box,
+  IconButton,
+  Divider,
+} from "@mui/material";
 import React from "react";
 import { makeStyles } from "tss-react/mui";
 import { styles } from "../css/CommonCSS";
+import { pallete } from "../css/Theme";
 
 const Career = () => {
   const { classes } = useStyles();
@@ -20,7 +28,10 @@ const Career = () => {
           />
         </Grid>
         <Grid item md={6} sx={{ margin: "auto" }}>
-          <Typography variant="h4">The future of work</Typography>
+          <Typography variant="h4">
+            <span style={{ color: pallete.primaryPurple }}>The future </span>
+            of work
+          </Typography>
           <Typography variant="h6">
             In publishing and graphic design, Lorem ipsum is a placeholder text
             commonly used to demonstrate the visual form of a document or a
@@ -83,7 +94,7 @@ const Career = () => {
                   />
                 </IconButton>
                 <IconButton
-                  sx={{ backgroundColor: "#B7B7B9", margin: "0 7px" }}
+                  sx={{ backgroundColor: "#F35F5F", margin: "0 7px" }}
                 >
                   <Box
                     component="img"
@@ -124,26 +135,56 @@ const Career = () => {
               />
               <Box className={classes.chatBox}>
                 <Box className={classes.chatBoxTop}>
-                    <Typography variant="h5" sx={{margin: 'auto 0'}}>Chat</Typography>
-                    <IconButton>
+                  <Typography variant="h5" sx={{ margin: "auto 0" }}>
+                    Chat
+                  </Typography>
+                  <IconButton>
                     <Box
-                    component="img"
-                    className={classes.chatBoxIcons}
-                    src="assets/icons/uparrowWhite.svg"
-                    alt="Descriptive Alt Text"
-                  />
-                    </IconButton>
+                      component="img"
+                      className={classes.chatBoxIcons}
+                      src="assets/icons/uparrowWhite.svg"
+                      alt="Descriptive Alt Text"
+                    />
+                  </IconButton>
                 </Box>
                 <Divider />
-                <Box>
-                <Box
+                <Box sx={{ display: "flex", margin: "10px 0" }}>
+                  <Box
                     component="img"
                     className={classes.chatBoxDP}
                     src="assets/icons/chatBoximg.png"
                     alt="Descriptive Alt Text"
-                  /> 
-                  <Typography>Helen Mentari</Typography>
-                  <Typography>10:12 AM</Typography>
+                  />
+                  <Typography className={classes.chaterName}>
+                    Helen Mentari
+                  </Typography>
+                  <Typography className={classes.chaterTime}>
+                    10:12 AM
+                  </Typography>
+                </Box>
+                <Typography className={classes.chaterFirstMsg}>
+                  Guys, what do you want?
+                </Typography>
+                <Typography
+                  sx={{ borderRadius: "8.667px !importent" }}
+                  className={classes.chaterFirstMsg}
+                >
+                  Can I help you?
+                </Typography>
+                <Box className={classes.chatInput}>
+                  <input
+                    placeholder="Message..."
+                    className={classes.chatInputHtmlTag}
+                    style={{ border: "none", outline: "none" }}
+                  />
+                  <IconButton sx={{ backgroundColor: "#AD9FFF" }}>
+                    <Box
+                      component="img"
+                      className={classes.chatBoxSendIcons}
+                      src="assets/icons/send.svg"
+                      alt="Descriptive Alt Text"
+                    />
+                  </IconButton>
                 </Box>
               </Box>
             </Box>
@@ -162,8 +203,86 @@ const Career = () => {
               before final copy is availableLorem ipsum is a placeholder text
               commonly used to demonstrate the visual form of a documents.
             </Typography>
+            <Box sx={{ margin: "20px 0 0 10px", display: "flex" }}>
+              <Box
+                component="img"
+                className={classes.pinIconBtn}
+                src="assets/icons/tickpurple.svg"
+                alt="Descriptive Alt Text"
+              />
+              <Typography
+                variant="h6"
+                className={classes.whiteText}
+                sx={{ margin: "auto 10px" }}
+              >
+                Security & Privacy
+              </Typography>
+            </Box>
+            <Box sx={{ margin: "20px 0 0 10px", display: "flex" }}>
+              <Box
+                component="img"
+                className={classes.pinIconBtn}
+                src="assets/icons/tickpurple.svg"
+                alt="Descriptive Alt Text"
+              />
+              <Typography
+                variant="h6"
+                className={classes.whiteText}
+                sx={{ margin: "auto 10px" }}
+              >
+                Audience Q&A
+              </Typography>
+            </Box>
+            <Box sx={{ margin: "20px 0 0 10px", display: "flex" }}>
+              <Box
+                component="img"
+                className={classes.pinIconBtn}
+                src="assets/icons/tickpurple.svg"
+                alt="Descriptive Alt Text"
+              />
+              <Typography
+                variant="h6"
+                className={classes.whiteText}
+                sx={{ margin: "auto 10px" }}
+              >
+                Engagement
+              </Typography>
+            </Box>
           </Grid>
         </Grid>
+      </Box>
+      <Box>
+        <Typography align="center" variant="h4">
+          <span style={{ color: pallete.primaryPurple }}>Newest Jobs </span>
+          for You
+        </Typography>
+        <Box className={classes.jobSearchBox}>
+          <Box>
+            <Typography>Location</Typography>
+            <Box sx={{display: 'flex', flexDirection: 'row'}}>
+              <Typography>Select Your City</Typography>
+              <Box
+                component="img"
+                className={classes.pinIconBtn}
+                src="assets/icons/location.svg"
+                alt="Descriptive Alt Text"
+              />
+            </Box>
+          </Box>
+          <Divider orientation="vertical"/>
+          <Box>
+            <Typography>Location</Typography>
+            <Box sx={{display: 'flex', flexDirection: 'row'}}>
+              <Typography>Select Your City</Typography>
+              <Box
+                component="img"
+                className={classes.pinIconBtn}
+                src="assets/icons/location.svg"
+                alt="Descriptive Alt Text"
+              />
+            </Box>
+          </Box>
+        </Box>
       </Box>
     </Container>
   );
@@ -173,19 +292,79 @@ export default Career;
 
 const useStyles = makeStyles()((theme) => {
   return {
-    chatBoxTop:{
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between'
+    jobSearchBox: {
+      borderRadius: "15px 20px 20px 20px",
+      background: "rgba(255, 255, 255, 0.80)",
+      boxShadow: "0px 30px 60px -15px rgba(143, 144, 188, 0.15)",
+    //   backdropFilter: "blur(10px)",
+      display:'flex',
+      flexDirection: 'row',
+      justifyContent: 'center',
+      margin: '20px auto',
+      width :'fit-content'
+    },
+    chatInputHtmlTag: {
+      fontFamily: "Roboto",
+      fontSize: "13px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "16.9px",
+    },
+    chatInput: {
+      borderRadius: "108px",
+      padding: "8px 13px",
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-between",
+      border: "0.542px solid #CFCFD1",
+      marginTop: "20px",
+    },
+    chaterFirstMsg: {
+      borderRadius: "0px 8.667px 8.667px 8.667px",
+      background: "#AD9FFF",
+      padding: "8.667px 13px",
+      color: "#FFF",
+      fontFamily: "Roboto",
+      fontSize: "13px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "6.9px",
+      width: "fit-content",
+      margin: "10px 0",
+    },
+    chaterName: {
+      color: "#0F1017",
+      textAlign: "center",
+      fontFamily: "Roboto",
+      fontSize: "13px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "16.9px",
+      margin: "auto 5px",
+    },
+    chaterTime: {
+      color: "#8A8B96",
+      fontFamily: "Poppins",
+      margin: "auto 5px",
+      fontSize: "8.667px",
+      fontStyle: "normal",
+      fontWeight: 300,
+      lineHeight: "10.4px", //
+      letterSpacing: "0.173px",
+    },
+    chatBoxTop: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-between",
     },
     chatBox: {
       padding: "17px",
-      backgroundColor: '#FFF',
-      position: 'absolute',
-      top: '50px',
-      right: '50px',
-      borderRadius:'16px',
-      width: '257px',
+      backgroundColor: "#FFF",
+      position: "absolute",
+      top: "75px",
+      right: "70px",
+      borderRadius: "16px",
+      width: "257px",
     },
     videoCOntrolsBox: {
       borderRadius: "100px",
@@ -219,6 +398,11 @@ const useStyles = makeStyles()((theme) => {
       ...styles.imagesBox,
       height: "26px",
       width: "26px",
+    },
+    chatBoxSendIcons: {
+      ...styles.imagesBox,
+      height: "17px",
+      width: "17px",
     },
     chatBoxDP: {
       ...styles.imagesBox,
