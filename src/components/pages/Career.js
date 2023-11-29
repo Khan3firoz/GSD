@@ -5,6 +5,7 @@ import {
   Box,
   IconButton,
   Divider,
+  Button,
 } from "@mui/material";
 import React from "react";
 import { makeStyles } from "tss-react/mui";
@@ -257,32 +258,168 @@ const Career = () => {
           for You
         </Typography>
         <Box className={classes.jobSearchBox}>
-          <Box>
-            <Typography>Location</Typography>
-            <Box sx={{display: 'flex', flexDirection: 'row'}}>
-              <Typography>Select Your City</Typography>
+          <Box sx={{ width: "100%" }}>
+            <Typography variant="h5" sx={{ fontWeight: 500, color: "#110229" }}>
+              Location
+            </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                width: "100%",
+              }}
+            >
+              <Typography variant="h6" sx={{ color: "#8F90A6" }}>
+                Select Your City
+              </Typography>
               <Box
                 component="img"
-                className={classes.pinIconBtn}
+                className={classes.chatBoxSendIcons}
                 src="assets/icons/location.svg"
                 alt="Descriptive Alt Text"
               />
             </Box>
           </Box>
-          <Divider orientation="vertical"/>
-          <Box>
-            <Typography>Location</Typography>
-            <Box sx={{display: 'flex', flexDirection: 'row'}}>
-              <Typography>Select Your City</Typography>
+          <Divider className={classes.jobsDivider} orientation="vertical" />
+          <Box sx={{ width: "100%" }}>
+            <Typography variant="h5" sx={{ fontWeight: 500, color: "#110229" }}>
+              Title
+            </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                width: "100%",
+              }}
+            >
+              <Typography variant="h6" sx={{ color: "#8F90A6" }}>
+                Choose job role
+              </Typography>
               <Box
                 component="img"
-                className={classes.pinIconBtn}
-                src="assets/icons/location.svg"
+                className={classes.chatBoxSendIcons}
+                src="assets/icons/downArrow.svg"
                 alt="Descriptive Alt Text"
               />
             </Box>
+          </Box>
+          <Divider className={classes.jobsDivider} orientation="vertical" />
+          <Box>
+            <Button
+              variant="contained"
+              endIcon={
+                <Box
+                  component="img"
+                  className={classes.chatBoxSendIcons}
+                  src="assets/icons/search.svg"
+                  alt="Descriptive Alt Text"
+                />
+              }
+              className={classes.searchBtn}
+            >
+              Search
+            </Button>
           </Box>
         </Box>
+      </Box>
+
+      <Box className={classes.openPositionsBox}>
+        <Typography variant="h4" fontFamily={"Roboto"} align="center">
+          Open Positions
+        </Typography>
+        {[...Array(2)].map((x) => (
+          <Grid key={x} container sx={{ margin: "20px 0" }}>
+            <Grid item md={3.6}>
+              <Typography
+                variant="h6"
+                sx={{ color: "#232323", margin: "0 20px" }}
+              >
+                Department
+              </Typography>
+              <Typography className={classes.jobsTExt}>
+                Customer Success
+              </Typography>
+            </Grid>
+            <Grid item md={3.6}>
+              <Typography
+                variant="h6"
+                sx={{ color: "#232323", margin: "0 20px" }}
+              >
+                Job titile
+              </Typography>
+              <Typography className={classes.jobsTExt}>
+                Performance Marketing Manager
+              </Typography>
+            </Grid>
+            <Grid item md={3.6}>
+              <Typography
+                variant="h6"
+                sx={{ color: "#232323", margin: "0 20px" }}
+              >
+                Location
+              </Typography>
+              <Typography className={classes.jobsTExt}>Remote</Typography>
+            </Grid>
+            <Grid item md={1.19}>
+              <Button variant="contained" className={classes.applyBtn}>
+                Apply
+              </Button>
+            </Grid>
+          </Grid>
+        ))}
+      </Box>
+
+      <Box className={classes.excitingBox}>
+        <Typography align="center" variant="h4">
+          <span style={{ color: pallete.primaryPurple }}>
+            Work with exciting{" "}
+          </span>
+          10+ companies
+        </Typography>
+        <Grid container md={8}>
+          <Grid item md={2.4} sm={6}>
+            <Box
+              component="img"
+              className={classes.compsImg}
+              src="assets/icons/comp1.svg"
+              alt="Descriptive Alt Text"
+            />
+          </Grid>
+          <Grid item md={2.4} sm={6}>
+            <Box
+              component="img"
+              className={classes.compsImg}
+              src="assets/icons/comp1.svg"
+              alt="Descriptive Alt Text"
+            />
+          </Grid>
+          <Grid item md={2.4} sm={6}>
+            <Box
+              component="img"
+              className={classes.compsImg}
+              src="assets/icons/comp1.svg"
+              alt="Descriptive Alt Text"
+            />
+          </Grid>
+          <Grid item md={2.4} sm={6}>
+            <Box
+              component="img"
+              className={classes.compsImg}
+              src="assets/icons/comp1.svg"
+              alt="Descriptive Alt Text"
+            />
+          </Grid>
+          <Grid item md={2.4} sm={6}>
+            <Box
+              component="img"
+              className={classes.compsImg}
+              src="assets/icons/comp1.svg"
+              alt="Descriptive Alt Text"
+            />
+          </Grid>
+        </Grid>
       </Box>
     </Container>
   );
@@ -292,16 +429,56 @@ export default Career;
 
 const useStyles = makeStyles()((theme) => {
   return {
+    excitingBox: {
+      backgroundColor: "#F0E6FBF5",
+      padding: "20px 0",
+      margin: "80px 0",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: 'center'
+    },
+
+    applyBtn: {
+      ...styles.buttonMain,
+      marginTop: "39px",
+      width: "100%",
+    },
+    jobsTExt: {
+      borderRadius: "8px",
+      border: "1px solid #E0E0E0",
+      background: "#FFF",
+      padding: "16px 20px",
+      margin: "10px 15px",
+    },
+    openPositionsBox: {
+      borderRadius: "16px",
+      backgroundColor: "#F4F5F9",
+      margin: "50px",
+      padding: " 20px",
+    },
+    searchBtn: {
+      ...styles.buttonMain,
+      padding: "10px 40px",
+    },
+    jobsDivider: {
+      height: "auto",
+      alignSelf: "stretch",
+      border: "2px solid #DCDCEB",
+      margin: "0 15px",
+    },
     jobSearchBox: {
       borderRadius: "15px 20px 20px 20px",
       background: "rgba(255, 255, 255, 0.80)",
       boxShadow: "0px 30px 60px -15px rgba(143, 144, 188, 0.15)",
-    //   backdropFilter: "blur(10px)",
-      display:'flex',
-      flexDirection: 'row',
-      justifyContent: 'center',
-      margin: '20px auto',
-      width :'fit-content'
+      //   backdropFilter: "blur(10px)",
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-between",
+      margin: "50px auto",
+      width: "fit-content",
+      padding: "20px 50px",
+      minWidth: "747px",
     },
     chatInputHtmlTag: {
       fontFamily: "Roboto",
@@ -403,6 +580,11 @@ const useStyles = makeStyles()((theme) => {
       ...styles.imagesBox,
       height: "17px",
       width: "17px",
+    },
+    compsImg: {
+      ...styles.imagesBox,
+      height: "130px",
+      width: "130px",
     },
     chatBoxDP: {
       ...styles.imagesBox,
