@@ -9,6 +9,7 @@ import Footer from "./components/pages/Footer"
 import { makeStyles } from "tss-react/mui";
 import AboutUs from "./components/pages/AboutUs";
 import Career from "./components/pages/Career";
+import MeetTheTeam from "./components/pages/MeetTheTeam";
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -31,6 +32,7 @@ export default function App() {
             <Route exact path="/" element={<Home />} />
             <Route exact path="/career" element={<Career />} />
             <Route exact path="/about-us" element={<AboutUs />} />
+            <Route exact path="/meet-team" element={<MeetTheTeam />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
