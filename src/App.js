@@ -10,6 +10,7 @@ import { makeStyles } from "tss-react/mui";
 import AboutUs from "./components/pages/AboutUs";
 import Career from "./components/pages/Career";
 import MeetTheTeam from "./components/pages/MeetTheTeam";
+import BlogPage from "./components/pages/Blog";
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -33,6 +34,7 @@ export default function App() {
             <Route exact path="/career" element={<Career />} />
             <Route exact path="/about-us" element={<AboutUs />} />
             <Route exact path="/meet-team" element={<MeetTheTeam />} />
+            <Route exact path="/blog-page" element={<BlogPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
