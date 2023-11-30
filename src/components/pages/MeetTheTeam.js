@@ -6,11 +6,10 @@ import {
   IconButton,
   Divider,
   Button,
-  
 } from "@mui/material";
-import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
-import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
-import React from 'react';
+import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
+import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
+import React from "react";
 import { makeStyles } from "tss-react/mui";
 import { styles } from "../css/CommonCSS";
 import { pallete } from "../css/Theme";
@@ -19,26 +18,24 @@ import { Gradient } from "@mui/icons-material";
 const MeetTheTeam = () => {
   const { classes } = useStyles();
   const placeholderImages = [
-    'assets/images/meetTheTeam/9.png',
-    'assets/images/meetTheTeam/10.png',
-    'assets/images/meetTheTeam/11.png',
-    'assets/images/meetTheTeam/12.png',
-    'assets/images/meetTheTeam/13.png',
+    "assets/images/meetTheTeam/9.png",
+    "assets/images/meetTheTeam/10.png",
+    "assets/images/meetTheTeam/11.png",
+    "assets/images/meetTheTeam/12.png",
+    "assets/images/meetTheTeam/13.png",
   ];
-  
-  return (
 
+  return (
     <div>
-       <Container maxWidth={false} className={classes.mainContainer}>
-       <Grid container className={classes.mainGrid}>
-          <Grid item md={6} >
-            <Typography className={classes.mainText} >
-            Meet Our Dedicated Virtual Assistant Team
+      <Container maxWidth={false} className={classes.mainContainer}>
+        <Grid container className={classes.mainGrid}>
+          <Grid item md={6}>
+            <Typography className={classes.mainText}>
+              Meet Our Dedicated Virtual Assistant Team
             </Typography>
-            <Typography className={classes.secondHeading} >
-            Experienced Professionals at Your Service.
+            <Typography className={classes.secondHeading}>
+              Experienced Professionals at Your Service.
             </Typography>
-            
           </Grid>
           <Grid item md={6} className={classes.columnsGridRight}>
             <Box className={classes.homemenBox}>
@@ -74,118 +71,120 @@ const MeetTheTeam = () => {
               />
             </Box>
           </Grid>
-          </Grid>
-       </Container>
-       {/* section-2*/}
-       <Container maxWidth={false} className={classes.container2} >
-       <Grid container sx={{ height: "100%" }}>
-       <Grid item md={6} className={classes.serviceLftGrid}>
+        </Grid>
+      </Container>
+      {/* section-2*/}
+      <Container maxWidth={false} className={classes.container2}>
+        <Grid container sx={{ height: "100%" }}>
+          <Grid item md={6} className={classes.serviceLftGrid}>
             <img
               alt="group"
-              src = "assets/images/meetTheTeam/7.png"
+              src="assets/images/meetTheTeam/7.png"
               className={classes.groupImg}
             />
             <img
               alt="girl"
-              src = "assets/images/meetTheTeam/8.png"
+              src="assets/images/meetTheTeam/8.png"
               className={classes.onewomenImg}
             />
-            
-            
-       </Grid>
+          </Grid>
           <Grid item md={6} className={classes.serviceRightTextBox}>
             <Box>
               <Typography className={classes.serveceBelo}>
                 <span style={{ color: pallete.primaryPurple }}>
-                Lorem ipsum{" "}
+                  Lorem ipsum{" "}
                 </span>{" "}
                 placeholder text
               </Typography>
               <Typography className={classes.paraText}>
-              In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form.In publishing and graphic design.In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form.In publishing and graphic design.In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form.In publishing and graphic design.In publishing and graphic design, Lorem ipsum is a placeholder.
+                In publishing and graphic design, Lorem ipsum is a placeholder
+                text commonly used to demonstrate the visual form.In publishing
+                and graphic design.In publishing and graphic design, Lorem ipsum
+                is a placeholder text commonly used to demonstrate the visual
+                form.In publishing and graphic design.In publishing and graphic
+                design, Lorem ipsum is a placeholder text commonly used to
+                demonstrate the visual form.In publishing and graphic design.In
+                publishing and graphic design, Lorem ipsum is a placeholder.
               </Typography>
-              </Box>
+            </Box>
           </Grid>
         </Grid>
-
-        </Container>
-        {/* meet our team section-3*/}
-       {<Container maxWidth={false} className={classes.container3}>
-      
-       <Box>
-       <Typography align="center" className={classes.serveceBelo}>
-                <span style={{ color: pallete.primaryPurple }}>
-                Meet{" "}
-                </span>{" "}
-                our Team
-              </Typography>
-        <Typography align="center" fontSize="14px" className={classes.section3paraText}>
-        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form.In publishing and graphic design.
-        </Typography>
-              </Box>
-              <Grid container justifyContent="center" spacing={2}>
-        
-        {placeholderImages.slice(0, 5).map((placeholder, index) => (
-          <Grid item key={index}>
-            <div
-              style={{
-                width: '100px',
-                height: '100px',
-                borderRadius: '50%',
-                overflow: 'hidden',
-                position: 'relative',
-                border: '2px solid #fff',
-              }}
+      </Container>
+      {/* meet our team section-3*/}
+      {
+        <Container maxWidth={false} className={classes.container3}>
+          <Box>
+            <Typography align="center" className={classes.serveceBelo}>
+              <span style={{ color: pallete.primaryPurple }}>Meet </span> our
+              Team
+            </Typography>
+            <Typography
+              align="center"
+              fontSize="14px"
+              className={classes.section3paraText}
             >
-              <img
-                src={placeholder}
-                alt={`Placeholder ${index + 1}`}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-            </div>
+              In publishing and graphic design, Lorem ipsum is a placeholder
+              text commonly used to demonstrate the visual form.In publishing
+              and graphic design.
+            </Typography>
+          </Box>
+          <Grid container justifyContent="center" spacing={2}>
+            {placeholderImages.slice(0, 5).map((placeholder, index) => (
+              <Grid item key={index}>
+                <div
+                  style={{
+                    width: "100px",
+                    height: "100px",
+                    borderRadius: "50%",
+                    overflow: "hidden",
+                    position: "relative",
+                    border: "2px solid #fff",
+                  }}
+                >
+                  <img
+                    src={placeholder}
+                    alt={`Placeholder ${index + 1}`}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+              </Grid>
+            ))}
           </Grid>
-        ))}
-      </Grid>
 
-      <Grid container justifyContent="center" mt={2}>
-        <Grid item>
-          <Button startIcon={<ArrowBackIosRoundedIcon />} >
-           
-          </Button>
-        </Grid>
-        <Grid item>
-          <Button endIcon={<ArrowForwardIosRoundedIcon/>} >
-         
-          </Button>
-        </Grid>
-      </Grid>
-        
-       </Container>}
-       {/*section-4*/ }
-       <Container maxWidth={false} className={classes.container4}>
-       <Grid container sx={{ height: "100%" }} spacing={2} >
-        <Grid item md={6} className={classes.serviceLftGridSection3}>
-        
-         <Typography className={classes.section3heading}>
-         Dedicated Team
-          </Typography>
-         
-        </Grid>
-        <Grid item md={6} className={classes.serviceRghtGrid}>
-      
-        <img
+          <Grid container justifyContent="center" mt={2}>
+            <Grid item>
+              <Button startIcon={<ArrowBackIosRoundedIcon />}></Button>
+            </Grid>
+            <Grid item>
+              <Button endIcon={<ArrowForwardIosRoundedIcon />}></Button>
+            </Grid>
+          </Grid>
+        </Container>
+      }
+      {/*section-4*/}
+      <Container maxWidth={false} className={classes.container4}>
+        <Grid container sx={{ height: "100%" }} spacing={2}>
+          <Grid item md={6} className={classes.serviceLftGridSection3}>
+            <Typography className={classes.section3heading}>
+              Dedicated Team
+            </Typography>
+          </Grid>
+          <Grid item md={6} className={classes.serviceRghtGrid}>
+            <img
               alt="group-2"
-              src = "assets/images/meetTheTeam/14.png"
+              src="assets/images/meetTheTeam/14.png"
               className={classes.groupImg}
             />
-           
+          </Grid>
         </Grid>
-        </Grid>
-       
-       </Container>
-           </div>
-  )
-}
+      </Container>
+    </div>
+  );
+};
 
 export default MeetTheTeam;
 const useStyles = makeStyles()((theme) => {
@@ -193,13 +192,12 @@ const useStyles = makeStyles()((theme) => {
     efficiencyCon: {},
     serviceRightTextBox: {
       margin: "auto",
-      //padding: "20px 60px",
     },
-    boxStyle : {
+    boxStyle: {
       height: "100px",
-      textAlign: 'center',
+      textAlign: "center",
       padding: "20px",
-      border: '1px solid #ccc', // Optional: Add border for visibility
+      border: "1px solid #ccc", // Optional: Add border for visibility
     },
     allPppsGrdBox: {
       padding: "40px",
@@ -207,12 +205,12 @@ const useStyles = makeStyles()((theme) => {
         padding: "20px 0",
       },
     },
-    section3paraText:{
+    section3paraText: {
       color: "#030303",
       fontSize: "14px",
-      marginLeft:"18.125rem",
-      marginTop:"10px",
-      marginBottom:"10px",
+      marginLeft: "18.125rem",
+      marginTop: "10px",
+      marginBottom: "10px",
       width: "692px",
 
       textAlign: "center",
@@ -221,19 +219,17 @@ const useStyles = makeStyles()((theme) => {
 
       fontStyle: "normal",
       fontWeight: "400",
-      lineHeight: "20px"/* 133.333% */
+      lineHeight: "20px" /* 133.333% */,
     },
-    section3heading:{
+    section3heading: {
       color: "#FFF",
       fontFamily: "Roboto",
       fontsize: "18px",
       fontstyle: "normal",
       fontWeight: "500",
-      lineHeight: "normal"
+      lineHeight: "normal",
     },
 
-    
-    
     appbgleft: {
       position: "absolute",
       left: 0,
@@ -247,7 +243,7 @@ const useStyles = makeStyles()((theme) => {
     homemenBox: {
       position: "relative",
     },
-    
+
     articalsPara: {
       color: "#2E2E2E",
       fontSize: "16px",
@@ -256,9 +252,8 @@ const useStyles = makeStyles()((theme) => {
       lineHeight: "26px",
       fontFamily: "Roboto",
     },
-    
-    
-    firstImg:{
+
+    firstImg: {
       width: "219.167px",
       height: "158.716px",
       position: "relative",
@@ -266,9 +261,9 @@ const useStyles = makeStyles()((theme) => {
         height: "00px",
         width: "300px",
       },
-      border: '1px solid white', // 1px solid white border
+      border: "1px solid white", // 1px solid white border
     },
-    secondImg:{
+    secondImg: {
       width: "125.751px",
       height: "57.082px",
       position: "relative",
@@ -276,9 +271,9 @@ const useStyles = makeStyles()((theme) => {
         height: "00px",
         width: "300px",
       },
-      border: '1px solid white', // 1px solid white border
+      border: "1px solid white", // 1px solid white border
     },
-    thirdImg:{
+    thirdImg: {
       width: "219.167px",
       height: "158.716px",
       position: "relative",
@@ -286,9 +281,9 @@ const useStyles = makeStyles()((theme) => {
         height: "00px",
         width: "300px",
       },
-      border: '1px solid white', // 1px solid white border
+      border: "1px solid white", // 1px solid white border
     },
-    fourthImg:{
+    fourthImg: {
       width: "143.45px",
       height: "79.324px",
       position: "relative",
@@ -296,35 +291,33 @@ const useStyles = makeStyles()((theme) => {
         height: "00px",
         width: "300px",
       },
-      border: '1px solid white', // 1px solid white border
+      border: "1px solid white", // 1px solid white border
     },
-    fifthImg:{
-      width: "219.167px",
-height: "158.716px",
-      position: "relative",
-      [theme.breakpoints.down("sm")]: {
-        height: "00px",
-        width: "300px",
-      },
-      border: '1px solid white', // 1px solid white border
-    },
-    sixthImg:{
+    fifthImg: {
       width: "219.167px",
       height: "158.716px",
       position: "relative",
       [theme.breakpoints.down("sm")]: {
         height: "00px",
         width: "300px",
-      },border: '1px solid white', // 1px solid white border
+      },
+      border: "1px solid white", // 1px solid white border
     },
-  
- 
+    sixthImg: {
+      width: "219.167px",
+      height: "158.716px",
+      position: "relative",
+      [theme.breakpoints.down("sm")]: {
+        height: "00px",
+        width: "300px",
+      },
+      border: "1px solid white", // 1px solid white border
+    },
+
     efficiencyBoxLeft: {
       padding: "100px 20px",
     },
-    
-    
-    
+
     paraText: {
       fontFamily: "Roboto",
       color: "#030303",
@@ -332,26 +325,24 @@ height: "158.716px",
       fontStyle: "normal",
       fontWeight: 400,
       lineHeight: "30px",
-      marginTop:"20px"
+      marginTop: "20px",
     },
     onewomenImg: {
       position: "absolute",
       width: "244px",
       height: "232px",
-      marginLeft:"380px",
-      marginTop:"90px",
-      border:"20px solid white"
+      marginLeft: "380px",
+      marginTop: "90px",
+      border: "20px solid white",
     },
-    groupImg:{
+    groupImg: {
       position: "absolute",
       width: "571px",
       height: "332px",
-      marginTop:"-70px",
-      marginLeft:"30px"
-      
-
+      marginTop: "-70px",
+      marginLeft: "30px",
     },
-    
+
     serviceLftGrid: {
       position: "relative",
       padding: "30px 15px",
@@ -362,7 +353,7 @@ height: "158.716px",
     serviceLftGridSection3: {
       position: "relative",
       //padding: "30px 15px",
-      background:"#2E2E2E",
+      background: "#2E2E2E",
       [theme.breakpoints.down("sm")]: {
         display: "none",
       },
@@ -427,7 +418,7 @@ height: "158.716px",
       fontWeight: 700,
       lineHeight: "24px",
     },
- 
+
     secondHeading: {
       fontSize: "18px",
       fontStyle: "normal",
@@ -469,23 +460,22 @@ height: "158.716px",
     mainContainer: {
       marginTop: "110px",
       height: "80vh",
-      background:"linear-Gradient(180deg,#DECAF4 0%,#EDC9DB 100%)",
-      
-      backgroundColor: "linear-gradint(180deg,#DECAF4 0%,#EDC9DB 100%)"
-    },
-    container2:{
-      marginTop: "110px",
-      height: "60vh",
-    },
-    container3:{
-      marginTop: "110px",
-      height: "60vh",
-      background: "#F0E6FB"
+      background: "linear-Gradient(180deg,#DECAF4 0%,#EDC9DB 100%)",
 
+      backgroundColor: "linear-gradint(180deg,#DECAF4 0%,#EDC9DB 100%)",
     },
-    container4:{
+    container2: {
       marginTop: "110px",
       height: "60vh",
-    }
+    },
+    container3: {
+      marginTop: "110px",
+      height: "60vh",
+      background: "#F0E6FB",
+    },
+    container4: {
+      marginTop: "110px",
+      height: "60vh",
+    },
   };
 });
