@@ -4,8 +4,6 @@ import {
   Typography,
   Box,
   Button,
-  Paper
-
 } from "@mui/material";
 import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
@@ -13,7 +11,7 @@ import React from 'react';
 import { makeStyles } from "tss-react/mui";
 import { styles } from "../css/CommonCSS";
 import { pallete } from "../css/Theme";
-import { Gradient } from "@mui/icons-material";
+
 
 const MeetTheTeam = () => {
   const { classes } = useStyles();
@@ -162,15 +160,28 @@ const MeetTheTeam = () => {
       </Container>}
       {/*section-4*/}
       <Container className={classes.container4}>
-        <div className={classes.containerbox}>
-          <div className={classes.box1}></div>
-          <div className={classes.box2}>
+        <Grid container className={classes.containerbox}>
+          <Grid item className={classes.box1}>
+            <Box className={classes.insidebox1}>
+              <Typography className={classes.section4heading}>
+                Dedicated Team
+              </Typography>
+              <Typography className={classes.section4subHeading}>
+                Professional Individuals
+              </Typography>
+              <Typography className={classes.section4ParaText}>
+                Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.Lorem ipsum is a placeholder text commonly.
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item className={classes.box2}>
             <img
               alt="img"
-              src="ssets/images/meetTheTeam/14.png"
+              src="assets/images/meetTheTeam/14.png"
+              className={classes.section4img}
             />
-          </div>
-        </div>
+          </Grid>
+        </Grid>
       </Container>
     </div >
   )
@@ -184,18 +195,58 @@ const useStyles = makeStyles()((theme) => {
       margin: "auto",
       //padding: "20px 60px",
     },
+    insidebox1: {
+
+      width: "400px",
+      height: "400px",
+      padding: "88px 48px",
+      flexdirection: "column",
+      alignitems: "flex-start",
+      gap: "10px",
+      flexshrink: "0"
+    },
+    section4heading: {
+      color: "#FFF",
+      fontfamily: "Roboto",
+      fontSize: "18px",
+      fontStyle: "normal",
+      fontWeight: "500",
+      lineheight: "normal"
+    },
+    section4subHeading: {
+      color: "#FFF",
+      fontFamily: "Roboto",
+      fontSize: "27px",
+      fontStyle: "normal",
+      fontWeight: "600",
+      lineheight: "50%" /* 48.4px */
+    },
+    section4ParaText: {
+      color: "#FFF",
+      fonFamily: "Roboto",
+      fontSize: "16px",
+      fontStyle: "normal",
+      fontWeight: "400",
+      lineheight: "113.187%", /* 23.39px */
+      
+    },
+    section4img: {
+      height: "450px",
+      width: "450px"
+    },
     containerbox: {
       display: "flex",
-      alignItems: "center"
+      alignItems: "center",
+      paddingLeft: "150px"
     },
     box1: {
-      height: "200px",
-      width: "200px",
+      height: "450px",
+      width: "450px",
       backgroundColor: "black"
     },
     box2: {
-      height: "200px",
-      width: "200px",
+      height: "450px",
+      width: "450px",
       backgroundColor: "red"
     },
     boxStyle: {
@@ -542,7 +593,7 @@ const useStyles = makeStyles()((theme) => {
     },
     container3: {
       marginTop: "110px",
-      height: "60vh",
+      height: "80vh",
       background: "#F0E6FB"
 
     },
