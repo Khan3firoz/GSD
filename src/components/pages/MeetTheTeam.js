@@ -1,41 +1,32 @@
-import {
-  Container,
-  Grid,
-  Typography,
-  Box,
-  Button,
-} from "@mui/material";
-import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
-import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
-import React from 'react';
+import { Container, Grid, Typography, Box, Button } from "@mui/material";
+import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
+import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
+import React from "react";
 import { makeStyles } from "tss-react/mui";
 import { styles } from "../css/CommonCSS";
 import { pallete } from "../css/Theme";
 
-
 const MeetTheTeam = () => {
   const { classes } = useStyles();
   const placeholderImages = [
-    'assets/images/meetTheTeam/9.png',
-    'assets/images/meetTheTeam/10.png',
-    'assets/images/meetTheTeam/11.png',
-    'assets/images/meetTheTeam/12.png',
-    'assets/images/meetTheTeam/13.png',
+    "assets/images/meetTheTeam/9.png",
+    "assets/images/meetTheTeam/10.png",
+    "assets/images/meetTheTeam/11.png",
+    "assets/images/meetTheTeam/12.png",
+    "assets/images/meetTheTeam/13.png",
   ];
 
   return (
-
     <div>
       <Container maxWidth={false} className={classes.mainContainer}>
         <Grid container className={classes.mainGrid}>
-          <Grid item md={6} >
-            <Typography className={classes.mainText} >
+          <Grid item md={6}>
+            <Typography className={classes.mainText}>
               Meet Our Dedicated Virtual Assistant Team
             </Typography>
-            <Typography className={classes.secondHeading} >
+            <Typography className={classes.secondHeading}>
               Experienced Professionals at Your Service.
             </Typography>
-
           </Grid>
           <Grid item md={6} className={classes.columnsGridRight}>
             <Box className={classes.homemenBox}>
@@ -74,7 +65,7 @@ const MeetTheTeam = () => {
         </Grid>
       </Container>
       {/* section-2*/}
-      <Container maxWidth={false} className={classes.container2} >
+      <Container maxWidth={false} className={classes.container2}>
         <Grid container sx={{ height: "100%" }}>
           <Grid item md={6} className={classes.serviceLftGrid}>
             <img
@@ -87,8 +78,6 @@ const MeetTheTeam = () => {
               src="assets/images/meetTheTeam/8.png"
               className={classes.onewomenImg}
             />
-
-
           </Grid>
           <Grid item md={6} className={classes.serviceRightTextBox}>
             <Box>
@@ -99,65 +88,74 @@ const MeetTheTeam = () => {
                 placeholder text
               </Typography>
               <Typography className={classes.paraText}>
-                In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form.In publishing and graphic design.In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form.In publishing and graphic design.In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form.In publishing and graphic design.In publishing and graphic design, Lorem ipsum is a placeholder.
+                In publishing and graphic design, Lorem ipsum is a placeholder
+                text commonly used to demonstrate the visual form.In publishing
+                and graphic design.In publishing and graphic design, Lorem ipsum
+                is a placeholder text commonly used to demonstrate the visual
+                form.In publishing and graphic design.In publishing and graphic
+                design, Lorem ipsum is a placeholder text commonly used to
+                demonstrate the visual form.In publishing and graphic design.In
+                publishing and graphic design, Lorem ipsum is a placeholder.
               </Typography>
             </Box>
           </Grid>
         </Grid>
-
       </Container>
       {/* meet our team section-3*/}
-      {<Container maxWidth={false} className={classes.container3}>
+      {
+        <Container maxWidth={false} className={classes.container3}>
+          <Box>
+            <Typography align="center" className={classes.serveceBelo}>
+              <span style={{ color: pallete.primaryPurple }}>Meet </span> our
+              Team
+            </Typography>
+            <Typography
+              align="center"
+              fontSize="14px"
+              className={classes.section3paraText}
+            >
+              In publishing and graphic design, Lorem ipsum is a placeholder
+              text commonly used to demonstrate the visual form.In publishing
+              and graphic design.
+            </Typography>
+          </Box>
+          <Grid container justifyContent="center" spacing={2}>
+            {placeholderImages.slice(0, 5).map((placeholder, index) => (
+              <Grid item key={index}>
+                <div
+                  style={{
+                    width: "100px",
+                    height: "100px",
+                    borderRadius: "50%",
+                    overflow: "hidden",
+                    position: "relative",
+                    border: "2px solid #fff",
+                  }}
+                >
+                  <img
+                    src={placeholder}
+                    alt={`Placeholder ${index + 1}`}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+              </Grid>
+            ))}
+          </Grid>
 
-        <Box>
-          <Typography align="center" className={classes.serveceBelo}>
-            <span style={{ color: pallete.primaryPurple }}>
-              Meet{" "}
-            </span>{" "}
-            our Team
-          </Typography>
-          <Typography align="center" fontSize="14px" className={classes.section3paraText}>
-            In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form.In publishing and graphic design.
-          </Typography>
-        </Box>
-        <Grid container justifyContent="center" spacing={2}>
-
-          {placeholderImages.slice(0, 5).map((placeholder, index) => (
-            <Grid item key={index}>
-              <div
-                style={{
-                  width: '100px',
-                  height: '100px',
-                  borderRadius: '50%',
-                  overflow: 'hidden',
-                  position: 'relative',
-                  border: '2px solid #fff',
-                }}
-              >
-                <img
-                  src={placeholder}
-                  alt={`Placeholder ${index + 1}`}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              </div>
+          <Grid container justifyContent="center" mt={2}>
+            <Grid item>
+              <Button startIcon={<ArrowBackIosRoundedIcon />}></Button>
             </Grid>
-          ))}
-        </Grid>
-
-        <Grid container justifyContent="center" mt={2}>
-          <Grid item>
-            <Button startIcon={<ArrowBackIosRoundedIcon />} >
-
-            </Button>
+            <Grid item>
+              <Button endIcon={<ArrowForwardIosRoundedIcon />}></Button>
+            </Grid>
           </Grid>
-          <Grid item>
-            <Button endIcon={<ArrowForwardIosRoundedIcon />} >
-
-            </Button>
-          </Grid>
-        </Grid>
-
-      </Container>}
+        </Container>
+      }
       {/*section-4*/}
       <Container className={classes.container4}>
         <Grid container className={classes.containerbox}>
@@ -170,7 +168,12 @@ const MeetTheTeam = () => {
                 Professional Individuals
               </Typography>
               <Typography className={classes.section4ParaText}>
-                Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.Lorem ipsum is a placeholder text commonly.
+                Lorem ipsum is a placeholder text commonly used to demonstrate
+                the visual form of a document or a typeface without relying on
+                meaningful content. Lorem ipsum is a placeholder text commonly
+                used to demonstrate the visual form of a document or a typeface
+                without relying on meaningful content.Lorem ipsum is a
+                placeholder text commonly.
               </Typography>
             </Box>
           </Grid>
@@ -183,9 +186,9 @@ const MeetTheTeam = () => {
           </Grid>
         </Grid>
       </Container>
-    </div >
-  )
-}
+    </div>
+  );
+};
 
 export default MeetTheTeam;
 const useStyles = makeStyles()((theme) => {
@@ -196,14 +199,13 @@ const useStyles = makeStyles()((theme) => {
       //padding: "20px 60px",
     },
     insidebox1: {
-
       width: "400px",
       height: "400px",
       padding: "88px 48px",
       flexdirection: "column",
       alignitems: "flex-start",
       gap: "10px",
-      flexshrink: "0"
+      flexshrink: "0",
     },
     section4heading: {
       color: "#FFF",
@@ -211,7 +213,7 @@ const useStyles = makeStyles()((theme) => {
       fontSize: "18px",
       fontStyle: "normal",
       fontWeight: "500",
-      lineheight: "normal"
+      lineheight: "normal",
     },
     section4subHeading: {
       color: "#FFF",
@@ -219,7 +221,7 @@ const useStyles = makeStyles()((theme) => {
       fontSize: "27px",
       fontStyle: "normal",
       fontWeight: "600",
-      lineheight: "50%" /* 48.4px */
+      lineheight: "50%" /* 48.4px */,
     },
     section4ParaText: {
       color: "#FFF",
@@ -227,33 +229,32 @@ const useStyles = makeStyles()((theme) => {
       fontSize: "16px",
       fontStyle: "normal",
       fontWeight: "400",
-      lineheight: "113.187%", /* 23.39px */
-      
+      lineheight: "113.187%" /* 23.39px */,
     },
     section4img: {
       height: "450px",
-      width: "450px"
+      width: "450px",
     },
     containerbox: {
       display: "flex",
       alignItems: "center",
-      paddingLeft: "150px"
+      paddingLeft: "150px",
     },
     box1: {
       height: "450px",
       width: "450px",
-      backgroundColor: "black"
+      backgroundColor: "black",
     },
     box2: {
       height: "450px",
       width: "450px",
-      backgroundColor: "red"
+      backgroundColor: "red",
     },
     boxStyle: {
       height: "100px",
-      textAlign: 'center',
+      textAlign: "center",
       padding: "20px",
-      border: '1px solid #ccc', // Optional: Add border for visibility
+      border: "1px solid #ccc", // Optional: Add border for visibility
     },
     allPppsGrdBox: {
       padding: "40px",
@@ -276,7 +277,7 @@ const useStyles = makeStyles()((theme) => {
 
       fontStyle: "normal",
       fontWeight: "400",
-      lineHeight: "20px",/* 133.333% */
+      lineHeight: "20px" /* 133.333% */,
       [theme.breakpoints.down("sm")]: {
         height: "00px",
         width: "300px",
@@ -284,7 +285,7 @@ const useStyles = makeStyles()((theme) => {
         display: "flex",
         alignItems: "center",
         textAlign: "center",
-        justifyContent: "center"
+        justifyContent: "center",
       },
     },
     section3heading: {
@@ -293,7 +294,7 @@ const useStyles = makeStyles()((theme) => {
       fontsize: "18px",
       fontstyle: "normal",
       fontWeight: "500",
-      lineHeight: "normal"
+      lineHeight: "normal",
     },
     section2subheading: {
       color: "#FFF",
@@ -301,7 +302,7 @@ const useStyles = makeStyles()((theme) => {
       fontSize: "40px",
       fontStyle: "normal",
       fontWeight: "600",
-      lineHeight: "121%"/* 48.4px */
+      lineHeight: "121%" /* 48.4px */,
     },
     section3paraText2: {
       color: "#FFF",
@@ -309,13 +310,12 @@ const useStyles = makeStyles()((theme) => {
       fontSize: "16px",
       fontStyle: "normal",
       fontWeight: "400",
-      lineHeight: "146.187%", /* 23.39px */
+      lineHeight: "146.187%" /* 23.39px */,
       [theme.breakpoints.down("sm")]: {
         height: "00px",
         width: "300px",
       },
     },
-
 
     appbgleft: {
       position: "absolute",
@@ -340,7 +340,6 @@ const useStyles = makeStyles()((theme) => {
       fontFamily: "Roboto",
     },
 
-
     firstImg: {
       width: "219.167px",
       height: "158.716px",
@@ -349,7 +348,7 @@ const useStyles = makeStyles()((theme) => {
         height: "00px",
         width: "300px",
       },
-      border: '1px solid white', // 1px solid white border
+      border: "1px solid white", // 1px solid white border
     },
     secondImg: {
       width: "125.751px",
@@ -359,7 +358,7 @@ const useStyles = makeStyles()((theme) => {
         height: "00px",
         width: "300px",
       },
-      border: '1px solid white', // 1px solid white border
+      border: "1px solid white", // 1px solid white border
     },
     thirdImg: {
       width: "219.167px",
@@ -369,7 +368,7 @@ const useStyles = makeStyles()((theme) => {
         height: "00px",
         width: "300px",
       },
-      border: '1px solid white', // 1px solid white border
+      border: "1px solid white", // 1px solid white border
     },
     fourthImg: {
       width: "143.45px",
@@ -379,7 +378,7 @@ const useStyles = makeStyles()((theme) => {
         height: "00px",
         width: "300px",
       },
-      border: '1px solid white', // 1px solid white border
+      border: "1px solid white", // 1px solid white border
     },
     fifthImg: {
       width: "219.167px",
@@ -389,7 +388,7 @@ const useStyles = makeStyles()((theme) => {
         height: "00px",
         width: "300px",
       },
-      border: '1px solid white', // 1px solid white border
+      border: "1px solid white", // 1px solid white border
     },
     sixthImg: {
       width: "219.167px",
@@ -398,15 +397,13 @@ const useStyles = makeStyles()((theme) => {
       [theme.breakpoints.down("sm")]: {
         height: "00px",
         width: "300px",
-      }, border: '1px solid white', // 1px solid white border
+      },
+      border: "1px solid white", // 1px solid white border
     },
-
 
     efficiencyBoxLeft: {
       padding: "100px 20px",
     },
-
-
 
     paraText: {
       fontFamily: "Roboto",
@@ -415,7 +412,7 @@ const useStyles = makeStyles()((theme) => {
       fontStyle: "normal",
       fontWeight: 400,
       lineHeight: "30px",
-      marginTop: "20px"
+      marginTop: "20px",
     },
     onewomenImg: {
       position: "absolute",
@@ -423,21 +420,17 @@ const useStyles = makeStyles()((theme) => {
       height: "232px",
       marginLeft: "380px",
       marginTop: "90px",
-      border: "20px solid white"
+      border: "20px solid white",
     },
     groupImg: {
       position: "absolute",
       width: "571px",
       height: "332px",
       marginTop: "-70px",
-      marginLeft: "30px"
-
-
+      marginLeft: "30px",
     },
     smallGrid: {
       display: "flex",
-
-
 
       width: "559px",
       height: "501px",
@@ -585,7 +578,7 @@ const useStyles = makeStyles()((theme) => {
       height: "80vh",
       background: "linear-Gradient(180deg,#DECAF4 0%,#EDC9DB 100%)",
 
-      backgroundColor: "linear-gradint(180deg,#DECAF4 0%,#EDC9DB 100%)"
+      backgroundColor: "linear-gradint(180deg,#DECAF4 0%,#EDC9DB 100%)",
     },
     container2: {
       marginTop: "110px",
@@ -594,12 +587,11 @@ const useStyles = makeStyles()((theme) => {
     container3: {
       marginTop: "110px",
       height: "80vh",
-      background: "#F0E6FB"
-
+      background: "#F0E6FB",
     },
     container4: {
       marginTop: "110px",
       height: "100vh",
-    }
+    },
   };
 });
