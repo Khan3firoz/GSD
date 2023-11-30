@@ -14,15 +14,16 @@ import React from 'react';
 import { makeStyles } from "tss-react/mui";
 import { styles } from "../css/CommonCSS";
 import { pallete } from "../css/Theme";
+import { Gradient } from "@mui/icons-material";
 
 const MeetTheTeam = () => {
   const { classes } = useStyles();
   const placeholderImages = [
-    '',
-    '',
-    '',
-    '',
-    '',
+    'assets/images/meetTheTeam/9.png',
+    'assets/images/meetTheTeam/10.png',
+    'assets/images/meetTheTeam/11.png',
+    'assets/images/meetTheTeam/12.png',
+    'assets/images/meetTheTeam/13.png',
   ];
   
   return (
@@ -75,20 +76,23 @@ const MeetTheTeam = () => {
           </Grid>
           </Grid>
        </Container>
-       <Container maxWidth={false} >
+       {/* section-2*/}
+       <Container maxWidth={false} className={classes.container2} >
        <Grid container sx={{ height: "100%" }}>
        <Grid item md={6} className={classes.serviceLftGrid}>
             <img
-              alt="dots"
-              
+              alt="group"
+              src = "assets/images/meetTheTeam/7.png"
+              className={classes.groupImg}
             />
             <img
-              alt="mens"
-              
+              alt="girl"
+              src = "assets/images/meetTheTeam/8.png"
+              className={classes.onewomenImg}
             />
             
             
-          </Grid>
+       </Grid>
           <Grid item md={6} className={classes.serviceRightTextBox}>
             <Box>
               <Typography className={classes.serveceBelo}>
@@ -101,11 +105,13 @@ const MeetTheTeam = () => {
               In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form.In publishing and graphic design.In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form.In publishing and graphic design.In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form.In publishing and graphic design.In publishing and graphic design, Lorem ipsum is a placeholder.
               </Typography>
               </Box>
-              </Grid>
-              </Grid>
+          </Grid>
+        </Grid>
 
         </Container>
-       <Container maxWidth={false}>
+        {/* meet our team section-3*/}
+       {<Container maxWidth={false} className={classes.container3}>
+      
        <Box>
        <Typography align="center" className={classes.serveceBelo}>
                 <span style={{ color: pallete.primaryPurple }}>
@@ -113,6 +119,9 @@ const MeetTheTeam = () => {
                 </span>{" "}
                 our Team
               </Typography>
+        <Typography align="center" fontSize="14px" className={classes.section3paraText}>
+        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form.In publishing and graphic design.
+        </Typography>
               </Box>
               <Grid container justifyContent="center" spacing={2}>
         
@@ -125,7 +134,7 @@ const MeetTheTeam = () => {
                 borderRadius: '50%',
                 overflow: 'hidden',
                 position: 'relative',
-                border: '2px solid #fff', // Add border if needed
+                border: '2px solid #fff',
               }}
             >
               <img
@@ -151,6 +160,28 @@ const MeetTheTeam = () => {
         </Grid>
       </Grid>
         
+       </Container>}
+       {/*section-4*/ }
+       <Container maxWidth={false} className={classes.container4}>
+       <Grid container sx={{ height: "100%" }} spacing={2} >
+        <Grid item md={6} className={classes.serviceLftGridSection3}>
+        
+         <Typography className={classes.section3heading}>
+         Dedicated Team
+          </Typography>
+         
+        </Grid>
+        <Grid item md={6} className={classes.serviceRghtGrid}>
+      
+        <img
+              alt="group-2"
+              src = "assets/images/meetTheTeam/14.png"
+              className={classes.groupImg}
+            />
+           
+        </Grid>
+        </Grid>
+       
        </Container>
            </div>
   )
@@ -159,84 +190,16 @@ const MeetTheTeam = () => {
 export default MeetTheTeam;
 const useStyles = makeStyles()((theme) => {
   return {
-    ytubeTextApps: {
-      position: "absolute",
-      top: "75px",
-      right: "50px",
-      [theme.breakpoints.down("sm")]: {
-        display: "none",
-      },
+    efficiencyCon: {},
+    serviceRightTextBox: {
+      margin: "auto",
+      //padding: "20px 60px",
     },
-    rocketBoxouter: {
-      display: "flex",
-      justifyContent: "center",
-      [theme.breakpoints.down("sm")]: {
-        paddingTop: "40px",
-      },
-    },
-    otherappsicons125: {
-      // width: "84.18px",
-      // height: "101.378px",
-      [theme.breakpoints.down("sm")]: {
-        width: "40.18px",
-        height: "50.378px",
-      },
-    },
-    otherappsicons125Middle: {
-      // width: "84.18px",
-      // height: "101.378px",
-      [theme.breakpoints.down("sm")]: {
-        width: "60.18px",
-        height: "80.378px",
-      },
-    },
-    otherappsicons4: {
-      position: "absolute",
-      [theme.breakpoints.down("sm")]: {
-        width: "40.18px",
-        height: "50.378px",
-      },
-    },
-    otherappsicons: {
-      width: "84.18px",
-      height: "101.378px",
-      [theme.breakpoints.down("sm")]: {
-        width: "40.18px",
-        height: "50.378px",
-      },
-    },
-    uberText: {
-      color: "#000",
-      fontSize: "24px",
-      fontStyle: "normal",
-      fontWeight: 500,
-      lineHeight: "normal",
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "12px",
-      },
-    },
-    amzonIcs: {
-      width: "75.334px",
-      height: "15.924px",
-      position: "absolute",
-      bottom: "90px",
-      left: "90px",
-      [theme.breakpoints.down("sm")]: {
-        width: "37.334px",
-        height: "7.924px",
-      },
-    },
-    amzonText: {
-      color: "#000",
-      fontSize: "32px",
-      fontStyle: "normal",
-      fontWeight: 600,
-      lineHeight: "20px",
-      position: "absolute",
-      left: "35px",
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "16px",
-      },
+    boxStyle : {
+      height: "100px",
+      textAlign: 'center',
+      padding: "20px",
+      border: '1px solid #ccc', // Optional: Add border for visibility
     },
     allPppsGrdBox: {
       padding: "40px",
@@ -244,54 +207,33 @@ const useStyles = makeStyles()((theme) => {
         padding: "20px 0",
       },
     },
-    amazonBox: {
-      borderRadius: "35px",
-      backgroundColor: "#FFFFFF",
-      width: "269.1px",
-      height: " 260.115px",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      position: "relative",
-      margin: "15px 0 0 0",
-      [theme.breakpoints.down("sm")]: {
-        width: "130.1px",
-        height: "120.115px",
-      },
+    section3paraText:{
+      color: "#030303",
+      fontSize: "14px",
+      marginLeft:"18.125rem",
+      marginTop:"10px",
+      marginBottom:"10px",
+      width: "692px",
+
+      textAlign: "center",
+
+      fontfamily: "Roboto",
+
+      fontStyle: "normal",
+      fontWeight: "400",
+      lineHeight: "20px"/* 133.333% */
     },
-    otherAppsBox: {
-      borderRadius: "35px",
-      backgroundColor: "#FFFFFF",
-      width: "131.1px",
-      height: "130.725px",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      margin: "15px 0 15px 15px",
-      alignItems: "center",
-      [theme.breakpoints.down("sm")]: {
-        width: "65.1px",
-        height: "65.725px",
-        borderRadius: "15px",
-      },
+    section3heading:{
+      color: "#FFF",
+      fontFamily: "Roboto",
+      fontsize: "18px",
+      fontstyle: "normal",
+      fontWeight: "500",
+      lineHeight: "normal"
     },
-    otherAppsBoxYtube: {
-      borderRadius: "35px",
-      backgroundColor: "#FFFFFF",
-      width: "131.1px",
-      height: "130.725px",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      margin: "15px",
-      alignItems: "center",
-      position: "relative",
-      [theme.breakpoints.down("sm")]: {
-        width: "65.1px",
-        height: "65.725px",
-        borderRadius: "15px",
-      },
-    },
+
+    
+    
     appbgleft: {
       position: "absolute",
       left: 0,
@@ -305,13 +247,7 @@ const useStyles = makeStyles()((theme) => {
     homemenBox: {
       position: "relative",
     },
-    appCOntainder: {
-      backgroundColor: "#F4F5F9",
-      position: "relative",
-      [theme.breakpoints.down("sm")]: {
-        padding: "40px 0",
-      },
-    },
+    
     articalsPara: {
       color: "#2E2E2E",
       fontSize: "16px",
@@ -320,65 +256,8 @@ const useStyles = makeStyles()((theme) => {
       lineHeight: "26px",
       fontFamily: "Roboto",
     },
-    carosalPara:{
-
-    },
-    whyGsdPARA: {
-      color: "#2E2E2E",
-      fontFamily:'Roboto',
-      fontSize: "16px",
-      fontStyle: "normal",
-      fontWeight: 400,
-      lineHeight: "26px",
-      [theme.breakpoints.down("sm")]: {
-        padding: "20px",
-      },
-    },
-    gsdArrouterBox: {
-      [theme.breakpoints.down("sm")]: {
-        padding: "20px",
-      },
-    },
-    gsdArrCard: {
-      borderRadius: "12px",
-      // border: '4px solid #ECDAFF',
-      background: "rgba(255, 255, 255, 0.32)",
-      // backdropFilter: "blur(12px)",
-      padding: "40px 20px",
-      marginBottom: "20px",
-      [theme.breakpoints.down("sm")]: {
-        padding: "20px",
-      },
-    },
-    gsdArrTitle: {
-      color: "#1A2128",
-      fontSize: "20px",
-      fontFamily:'Roboto',
-      fontStyle: "normal",
-      fontWeight: 600,
-      lineHeight: "normal",
-      letterSpacing: "0.2px",
-    },
-    gsdArrPara: {
-      paddingTop: "10px",
-      color: "#434D56",
-      fontFamily:'Roboto',
-      fontSize: "16px",
-      fontStyle: "normal",
-      fontWeight: 400,
-      lineHeight: "22px",
-    },
-    takeYourBusiness: {
-      [theme.breakpoints.down("sm")]: {
-        padding: "50px 0",
-      },
-    },
-    coolbuysImg: {
-      [theme.breakpoints.down("sm")]: {
-        width: "350px",
-        height: "250px",
-      },
-    },
+    
+    
     firstImg:{
       width: "219.167px",
       height: "158.716px",
@@ -438,266 +317,59 @@ height: "158.716px",
         width: "300px",
       },border: '1px solid white', // 1px solid white border
     },
-    
-    rocketElips: {
-      // position:'absolute',
-    },
-    rocketImg: {
-      position: "absolute",
-      bottom: "31px",
-      left: "23px",
-      width: "93.73px",
-      height: "93.73px",
-    },
-    rocketBox: {
-      position: "relative",
-    },
-    whyGsdContainer: {
-      margin: "100px 0",
-      display: "flex",
-      justifyContent: "center",
-    },
-    corosalClientCOntrols: {
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-    },
-    quotIcon: {
-      top: "-3px",
-      left: "60px",
-      position: "absolute",
-      [theme.breakpoints.down("sm")]: {
-        padding: "0",
-        top: "-3px",
-        left: "30px",
-      },
-    },
-    carosalBox: {
-      position: "relative",
-      padding: "0 20px",
-      [theme.breakpoints.down("sm")]: {
-        padding: "0",
-      },
-    },
-    caroselCards: {
-      padding: "40px",
-      margin: "20px",
-      [theme.breakpoints.down("sm")]: {
-        padding: "30px",
-        margin: "10px",
-      },
-    },
-    cTitle: {
-      color: "#2E2E2E",
-      textAlign: "center",
-      fontSize: "16px",
-      fontStyle: "normal",
-      fontWeight: 400,
-      lineHeight: "normal",
-      padding: "0px 0 20px 0",
-    },
-    cName: {
-      padding: "10px 0",
-      color: "#2E2E2E",
-      fontSize: "22px",
-      fontStyle: "normal",
-      fontWeight: 600,
-      lineHeight: "normal",
-    },
-    clintImg: {
-      width: "575px",
-      height: "446.25px",
-      [theme.breakpoints.down("sm")]: {
-        width: "90%",
-        height: "250px",
-      },
-    },
-    happyClientBox: {
-      width: "595px",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      backgroundColor: "#FFF",
-      alignContent: "center",
-      alignItems: "center",
-      // margin: "10px 70px",
-      // paddingTop: "10px",
-      [theme.breakpoints.down("sm")]: {
-        width: "80%",
-      },
-    },
-    welcomCOntainer: {
-      backgroundColor: "#F0E6FB",
-      padding: "40px 60px",
-    },
-    expertBtns: {
-      ...styles.buttonMain,
-      backgroundColor: "#fff",
-      color: "#737373",
-      "&:hover": {
-        backgroundColor: "#fff",
-        color: "#737373",
-      },
-      [theme.breakpoints.down("sm")]: {
-        padding: "5px 15px",
-        fontSize: "12px",
-        fontWeight: "400",
-        margin: "0 5px",
-      },
-    },
-    experBtnGrod: {
-      margin: "auto ",
-    },
-    experBtnGrodBottom: {
-      margin: "auto",
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-around",
-    },
-    dividerMain: {
-      width: "48px",
-      height: "4px",
-      backgroundColor: "#fff", // Replace with your desired color
-      margin: theme.spacing(1, 0),
-      borderRadius: "2px",
-    },
-    expectPara: {
-      color: "#FFFFFF",
-      fontSize: "16px",
-      fontStyle: "normal",
-      fontWeight: 400,
-      lineHeight: "normal",
-      fontFamily:'Roboto'
-    },
-    expetText: {
-      color: "#FFFFFF",
-      fontSize: "26px",
-      fontStyle: "normal",
-      fontWeight: 600,
-      lineHeight: "normal",
-    },
-    expertLeftBox: {
-      padding: "40px 40px",
-    },
-    expertGrid: {
-      padding: "200px 50px",
-      height: "300px",
-    },
-    expertContainer: {
-      margin: "50px 0",
-    },
-    blogsGrid: {
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "center",
-      alignItems: "center",
-      alignContent: "center",
-    },
-    blogimg: {
-      // width: "332px",
-      // height: "281px",
-      [theme.breakpoints.down("sm")]: {
-        // width :'80%'
-      },
-    },
-    blogTagp: {
-      fontFamily: "Roboto",
-      color: "#6A6A6A",
-      fontSize: "12px",
-      fontStyle: "normal",
-      fontWeight: 500,
-      lineHeight: "normal",
-    },
-    blogtagH: {
-      color: "#000",
-      fontFamily: "Roboto",
-      fontSize: "14px",
-      fontStyle: "normal",
-      fontWeight: 500,
-      lineHeight: "normal",
-    },
-    bolgNameTagBox: {
-      backgroundColor: "#FFFFFF",
-      position: "absolute",
-      padding: "10px 20px",
-      borderRadius: "8px 0px 0px 8px",
-      right: "14.5px",
-      top: "180px",
-    },
-    blogPara: {
-      color: "#2E2E2E",
-      fontSize: "16px",
-      fontStyle: "normal",
-      fontWeight: 400,
-      lineHeight: "normal",
-    },
-    blogHeading: {
-      fontFamily: "Roboto",
-      color: "#2E2E2E",
-      fontSize: "18px",
-      fontStyle: "normal",
-      fontWeight: 600,
-      lineHeight: "normal",
-      padding: "15px 0",
-    },
-    blogsBox: {
-      display: "flex",
-      flexDirection: "column",
-      padding: "10px 15px",
-      position: "relative",
-    },
+  
+ 
     efficiencyBoxLeft: {
       padding: "100px 20px",
     },
-    teamImg01: {
-      padding: "0 10px",
-      [theme.breakpoints.down("sm")]: {
-        width: "350px",
-        height: "250px",
-      },
-    },
-    teamImg02: {
-      padding: "0 10px",
-      [theme.breakpoints.down("sm")]: {
-        width: "350px",
-        height: "250px",
-      },
-    },
-    efficiencyCon: {},
-    serviceRightTextBox: {
-      margin: "auto",
-      padding: "20px 60px",
-    },
+    
+    
+    
     paraText: {
       fontFamily: "Roboto",
       color: "#030303",
       fontSize: "16px",
       fontStyle: "normal",
       fontWeight: 400,
-      lineHeight: "24px",
+      lineHeight: "30px",
+      marginTop:"20px"
     },
     onewomenImg: {
       position: "absolute",
-      right: "0px",
-      top: "170px",
+      width: "244px",
+      height: "232px",
+      marginLeft:"380px",
+      marginTop:"90px",
+      border:"20px solid white"
     },
-    twomenImg: {
+    groupImg:{
       position: "absolute",
-      left: "70px",
-      top: "50px",
+      width: "571px",
+      height: "332px",
+      marginTop:"-70px",
+      marginLeft:"30px"
+      
+
     },
-    dotsbottomImg: {
-      position: "absolute",
-      right: "280px",
-      top: "480px",
-    },
-    dotsImg: {
-      position: "absolute",
-    },
+    
     serviceLftGrid: {
       position: "relative",
       padding: "30px 15px",
+      [theme.breakpoints.down("sm")]: {
+        display: "none",
+      },
+    },
+    serviceLftGridSection3: {
+      position: "relative",
+      //padding: "30px 15px",
+      background:"#2E2E2E",
+      [theme.breakpoints.down("sm")]: {
+        display: "none",
+      },
+    },
+    serviceRghtGrid: {
+      position: "relative",
+      //padding: "30px 15px",
       [theme.breakpoints.down("sm")]: {
         display: "none",
       },
@@ -747,18 +419,6 @@ height: "158.716px",
         fontSize: "20px",
       },
     },
-    serveceBelo2:{
-      fontSize: "40px",
-      textAlign:"center",
-      fontStyle: "normal",
-      fontWeight: 600,
-      lineHeight: "normal",
-      letterSpacing: "-1px",
-      textTransform: "capitalize",
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "20px",
-      }
-    },
     serviceText: {
       fontFamily: "Roboto",
       color: "#2E2E2E",
@@ -767,15 +427,7 @@ height: "158.716px",
       fontWeight: 700,
       lineHeight: "24px",
     },
-    exploreLink: {
-      fontFamily: "Roboto",
-      fontSize: "18px",
-      fontStyle: "normal",
-      fontWeight: 600,
-      lineHeight: "normal",
-      color: pallete.parimayBlue,
-      margin: "auto 0",
-    },
+ 
     secondHeading: {
       fontSize: "18px",
       fontStyle: "normal",
@@ -816,8 +468,24 @@ height: "158.716px",
     },
     mainContainer: {
       marginTop: "110px",
-      height: "100vh",
-      backgroundColor: "#DECAF4;#EDC9DB"
+      height: "80vh",
+      background:"linear-Gradient(180deg,#DECAF4 0%,#EDC9DB 100%)",
+      
+      backgroundColor: "linear-gradint(180deg,#DECAF4 0%,#EDC9DB 100%)"
     },
+    container2:{
+      marginTop: "110px",
+      height: "60vh",
+    },
+    container3:{
+      marginTop: "110px",
+      height: "60vh",
+      background: "#F0E6FB"
+
+    },
+    container4:{
+      marginTop: "110px",
+      height: "60vh",
+    }
   };
 });
