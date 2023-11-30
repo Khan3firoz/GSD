@@ -6,6 +6,7 @@ import {
   IconButton,
   Divider,
   Button,
+  Card,
 } from "@mui/material";
 import React from "react";
 import { makeStyles } from "tss-react/mui";
@@ -14,6 +15,45 @@ import { pallete } from "../css/Theme";
 
 const Career = () => {
   const { classes } = useStyles();
+
+  const clients = [
+    {
+      id: 1,
+      title: "Financial Investment",
+      img: "assets/images/client1.png",
+      date: "Oct 2023",
+    },
+    {
+      id: 2,
+      title: "Marketing Strategy",
+      img: "assets/images/client2.png",
+      date: "Oct 2023",
+    },
+    {
+      id: 3,
+      title: "Business Consulting",
+      img: "assets/images/client3.png",
+      date: "Oct 2023",
+    },
+    {
+      id: 4,
+      title: "Financial Investment",
+      img: "assets/images/client4.png",
+      date: "Oct 2023",
+    },
+    {
+      id: 5,
+      title: "Marketing Strategy",
+      img: "assets/images/client5.png",
+      date: "Oct 2023",
+    },
+    {
+      id: 6,
+      title: "Business Consulting",
+      img: "assets/images/client6.png",
+      date: "Oct 2023",
+    },
+  ];
   //   React.useEffect(() => {
   //     window.scrollTo(0, 0);
   //   }, []);
@@ -378,8 +418,8 @@ const Career = () => {
           </span>
           10+ companies
         </Typography>
-        <Grid container md={8}>
-          <Grid item md={2.4} sm={6}>
+        <Grid container md={6}>
+          <Grid item md={3} sm={6}>
             <Box
               component="img"
               className={classes.compsImg}
@@ -387,38 +427,64 @@ const Career = () => {
               alt="Descriptive Alt Text"
             />
           </Grid>
-          <Grid item md={2.4} sm={6}>
+          <Grid item md={3} sm={6}>
             <Box
               component="img"
               className={classes.compsImg}
-              src="assets/icons/comp1.svg"
+              src="assets/icons/comp2.svg"
               alt="Descriptive Alt Text"
             />
           </Grid>
-          <Grid item md={2.4} sm={6}>
+          <Grid item md={3} sm={6}>
             <Box
               component="img"
               className={classes.compsImg}
-              src="assets/icons/comp1.svg"
+              src="assets/icons/comp3.svg"
               alt="Descriptive Alt Text"
             />
           </Grid>
-          <Grid item md={2.4} sm={6}>
+          <Grid item md={3} sm={6}>
             <Box
               component="img"
               className={classes.compsImg}
-              src="assets/icons/comp1.svg"
+              src="assets/icons/comp4.svg"
               alt="Descriptive Alt Text"
             />
           </Grid>
-          <Grid item md={2.4} sm={6}>
-            <Box
-              component="img"
-              className={classes.compsImg}
-              src="assets/icons/comp1.svg"
-              alt="Descriptive Alt Text"
-            />
-          </Grid>
+        </Grid>
+      </Box>
+      <Box className={classes.cleintProjectBox}>
+        <Typography align="center" variant="h5">
+          Latest Projects
+        </Typography>
+        <Typography align="center" variant="h4" sx={{ margin: "10px 0" }}>
+          <span style={{ color: pallete.primaryPurple }}>
+            Discover our latest{" "}
+          </span>
+          client projects
+        </Typography>
+        <Typography align="center" variant="h6">
+          Lorem ipsum is a placeholder text commonly used to demonstrate the
+          visual form of a document or a typeface without
+          <br /> relying on meaningful content.
+        </Typography>
+        <Grid container>
+          {clients.map((x) => (
+            <Grid key={x.id} item md={6} lg={4}>
+              <Card>
+                <Box
+                  component="img"
+                  className={classes.clientsImg}
+                  src={x.img}
+                  alt="Descriptive Alt Text"
+                />
+                <Typography variant="h5">{x.title}</Typography>
+                <Box>
+                <Typography variant="h6">{x.date}</Typography>
+                </Box>
+              </Card>
+            </Grid>
+          ))}
         </Grid>
       </Box>
     </Container>
@@ -429,6 +495,10 @@ export default Career;
 
 const useStyles = makeStyles()((theme) => {
   return {
+    clientsImg: {
+      ...styles.imagesBox,
+      maxWidth: '600px'
+    },
     excitingBox: {
       backgroundColor: "#F0E6FBF5",
       padding: "20px 0",
@@ -436,7 +506,7 @@ const useStyles = makeStyles()((theme) => {
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
-      alignItems: 'center'
+      alignItems: "center",
     },
 
     applyBtn: {
@@ -585,6 +655,7 @@ const useStyles = makeStyles()((theme) => {
       ...styles.imagesBox,
       height: "130px",
       width: "130px",
+      margin: "10px 0",
     },
     chatBoxDP: {
       ...styles.imagesBox,
