@@ -1,4 +1,4 @@
-import { Container, Grid, Typography, Box, Button } from "@mui/material";
+import { Container, Grid, Typography, Box, Button, Divider } from "@mui/material";
 
 import React from "react";
 import { makeStyles } from "tss-react/mui";
@@ -10,9 +10,14 @@ const BlogPage = () => {
     "assets/images/blogPage/blog1.jpg",
     "assets/images/blogPage/blog2.jpg",
     "assets/images/blogPage/blog3.jpg",
-    "assets/images/blogPage/blog4.jpg",
+    "assets/images/blogPage/blog4.jpg"];
+  const placeholderImages2 = [
+    "assets/images/blogPage/section5img1.jpg",
+    "assets/images/blogPage/section5img2.jpg",
+    "assets/images/blogPage/section5img3.jpg",
+    "assets/images/blogPage/section5img4.jpg"];
 
-  ];
+
   const { classes } = useStyles();
   const category = 'Category name';
   return (
@@ -98,33 +103,121 @@ const BlogPage = () => {
           src="assets/images/blogPage/section3img.jpg"
           className={classes.waterImg}
           style={{
-      
+            marginLeft: "0",
+            marginRight: "0",
             width: "100%",
             height: "100%",
             objectFit: "cover",
             backgroundColor: "#343A40"
           }} />
-           <div className={classes.overlay}></div>
+        <div className={classes.overlay}></div>
         <Typography className={classes.textOverlay}>
           "Unlock Productivity and Efficiency with Virtual Private Assistant Services!""
         </Typography>
       </Container>
 
       {/*section-4*/}
-      <Container maxWidth={false} className={classes.container4}>        
-      <Grid container spacing={2}>
-      {[...Array(6)].map((_, index) => (
-          <Grid item xs={2} key={index}>
-            <Typography variant="h6" className={classes.categoryRow}>
-              {category}
+      <Container maxWidth={false} className={classes.container4}>
+        <Grid container spacing={2} className={classes.section4}>
+          {[...Array(6)].map((_, index) => (
+            <Grid item xs={2} key={index}>
+              <Typography variant="h6" className={classes.categoryRow}>
+                {category}
+              </Typography>
+
+            </Grid>
+          ))}
+        </Grid>
+        <Divider className={classes.horizontalLine} />
+
+        <Box className={classes.rectangleBox}>
+
+
+
+          <Grid container justifyContent="space-between" className={classes.leftSection}>
+            <Grid item>
+              <img
+                src="assets/images/blogPage/section4img.jpg"
+                alt='Placeholder'
+                className={classes.section4img}
+              />
+            </Grid>
+            <Grid item>
+              <Typography className={classes.dateStyle}>
+                1 Month Ago
+              </Typography>
+              <Typography className={classes.section2heading}>
+                Lorem Ipsum Generator Generate Lorem Ipsum placeholder text. Select the number of characters, words, sentences or paragraphs, and hit generate!
+              </Typography>
+              <Typography className={classes.section2subheading}>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </Typography>
+              <Typography className={classes.viewPost}>
+                View Post
+              </Typography>
+            </Grid>
+          </Grid>
+
+          <Grid container justifyContent="flex-end" spacing={2} direction="column" className={classes.rightSection}>
+            {/* {imagePaths.map((imagePath, index) => (
+          <Grid item key={index}>
+            <img
+              className={classes.image}
+              src={imagePath}
+              alt={`Image ${index + 1}`}
+            />
+            <Typography variant="h6" className={classes.content}>
+              Akame Ga Kill: Season finale
             </Typography>
           </Grid>
-        ))}
-      </Grid>
+        ))} */}
+          </Grid>
+
+        </Box>
+
+
+
 
 
       </Container>
+      {/*section-5 */}
+      <Typography className={classes.section5typo}>
+        Related Posts
+      </Typography>
+      <Container maxWidth={false} className={classes.container5}>
 
+        <Grid container justifyContent="center" className={classes.addPadding} spacing={2}>
+          {placeholderImages2.slice(0, 4).map((placeholder, index) => (
+            <Grid item key={index}>
+              <Grid item className={classes.repeatImage}>
+
+                <img
+                  src={placeholder}
+                  alt={`Placeholder ${index + 1}`}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
+                />
+              </Grid >
+              < Box className={classes.boxImg}>
+                <Typography className={classes.dateStyle}>
+                  10.22.2023
+                </Typography>
+                <Typography className={classes.section2heading}>
+                  Lorem ipsum is a placeholder text commonly used to visual form
+                </Typography>
+                <Typography className={classes.section2subheading}>
+                  Lorem ipsum is a placeholder text commonly used to monstrate the visual form of a document or a typeface without relying on meaningful content.
+                </Typography>
+              </Box>
+
+            </Grid>
+          ))}
+        </Grid>
+
+      </Container>
     </div>
   );
 };
@@ -132,28 +225,99 @@ export default BlogPage;
 
 const useStyles = makeStyles()((theme) => {
   return {
+    section5typo: {
+      color: "#495057",
+      marginLeft:"20px",
+      fontFamily: "Roboto",
+      fontSize: "18px",
+      fontStyle: "normal",
+      fontWeight: "600",
+      lineHeight: "25px"
+    },
+    container5: {
+      marginTop: "100px",
+      height: "100vh"
+
+    },
+    image: {
+      width: '10%',
+      height: 'auto',
+      marginBottom: theme.spacing(2),
+    },
+    content: {
+      marginLeft: theme.spacing(2),
+    },
+    viewPost: {
+
+      color: "#2E2E2E",
+      fontFamily: "Roboto",
+      fontSize: "14px",
+      fontStyle: "normal",
+      fontWeight: "200",
+      lineHeight: "20px",
+      textDecoration: 'underline',
+      marginTop: "10px"
+    },
+    rightSection: {
+      width: "30%",
+      justifyContent: 'flex-end',
+      alignItems: 'center',
+    },
+    leftSection: {
+      width: "700px",
+      margin: "20px",
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+    },
+    section4img: {
+      marginTop: "20px",
+      width: "700px",
+      height: "340px"
+    },
+    rectangleBox: {
+      width: '1480px',
+      height: '620px',
+      flexShrink: 0,
+      border: '1px solid rgba(18, 20, 22, 0.20)',
+      background: '#FFF',
+      marginTop: theme.spacing(2), // Adjust margin as needed
+    },
+    horizontalLine: {
+      width: '1480px',
+      height: '0px',
+      flexShrink: 0,
+      borderWidth: '1px',
+      borderColor: '#D6D6D6',
+      borderStyle: 'solid',
+      margin: `${theme.spacing(2)}px 0`, // Adjust margin as needed
+    },
+    section4: {
+      width: "50%"
+    },
     categoryRow: {
       paddingTop: theme.spacing(2),
       paddingBottom: theme.spacing(2),
       //backgroundColor: theme.palette.primary.main, // Adjust the background color as needed
       color: 'black', // Text color
       textAlign: 'left',
+      fontSize: "10px",
+      fontWeight: "700"
     },
-    container4:{
+    container4: {
       marginTop: "100px",
-      height: "80vh"
+      height: "140vh"
     },
     overlay: {
       position: 'absolute',
-      top:0,
-      left:0,
+      top: 0,
+      left: 0,
       objectFit: "cover",
       width: '100%',
       height: '100%',
       backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust the darkness by changing the last value (0.5 in this case)
     },
     textOverlay: {
-      
+
       position: 'absolute',
       top: '50%',
       left: '50%',
@@ -191,7 +355,8 @@ const useStyles = makeStyles()((theme) => {
       fontSize: "14px",
       fontStyle: "normal",
       fontWeight: "400",
-      lineHeight: "20px"
+      lineHeight: "20px",
+      marginTop: "10px"
     },
     section2heading: {
       color: "#030303",
@@ -199,7 +364,8 @@ const useStyles = makeStyles()((theme) => {
       fontSize: "18px",
       fontStyle: "normal",
       fontWeight: "500",
-      lineHeight: "24px"
+      lineHeight: "24px",
+      marginTop: "10px"
     },
     dateStyle: {
       color: "#2E2E2E",
@@ -207,7 +373,8 @@ const useStyles = makeStyles()((theme) => {
       fontSize: "14px",
       fontStyle: "normal",
       fontWeight: "400",
-      lineHeight: "normal"
+      lineHeight: "normal",
+      marginTop: "10px"
     },
     repeatImage: {
       width: "270px",
