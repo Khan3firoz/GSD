@@ -1,19 +1,10 @@
-import {
-  Container,
-  Grid,
-  Typography,
-  Box,
-  IconButton,
-  Divider,
-  Button,
-} from "@mui/material";
+import { Container, Grid, Typography, Box, Button } from "@mui/material";
 import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import React from "react";
 import { makeStyles } from "tss-react/mui";
 import { styles } from "../css/CommonCSS";
 import { pallete } from "../css/Theme";
-import { Gradient } from "@mui/icons-material";
 
 const MeetTheTeam = () => {
   const { classes } = useStyles();
@@ -166,18 +157,31 @@ const MeetTheTeam = () => {
         </Container>
       }
       {/*section-4*/}
-      <Container maxWidth={false} className={classes.container4}>
-        <Grid container sx={{ height: "100%" }} spacing={2}>
-          <Grid item md={6} className={classes.serviceLftGridSection3}>
-            <Typography className={classes.section3heading}>
-              Dedicated Team
-            </Typography>
+      <Container className={classes.container4}>
+        <Grid container className={classes.containerbox}>
+          <Grid item className={classes.box1}>
+            <Box className={classes.insidebox1}>
+              <Typography className={classes.section4heading}>
+                Dedicated Team
+              </Typography>
+              <Typography className={classes.section4subHeading}>
+                Professional Individuals
+              </Typography>
+              <Typography className={classes.section4ParaText}>
+                Lorem ipsum is a placeholder text commonly used to demonstrate
+                the visual form of a document or a typeface without relying on
+                meaningful content. Lorem ipsum is a placeholder text commonly
+                used to demonstrate the visual form of a document or a typeface
+                without relying on meaningful content.Lorem ipsum is a
+                placeholder text commonly.
+              </Typography>
+            </Box>
           </Grid>
-          <Grid item md={6} className={classes.serviceRghtGrid}>
+          <Grid item className={classes.box2}>
             <img
-              alt="group-2"
+              alt="img"
               src="assets/images/meetTheTeam/14.png"
-              className={classes.groupImg}
+              className={classes.section4img}
             />
           </Grid>
         </Grid>
@@ -192,6 +196,58 @@ const useStyles = makeStyles()((theme) => {
     efficiencyCon: {},
     serviceRightTextBox: {
       margin: "auto",
+    },
+    insidebox1: {
+      width: "400px",
+      height: "400px",
+      padding: "88px 48px",
+      flexdirection: "column",
+      alignitems: "flex-start",
+      gap: "10px",
+      flexshrink: "0",
+    },
+    section4heading: {
+      color: "#FFF",
+      fontfamily: "Roboto",
+      fontSize: "18px",
+      fontStyle: "normal",
+      fontWeight: "500",
+      lineheight: "normal",
+    },
+    section4subHeading: {
+      color: "#FFF",
+      fontFamily: "Roboto",
+      fontSize: "27px",
+      fontStyle: "normal",
+      fontWeight: "600",
+      lineheight: "50%" /* 48.4px */,
+    },
+    section4ParaText: {
+      color: "#FFF",
+      fonFamily: "Roboto",
+      fontSize: "16px",
+      fontStyle: "normal",
+      fontWeight: "400",
+      lineheight: "113.187%" /* 23.39px */,
+    },
+    section4img: {
+      height: "450px",
+      width: "450px",
+    },
+    containerbox: {
+      display: "flex",
+      alignItems: "center",
+      paddingLeft: "150px",
+    },
+    box1: {
+      height: "450px",
+      width: "450px",
+      backgroundColor: "black",
+    },
+    box2: {
+      height: "450px",
+      width: "450px",
+      backgroundColor: "red",
     },
     boxStyle: {
       height: "100px",
@@ -212,7 +268,8 @@ const useStyles = makeStyles()((theme) => {
       marginTop: "10px",
       marginBottom: "10px",
       width: "692px",
-
+      display: "flex",
+      alignItems: "center",
       textAlign: "center",
 
       fontfamily: "Roboto",
@@ -220,6 +277,15 @@ const useStyles = makeStyles()((theme) => {
       fontStyle: "normal",
       fontWeight: "400",
       lineHeight: "20px" /* 133.333% */,
+      [theme.breakpoints.down("sm")]: {
+        height: "00px",
+        width: "300px",
+        margin: "0",
+        display: "flex",
+        alignItems: "center",
+        textAlign: "center",
+        justifyContent: "center",
+      },
     },
     section3heading: {
       color: "#FFF",
@@ -228,6 +294,26 @@ const useStyles = makeStyles()((theme) => {
       fontstyle: "normal",
       fontWeight: "500",
       lineHeight: "normal",
+    },
+    section2subheading: {
+      color: "#FFF",
+      fontFamily: "Roboto",
+      fontSize: "40px",
+      fontStyle: "normal",
+      fontWeight: "600",
+      lineHeight: "121%" /* 48.4px */,
+    },
+    section3paraText2: {
+      color: "#FFF",
+      fontFamily: "Roboto",
+      fontSize: "16px",
+      fontStyle: "normal",
+      fontWeight: "400",
+      lineHeight: "146.187%" /* 23.39px */,
+      [theme.breakpoints.down("sm")]: {
+        height: "00px",
+        width: "300px",
+      },
     },
 
     appbgleft: {
@@ -342,6 +428,29 @@ const useStyles = makeStyles()((theme) => {
       marginTop: "-70px",
       marginLeft: "30px",
     },
+    smallGrid: {
+      display: "flex",
+
+      width: "559px",
+      height: "501px",
+      padding: "88px 48px",
+      flexDirection: "column",
+      alignItems: "flex - start",
+      gap: "10px",
+      flexShrink: "0",
+      background: "#2E2E2E",
+      [theme.breakpoints.down("sm")]: {
+        display: "none",
+      },
+    },
+
+    groupImg2: {
+      position: "absolute",
+      width: "507px",
+      height: "338px",
+      marginTop: "-70px",
+      //marginLeft:"30px"
+    },
 
     serviceLftGrid: {
       position: "relative",
@@ -351,8 +460,14 @@ const useStyles = makeStyles()((theme) => {
       },
     },
     serviceLftGridSection3: {
-      position: "relative",
+      //display: "flex",
+
       //padding: "30px 15px",
+
+      width: "507px",
+      height: "538px",
+      marginTop: "-70px",
+
       background: "#2E2E2E",
       [theme.breakpoints.down("sm")]: {
         display: "none",
@@ -470,12 +585,12 @@ const useStyles = makeStyles()((theme) => {
     },
     container3: {
       marginTop: "110px",
-      height: "60vh",
+      height: "80vh",
       background: "#F0E6FB",
     },
     container4: {
       marginTop: "110px",
-      height: "60vh",
+      height: "100vh",
     },
   };
 });
