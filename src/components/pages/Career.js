@@ -468,23 +468,38 @@ const Career = () => {
           visual form of a document or a typeface without
           <br /> relying on meaningful content.
         </Typography>
-        <Grid container>
-          {clients.map((x) => (
-            <Grid key={x.id} item md={6} lg={4}>
-              <Card>
-                <Box
-                  component="img"
-                  className={classes.clientsImg}
-                  src={x.img}
-                  alt="Descriptive Alt Text"
-                />
-                <Typography variant="h5">{x.title}</Typography>
-                <Box>
-                <Typography variant="h6">{x.date}</Typography>
-                </Box>
-              </Card>
-            </Grid>
-          ))}
+        <Grid
+          container
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+          }}
+        >
+          <Grid container md={10}>
+            {clients.map((x) => (
+              <Grid key={x.id} item md={6} lg={4}>
+                <Card className={classes.clientsCards}>
+                  <Box
+                    component="img"
+                    className={classes.clientsImg}
+                    src={x.img}
+                    alt="Descriptive Alt Text"
+                  />
+                  <Typography variant="h5">{x.title}</Typography>
+                  <Box>
+                  <Box
+                    component="img"
+                    className={classes.clientsIcin}
+                    src="assets/icons/calander.svg"
+                    alt="Descriptive Alt Text"
+                  />
+                    <Typography variant="h6">{x.date}</Typography>
+                  </Box>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
         </Grid>
       </Box>
     </Container>
@@ -495,9 +510,16 @@ export default Career;
 
 const useStyles = makeStyles()((theme) => {
   return {
+    clientsCards: {
+      margin: "20px",
+    },
     clientsImg: {
       ...styles.imagesBox,
-      maxWidth: '600px'
+      maxWidth: "600px",
+    },
+    clientsIcin: {
+      ...styles.imagesBox,
+      maxWidth: "22px",
     },
     excitingBox: {
       backgroundColor: "#F0E6FBF5",
