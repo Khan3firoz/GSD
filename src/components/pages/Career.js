@@ -18,7 +18,7 @@ import OpenJobs from "./OpenJobs";
 const Career = () => {
   const { classes } = useStyles();
   const navigate = useNavigate();
-  const [showJobDs, setShowJobDs] = useState(false);
+  const [showJobDs, setShowJobDs] = useState(true);
   const clients = [
     {
       id: 1,
@@ -372,7 +372,45 @@ const Career = () => {
         <Typography variant="h4" fontFamily={"Roboto"} align="center">
           Open Positions
         </Typography>
-        {[...Array(2)].map((x) => (
+        {showJobDs ?
+          <Grid container sx={{ margin: "20px 0" }}>
+            <Grid item md={3.6}>
+              <Typography
+                variant="h6"
+                sx={{ color: "#232323", margin: "0 20px" }}
+              >
+                Department
+              </Typography>
+              <Typography className={classes.jobsTExt}>
+                Customer Success
+              </Typography>
+            </Grid>
+            <Grid item md={3.6}>
+              <Typography
+                variant="h6"
+                sx={{ color: "#232323", margin: "0 20px" }}
+              >
+                Job titile
+              </Typography>
+              <Typography className={classes.jobsTExt}>
+                Performance Marketing Manager
+              </Typography>
+            </Grid>
+            <Grid item md={3.6}>
+              <Typography
+                variant="h6"
+                sx={{ color: "#232323", margin: "0 20px" }}
+              >
+                Location
+              </Typography>
+              <Typography className={classes.jobsTExt}>Remote</Typography>
+            </Grid>
+            <Grid item md={12}>
+            <OpenJobs />
+            </Grid>
+          </Grid>
+         :
+        [...Array(2)].map((x) => (
           <Grid key={x} container sx={{ margin: "20px 0" }}>
             <Grid item md={3.6}>
               <Typography
