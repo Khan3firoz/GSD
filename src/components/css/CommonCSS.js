@@ -6,6 +6,11 @@ export const styles = {
     flexDirection: "row",
     justifyContent: "space-between",
   },
+  flexDRC: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+  },
   flexDC: {
     display: "flex",
     flexDirection: "column",

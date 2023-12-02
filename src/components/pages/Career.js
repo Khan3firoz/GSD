@@ -18,7 +18,7 @@ import OpenJobs from "./OpenJobs";
 const Career = () => {
   const { classes } = useStyles();
   const navigate = useNavigate();
-  const [showJobDs, setShowJobDs] = useState(true);
+  const [showJobDs, setShowJobDs] = useState(false);
   const clients = [
     {
       id: 1,
@@ -406,7 +406,7 @@ const Career = () => {
               <Typography className={classes.jobsTExt}>Remote</Typography>
             </Grid>
             <Grid item md={12}>
-            <OpenJobs />
+            <OpenJobs setShowJobDs={setShowJobDs}/>
             </Grid>
           </Grid>
          :
@@ -444,7 +444,7 @@ const Career = () => {
               <Typography className={classes.jobsTExt}>Remote</Typography>
             </Grid>
             <Grid item md={1.19}>
-              <Button variant="contained" className={classes.applyBtn}>
+              <Button onClick={() => setShowJobDs(true)} variant="contained" className={classes.applyBtn}>
                 Apply
               </Button>
             </Grid>

@@ -13,7 +13,6 @@ export const pallete = {
 };
 
 let theme = createTheme({
-  
   palette: {
     primary: { main: pallete.primaryPurple },
     secondary: { main: pallete.primaryPurple },
@@ -28,13 +27,13 @@ let theme = createTheme({
   },
   typography: {
     fontFamily: montserrat,
-    h5: { 
+    h5: {
       fontFamily: "Roboto",
       fontSize: "18px",
       fontStyle: "normal",
-      fontWeight: 700, 
-      lineHeight: 1.5  
-     },
+      fontWeight: 700,
+      lineHeight: 1.5,
+    },
     h6: {
       color: "#030303",
       fontFamily: "Roboto",
@@ -49,7 +48,12 @@ let theme = createTheme({
       fontStyle: "normal",
       fontWeight: 600,
     },
-    h3: { fontSize: 18, latterSpacing: "0.03rem", fontWeight: "600" },
+    h3: {
+      fontFamily: roboto,
+      fontSize: "40px",
+      fontStyle: "normal",
+      fontWeight: 600,
+    },
     h2: {
       color: "#645FF2",
       fontSize: "20px",

@@ -1,11 +1,18 @@
-import { Container, Typography, Box } from "@mui/material";
+import {
+  Container,
+  Typography,
+  Box,
+  Grid,
+  TextField,
+  Button,
+} from "@mui/material";
 import React from "react";
 import { makeStyles } from "tss-react/mui";
 import { styles } from "../css/CommonCSS";
 import { pallete } from "../css/Theme";
 import { useNavigate } from "react-router-dom";
 
-const OpenJobs = () => {
+const OpenJobs = ({setShowJobDs}) => {
   const { classes } = useStyles();
   return (
     <Box className={classes.jobsContainer}>
@@ -190,7 +197,79 @@ const OpenJobs = () => {
           </Typography>
         </ul>
       </Box>
-      <Typography variant="h5"></Typography>
+      <Typography variant="h5">About GSD</Typography>
+      <Typography variant="h6">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </Typography>
+      <Box sx={{ padding: "40px" }}>
+        <Typography align="center" variant="h3" sx={{ paddingBottom: "40px" }}>
+          Apply For This Job
+        </Typography>
+        <Grid container sx={{ margin: "20px 0" }}>
+          <Grid item md={4}>
+            <Typography>First Name*</Typography>
+            <TextField
+              label="Your First Name"
+              className={classes.inputFields}
+            />
+          </Grid>
+          <Grid item md={4}>
+            <Typography>First Name*</Typography>
+            <TextField
+              label="Your First Name"
+              className={classes.inputFields}
+            />
+          </Grid>
+          <Grid item md={4}>
+            <Typography>Email*</Typography>
+            <TextField
+              label="Yourmail@example.com"
+              className={classes.inputFields}
+            />
+          </Grid>
+        </Grid>
+        <Grid container sx={{ margin: "20px 0" }}>
+          <Grid item md={4}>
+            <Typography>Phone No*</Typography>
+            <TextField label="Your Phone No" className={classes.inputFields} />
+          </Grid>
+          <Grid item md={4}>
+            <Typography>Upload Your Resume/CV*</Typography>
+            <TextField
+              label="Your First Name"
+              className={classes.inputFields}
+            />
+          </Grid>
+        </Grid>
+        <Grid container sx={{ margin: "20px 0" }}>
+          <Grid item md={4}>
+            <Typography>LinkedIn Profile</Typography>
+            <TextField
+              label="Your LinkedIn Profile"
+              className={classes.inputFields}
+            />
+          </Grid>
+          <Grid item md={4}>
+            <Typography>Website</Typography>
+            <TextField label="Your Website" className={classes.inputFields} />
+          </Grid>
+          <Grid item md={4}>
+            <Typography>What are your Salary expectations? *</Typography>
+            <TextField label="CTC" className={classes.inputFields} />
+          </Grid>
+        </Grid>
+      </Box>
+      <Box sx={{...styles.flexDRC}}>
+        <Button onClick={() => setShowJobDs(false)} variant="contained" className={classes.submitBtn}>
+          Submit Application
+        </Button>
+      </Box>
     </Box>
   );
 };
@@ -199,6 +278,18 @@ export default OpenJobs;
 
 const useStyles = makeStyles()((theme) => {
   return {
+    submitBtn: {
+      ...styles.buttonMain,
+      borderRadius:"24px",
+      padding: '10px 50px'
+    },
+    inputFields: {
+      margin: "10px 0",
+      width: "90%",
+      "& .MuiOutlinedInput-root": {
+        borderRadius: "12px", // Adjust as needed
+      },
+    },
     jobsContainer: {
       padding: "20px",
     },

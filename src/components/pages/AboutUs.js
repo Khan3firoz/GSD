@@ -13,7 +13,7 @@ const AboutUs = () => {
     <div>
       <Container maxWidth={false} className={classes.mainContainer}>
         <Grid container>
-          <Grid md={6} sx={{ margin: "auto", padding: "0 50px" }}>
+          <Grid md={6} className={classes.AboutUsTOpLeftGrid}>
             <Typography className={classes.serviceText}>About US</Typography>
             <Typography className={classes.serveceBelo}>
               <Typography
@@ -33,12 +33,18 @@ const AboutUs = () => {
           </Grid>
           <Grid md={6}>
             <Box sx={{ position: "relative" }}>
-              <img alt="" src="assets/images/abfTOp.png" />
+              <Box
+                component="img"
+                className={classes.pinIconBtn}
+                src="assets/images/abfTOp.png"
+                alt="Descriptive Alt Text"
+              />
               <Box>
-                <img
-                  alt=""
-                  src="assets/images/abft.png"
+                <Box
+                  component="img"
                   className={classes.sortImg}
+                  src="assets/images/abft.png"
+                  alt="Descriptive Alt Text"
                 />
               </Box>
             </Box>
@@ -133,6 +139,16 @@ export default AboutUs;
 
 const useStyles = makeStyles()((theme) => {
   return {
+    AboutUsTOpLeftGrid: {
+      margin: "auto",
+      padding: "0 50px",
+      [theme.breakpoints.down("sm")]: {
+        padding: "10px",
+      },
+    },
+    pinIconBtn: {
+      ...styles.imagesBox,
+    },
     appbgleft: {
       position: "absolute",
       left: 0,
@@ -201,11 +217,18 @@ const useStyles = makeStyles()((theme) => {
       lineHeight: "24px",
       padding: "10px 70px 0 0",
       fontFamily: "Roboto",
+      [theme.breakpoints.down("sm")]: {
+        padding: "10px 0",
+      }
     },
     sortImg: {
       position: "absolute",
       bottom: "-130px",
       left: "-60px",
+      [theme.breakpoints.down("sm")]: {
+        bottom: "-160px",
+        left: "-20px",
+      }
     },
     serveceBelo: {
       fontSize: "40px",

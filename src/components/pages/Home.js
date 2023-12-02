@@ -778,6 +778,8 @@ const useStyles = makeStyles()((theme) => {
       [theme.breakpoints.down("sm")]: {
         width: "37.334px",
         height: "7.924px",
+        bottom: "40px",
+        left: "70px",
       },
     },
     amzonText: {
@@ -874,12 +876,10 @@ const useStyles = makeStyles()((theme) => {
       lineHeight: "26px",
       fontFamily: "Roboto",
     },
-    carosalPara:{
-
-    },
+    carosalPara: {},
     whyGsdPARA: {
       color: "#2E2E2E",
-      fontFamily:'Roboto',
+      fontFamily: "Roboto",
       fontSize: "16px",
       fontStyle: "normal",
       fontWeight: 400,
@@ -907,7 +907,7 @@ const useStyles = makeStyles()((theme) => {
     gsdArrTitle: {
       color: "#1A2128",
       fontSize: "20px",
-      fontFamily:'Roboto',
+      fontFamily: "Roboto",
       fontStyle: "normal",
       fontWeight: 600,
       lineHeight: "normal",
@@ -916,7 +916,7 @@ const useStyles = makeStyles()((theme) => {
     gsdArrPara: {
       paddingTop: "10px",
       color: "#434D56",
-      fontFamily:'Roboto',
+      fontFamily: "Roboto",
       fontSize: "16px",
       fontStyle: "normal",
       fontWeight: 400,
@@ -1036,7 +1036,7 @@ const useStyles = makeStyles()((theme) => {
       // margin: "10px 70px",
       // paddingTop: "10px",
       [theme.breakpoints.down("sm")]: {
-        width: "80%",
+        display: "none",
       },
     },
     welcomCOntainer: {
@@ -1080,7 +1080,7 @@ const useStyles = makeStyles()((theme) => {
       fontStyle: "normal",
       fontWeight: 400,
       lineHeight: "normal",
-      fontFamily:'Roboto'
+      fontFamily: "Roboto",
     },
     expetText: {
       color: "#FFFFFF",
@@ -1158,6 +1158,9 @@ const useStyles = makeStyles()((theme) => {
       flexDirection: "column",
       padding: "10px 15px",
       position: "relative",
+      [theme.breakpoints.down("sm")]: {
+        margin: "0 20px",
+      },
     },
     efficiencyBoxLeft: {
       padding: "100px 20px",
@@ -1265,6 +1268,7 @@ const useStyles = makeStyles()((theme) => {
       fontStyle: "normal",
       fontWeight: 700,
       lineHeight: "24px",
+      padding: "10px 0",
     },
     exploreLink: {
       fontFamily: "Roboto",
@@ -1290,7 +1294,12 @@ const useStyles = makeStyles()((theme) => {
       margin: "20px 0px",
     },
     columnsGrid: {
-      margin: "auto 0px",
+      margin: "100px 0px",
+      paddingLeft: "60px",
+      [theme.breakpoints.down("sm")]: {
+        margin: "auto 0",
+        padding: "0",
+      },
     },
     columnsGridRight: {
       display: "flex",
