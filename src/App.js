@@ -11,6 +11,7 @@ import AboutUs from "./components/pages/AboutUs";
 import Career from "./components/pages/Career";
 import MeetTheTeam from "./components/pages/MeetTheTeam";
 import BlogPage from "./components/pages/Blog";
+import PaymentPage from "./components/pages/PaymentPage";
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -35,6 +36,7 @@ export default function App() {
             <Route exact path="/about-us" element={<AboutUs />} />
             <Route exact path="/meet-team" element={<MeetTheTeam />} />
             <Route exact path="/blog-page" element={<BlogPage />} />
+            <Route exact path="/payment-page" element={<PaymentPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
