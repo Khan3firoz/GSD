@@ -10,6 +10,10 @@ export const styles = {
     display: "flex",
     flexDirection: "column",
   },
+  flexDR: {
+    display: "flex",
+    flexDirection: "row",
+  },
   buttonMain: {
     backgroundColor: pallete.parimayBlue,
     color: pallete.primaryWhite,

@@ -8,14 +8,17 @@ import {
   Button,
   Card,
 } from "@mui/material";
-import React from "react";
+import React, {useState} from "react";
 import { makeStyles } from "tss-react/mui";
 import { styles } from "../css/CommonCSS";
 import { pallete } from "../css/Theme";
+import { useNavigate } from "react-router-dom";
+import OpenJobs from "./OpenJobs";
 
 const Career = () => {
   const { classes } = useStyles();
-
+  const navigate = useNavigate();
+  const [showJobDs, setShowJobDs] = useState(false);
   const clients = [
     {
       id: 1,
@@ -486,15 +489,29 @@ const Career = () => {
                     src={x.img}
                     alt="Descriptive Alt Text"
                   />
-                  <Typography variant="h5">{x.title}</Typography>
-                  <Box>
-                  <Box
-                    component="img"
-                    className={classes.clientsIcin}
-                    src="assets/icons/calander.svg"
-                    alt="Descriptive Alt Text"
-                  />
-                    <Typography variant="h6">{x.date}</Typography>
+                  <Box sx={{ ...styles.flexDRS }}>
+                    <Box>
+                      <Typography variant="h5" sx={{ padding: "0 10px" }}>
+                        {x.title}
+                      </Typography>
+                      <Box sx={{ ...styles.flexDR, padding: "10px" }}>
+                        <Box
+                          component="img"
+                          className={classes.clientsIcin}
+                          src="assets/icons/calander.svg"
+                          alt="Descriptive Alt Text"
+                        />
+                        <Typography variant="h6">{x.date}</Typography>
+                      </Box>
+                    </Box>
+                    <IconButton sx={{ margin: "10px" }}>
+                      <Box
+                        component="img"
+                        // className={classes.clientsImg}
+                        src="assets/icons/arrowIcon.svg"
+                        alt="Descriptive Alt Text"
+                      />
+                    </IconButton>
                   </Box>
                 </Card>
               </Grid>
@@ -502,6 +519,43 @@ const Career = () => {
           </Grid>
         </Grid>
       </Box>
+      <Container maxWidth={false} className={classes.expertContainer}>
+        <Grid container className={classes.blogsGrid}>
+          <Grid
+            container
+            md={8}
+            sx={{
+              backgroundColor: pallete.primaryPurple,
+              borderRadius: "12px",
+            }}
+            className={classes.takeYourBusiness}
+          >
+            <Grid item md={9}>
+              <Box className={classes.expertLeftBox}>
+                <Typography className={classes.expetText}>
+                  Get Contact Me
+                </Typography>
+                <Divider variant="inset" className={classes.dividerMain} />
+                <Typography className={classes.expectPara}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu
+                  pharetra, ac purus diam leo eget. Sem a magna egestas
+                  ridiculus.Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit.{" "}
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item md={3} className={classes.experBtnGrodBottom}>
+              <Button
+                onClick={() => navigate("about-us")}
+                variant="contained"
+                className={classes.expertBtns}
+              >
+                Get Started
+              </Button>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Container>
     </Container>
   );
 };
@@ -510,12 +564,72 @@ export default Career;
 
 const useStyles = makeStyles()((theme) => {
   return {
+    expectPara: {
+      color: "#FFFFFF",
+      fontSize: "16px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal",
+      fontFamily: "Roboto",
+    },
+    expertBtns: {
+      ...styles.buttonMain,
+      backgroundColor: "#fff",
+      color: "#737373",
+      "&:hover": {
+        backgroundColor: "#fff",
+        color: "#737373",
+      },
+    },
+    experBtnGrodBottom: {
+      margin: "auto",
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-around",
+    },
+    dividerMain: {
+      width: "48px",
+      height: "4px",
+      backgroundColor: "#fff", // Replace with your desired color
+      margin: theme.spacing(1, 0),
+      borderRadius: "2px",
+    },
+    takeYourBusiness: {
+      [theme.breakpoints.down("sm")]: {
+        padding: "50px 0",
+      },
+    },
+    blogsGrid: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
+      alignItems: "center",
+      alignContent: "center",
+    },
+    expetText: {
+      color: "#FFFFFF",
+      fontSize: "26px",
+      fontStyle: "normal",
+      fontWeight: 600,
+      lineHeight: "normal",
+    },
+    expertLeftBox: {
+      padding: "40px 40px",
+    },
+    expertGrid: {
+      padding: "200px 50px",
+      height: "300px",
+    },
+    expertContainer: {
+      margin: "50px 0",
+    },
     clientsCards: {
       margin: "20px",
     },
     clientsImg: {
       ...styles.imagesBox,
       maxWidth: "600px",
+      paddingBottom: "10px",
     },
     clientsIcin: {
       ...styles.imagesBox,
