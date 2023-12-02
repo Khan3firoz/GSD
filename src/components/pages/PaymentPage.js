@@ -113,8 +113,8 @@ const PaymentPage = () => {
                         </Typography>
                         <Typography align="center" className={classes.modalText}>
                           In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.
-                          Questions? Suggestions? insightful thoughts?
-                          Shoot us an email.
+                          <br/><br/>Questions? Suggestions? insightful thoughts?
+                          <br/><span className={classes.text}>Shoot us an email.</span>
                         </Typography>
                         <Box className={classes.rectangleBox3}>
 
@@ -164,6 +164,10 @@ export default PaymentPage;
 
 const useStyles = makeStyles()((theme) => {
   return {
+    text:{
+      color: "#020246",
+      textDecoration:"underline"
+    },
     homePageBack:{
       width: '550px',
       height: '47px',
