@@ -69,15 +69,11 @@ const Home = () => {
           </Grid>
           <Grid item md={6} className={classes.columnsGridRight}>
             <Box className={classes.homemenBox}>
-              <img
-                alt="boybg"
-                src="assets/images/hommenebg.png"
-                className={classes.homemenImgBG}
-              />
-              <img
-                alt="boy"
-                src="assets/images/homemen.png"
-                className={classes.homemenImg}
+              <Box
+                component="img"
+                className={classes.pinIconBtn}
+                src="assets\images\GSDNewImages\homeTOPImg.png"
+                alt="Descriptive Alt Text"
               />
             </Box>
           </Grid>
@@ -713,6 +709,9 @@ export default Home;
 
 const useStyles = makeStyles()((theme) => {
   return {
+    pinIconBtn: {
+      ...styles.imagesBox,
+    },
     ytubeTextApps: {
       position: "absolute",
       top: "75px",
@@ -1299,7 +1298,7 @@ const useStyles = makeStyles()((theme) => {
       [theme.breakpoints.down("sm")]: {
         margin: "auto 0",
         padding: "0",
-      },
+      }
     },
     columnsGridRight: {
       display: "flex",
@@ -1325,6 +1324,11 @@ const useStyles = makeStyles()((theme) => {
     mainContainer: {
       marginTop: "110px",
       height: "100vh",
+      // backgroundColor: '#f0e5fb',
+      backgroundImage: "url(assets/images/GSDNewImages/GSD.png)", // Add your image path here
+      // backgroundSize: "cover", // Optional: for covering the entire element
+      // backgroundPosition: "center", // Optional: to center the image
+      backgroundRepeat: "no-repeat",
     },
   };
 });
