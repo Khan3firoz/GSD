@@ -16,10 +16,46 @@ import { styles } from "../css/CommonCSS";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
 import { useNavigate } from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Home = () => {
   const navigate = useNavigate();
   const { classes } = useStyles();
+  const settings = {
+    centerMode: true,
+    centerPadding: "30px",
+    slidesToShow: 1,
+    dots: true,
+    infinite: true,
+    vertical: false,
+    speed: 1000,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
   const whyGsdArr = [
     {
       id: 1,
@@ -51,36 +87,42 @@ const Home = () => {
   ];
   return (
     <div>
-      <Container maxWidth={false} className={classes.mainContainer}>
-        <Grid container className={classes.mainGrid}>
-          <Grid item md={6} className={classes.columnsGrid}>
-            <Typography className={classes.mainText}>
-              Virtual Private Assistant Services
-            </Typography>
-            <Typography className={classes.secondHeading}>
-              We Make your business thrive.
-            </Typography>
-            <Box className={classes.exploreBox}>
-              <Typography className={classes.exploreLink}>Explore</Typography>
-              <ArrowForwardIcon
-                sx={{ color: pallete.parimayBlue, fontSize: "20px" }}
-              />
-            </Box>
-          </Grid>
-          <Grid item md={6} className={classes.columnsGridRight}>
-            <Box className={classes.homemenBox}>
-              <Box
-                component="img"
-                className={classes.pinIconBtn}
-                src="assets\images\GSDNewImages\homeTOPImg.png"
-                alt="Descriptive Alt Text"
-              />
-            </Box>
-          </Grid>
-        </Grid>
-      </Container>
-      <Container maxWidth={false}>
-        <Box sx={{ margin: "50px 0" }} className={classes.serviceBox}>
+      <Slider {...settings} className="content-container">
+        {[...Array(6)].map((x) => (
+          <Container maxWidth={false} className={classes.mainContainer}>
+            <Grid container className={classes.mainGrid}>
+              <Grid item md={6} className={classes.columnsGrid}>
+                <Typography className={classes.mainText}>
+                  Virtual Private Assistant Services
+                </Typography>
+                <Typography className={classes.secondHeading}>
+                  We Make your business thrive.
+                </Typography>
+                <Box className={classes.exploreBox}>
+                  <Typography className={classes.exploreLink}>
+                    Explore
+                  </Typography>
+                  <ArrowForwardIcon
+                    sx={{ color: pallete.parimayBlue, fontSize: "20px" }}
+                  />
+                </Box>
+              </Grid>
+              <Grid item md={6} className={classes.columnsGridRight}>
+                <Box className={classes.homemenBox}>
+                  <Box
+                    component="img"
+                    className={classes.pinIconBtn}
+                    src="assets\images\GSDNewImages\homeTOPImg.png"
+                    alt="Descriptive Alt Text"
+                  />
+                </Box>
+              </Grid>
+            </Grid>
+          </Container>
+        ))}
+      </Slider>
+      <Container maxWidth={false} sx={{marginTop: '40px'}}>
+        <Box sx={{ margin: "10px 0" }} className={classes.serviceBox}>
           <Typography align="center" className={classes.serviceText}>
             Our Services
           </Typography>
@@ -1298,7 +1340,7 @@ const useStyles = makeStyles()((theme) => {
       [theme.breakpoints.down("sm")]: {
         margin: "auto 0",
         padding: "0",
-      }
+      },
     },
     columnsGridRight: {
       display: "flex",
@@ -1323,7 +1365,8 @@ const useStyles = makeStyles()((theme) => {
     },
     mainContainer: {
       marginTop: "110px",
-      height: "100vh",
+      marginBottom: "100px",
+      // height: "100",
       // backgroundColor: '#f0e5fb',
       backgroundImage: "url(assets/images/GSDNewImages/GSD.png)", // Add your image path here
       // backgroundSize: "cover", // Optional: for covering the entire element
