@@ -7,8 +7,9 @@ import { styles } from "../css/CommonCSS";
 const AboutUs = () => {
   const { classes } = useStyles();
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
+  
   return (
     <div>
       <Container maxWidth={false} className={classes.mainContainer}>

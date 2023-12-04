@@ -8,7 +8,7 @@ import {
   Divider,
   IconButton,
 } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import { makeStyles } from "tss-react/mui";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { pallete } from "../css/Theme";
@@ -85,6 +85,11 @@ const Home = () => {
       borderColor: "4px solid #FFA3CA",
     },
   ];
+
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+  
   return (
     <div>
       <Slider {...settings} className="content-container">
@@ -121,7 +126,7 @@ const Home = () => {
           </Container>
         ))}
       </Slider>
-      <Container maxWidth={false} sx={{marginTop: '40px'}}>
+      <Container maxWidth={false} sx={{ marginTop: "40px" }}>
         <Box sx={{ margin: "10px 0" }} className={classes.serviceBox}>
           <Typography align="center" className={classes.serviceText}>
             Our Services

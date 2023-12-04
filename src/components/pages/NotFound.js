@@ -1,8 +1,13 @@
+import { Typography, Box, Container } from '@mui/material'
 import React from 'react'
 
 const NotFound = () => {
   return (
-    <div>NotFound</div>
+   <Container maxWidth={false}>
+    <Box>
+      <Typography>Page not found</Typography>
+    </Box>
+   </Container>
   )
 }
 

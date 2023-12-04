@@ -16,6 +16,10 @@ const MeetTheTeam = () => {
     "assets/images/meetTheTeam/13.png",
   ];
 
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   return (
     <div>
       <Container maxWidth={false} className={classes.mainContainer}>

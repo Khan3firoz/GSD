@@ -19,6 +19,11 @@ import "../css/demo.css";
 const Demo = () => {
   const { classes } = useStyles();
   const [value, onChange] = useState(new Date());
+
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+  
   return (
     <Container maxWidth={false} className={classes.demoComtainer}>
       <Card className={classes.demoCard}>

@@ -57,9 +57,9 @@ const Career = () => {
       date: "Oct 2023",
     },
   ];
-  //   React.useEffect(() => {
-  //     window.scrollTo(0, 0);
-  //   }, []);
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
     <Container maxWidth={false}>
       <Grid container className={classes.topContaineer}>

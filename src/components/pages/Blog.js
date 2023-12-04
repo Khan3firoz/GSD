@@ -20,6 +20,11 @@ const BlogPage = () => {
 
   const { classes } = useStyles();
   const category = 'Category name';
+
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+  
   return (
     <div>
       {/*!section-1*/}

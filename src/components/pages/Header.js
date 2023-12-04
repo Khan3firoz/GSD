@@ -246,7 +246,7 @@ export default function ButtonAppBar() {
               <Box className={classes.menuBox}>
                 <Typography className={classes.menuText}>Blog</Typography>
               </Box>
-              <Box className={classes.menuBox}>
+              <Box className={classes.menuBox} onClick={() => navigate("/contact-us")}>
                 <Typography className={classes.menuText}>Contact us</Typography>
               </Box>
             </Box>

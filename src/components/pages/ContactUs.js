@@ -16,6 +16,10 @@ import { styles } from "../css/CommonCSS";
 
 const ContactUs = () => {
   const { classes } = useStyles();
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+  
   return (
     <Container maxWidth={false} className={classes.mainContainer}>
       <Box className={classes.topBox}>
