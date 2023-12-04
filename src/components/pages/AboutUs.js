@@ -3,9 +3,12 @@ import React from "react";
 import { makeStyles } from "tss-react/mui";
 import { pallete } from "../css/Theme";
 import { styles } from "../css/CommonCSS";
+import { useNavigate } from "react-router-dom";
 
 const AboutUs = () => {
   const { classes } = useStyles();
+  const navigate  = useNavigate();
+
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
@@ -112,7 +115,7 @@ const AboutUs = () => {
             <Typography className={classes.paraText}>
               Start Optimizing Your Process Today
             </Typography>
-            <Button variant="contained" className={classes.contactUsBtn}>
+            <Button onClick={() => navigate("/book-demo")} variant="contained" className={classes.contactUsBtn}>
               Contact Us
             </Button>
           </Grid>

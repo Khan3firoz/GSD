@@ -24,7 +24,7 @@ const MeetTheTeam = () => {
     <div>
       <Container maxWidth={false} className={classes.mainContainer}>
         <Grid container className={classes.mainGrid}>
-          <Grid item md={6}>
+          <Grid item md={6} className={classes.columnsGrid}>
             <Typography className={classes.mainText}>
               Meet Our Dedicated Virtual Assistant Team
             </Typography>
@@ -34,6 +34,14 @@ const MeetTheTeam = () => {
           </Grid>
           <Grid item md={6} className={classes.columnsGridRight}>
             <Box className={classes.homemenBox}>
+              <Grid container>
+                <Grid item md={6}>
+
+                </Grid>
+                <Grid item md={6}>
+                  
+                </Grid>
+              </Grid>
               <img
                 alt="1stBG"
                 src="assets/images/meetTheTeam/1.png"
@@ -68,6 +76,7 @@ const MeetTheTeam = () => {
           </Grid>
         </Grid>
       </Container>
+
       {/* section-2*/}
       <Container maxWidth={false} className={classes.container2}>
         <Grid container sx={{ height: "100%" }}>
@@ -197,6 +206,14 @@ const MeetTheTeam = () => {
 export default MeetTheTeam;
 const useStyles = makeStyles()((theme) => {
   return {
+    columnsGrid: {
+      margin: "100px 0px",
+      paddingLeft: "60px",
+      [theme.breakpoints.down("sm")]: {
+        margin: "auto 0",
+        padding: "0",
+      },
+    },
     efficiencyCon: {},
     serviceRightTextBox: {
       margin: "auto",

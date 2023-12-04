@@ -584,7 +584,7 @@ const Career = () => {
             </Grid>
             <Grid item md={3} className={classes.experBtnGrodBottom}>
               <Button
-                onClick={() => navigate("about-us")}
+                onClick={() => navigate("/book-demo")}
                 variant="contained"
                 className={classes.expertBtns}
               >

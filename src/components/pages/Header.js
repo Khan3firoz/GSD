@@ -223,7 +223,7 @@ export default function ButtonAppBar() {
                 }}
               >
                 <List>
-                  <ListItem disablePadding>
+                  <ListItem disablePadding onClick={() => navigate("/about-us")}>
                     <ListItemButton>
                       <ListItemText primary="About US" />
                     </ListItemButton>
@@ -231,19 +231,19 @@ export default function ButtonAppBar() {
                   <Divider />
                   <ListItem disablePadding>
                     <ListItemButton>
-                      <ListItemText primary="Career" />
+                      <ListItemText primary="Career" onClick={() => navigate("/career")}/>
                     </ListItemButton>
                   </ListItem>
                   <Divider />
                   <ListItem disablePadding>
                     <ListItemButton>
-                      <ListItemText primary="Meet The Team" />
+                      <ListItemText primary="Meet The Team" onClick={() => navigate("/meet-team")}/>
                     </ListItemButton>
                   </ListItem>
                 </List>
               </Popover>
 
-              <Box className={classes.menuBox}>
+              <Box className={classes.menuBox} onClick={() => navigate("/blogs")}>
                 <Typography className={classes.menuText}>Blog</Typography>
               </Box>
               <Box className={classes.menuBox} onClick={() => navigate("/contact-us")}>
@@ -251,7 +251,7 @@ export default function ButtonAppBar() {
               </Box>
             </Box>
             <Box className={classes.btnBox}>
-              <Button onClick={() => navigate("about-us")} className={classes.mainBtn} variant="contained">
+              <Button onClick={() => navigate("/book-demo")} className={classes.mainBtn} variant="contained">
                 Get Started
               </Button>
             </Box>

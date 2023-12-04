@@ -155,7 +155,7 @@ const Home = () => {
             /> */}
           </Box>
           <Button
-            onClick={() => navigate("about-us")}
+            onClick={() => navigate("/contact-us")}
             variant="contained"
             className={classes.contactUsBtn}
           >
@@ -463,7 +463,7 @@ const Home = () => {
             </Grid>
             <Grid item md={2.5} className={classes.experBtnGrod}>
               <Button
-                onClick={() => navigate("about-us")}
+                onClick={() => navigate("/book-demo")}
                 variant="contained"
                 className={classes.expertBtns}
               >

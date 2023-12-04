@@ -39,7 +39,7 @@ export default function App() {
             <Route exact path="/meet-team" element={<MeetTheTeam />} />
             <Route exact path="/blogs" element={<BlogPage />} />
             <Route exact path="/payments" element={<PaymentPage />} />
-            <Route exact path="/demo" element={<Demo />} />
+            <Route exact path="/book-demo" element={<Demo />} />
             <Route exact path="/contact-us" element={<ContactUs />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
