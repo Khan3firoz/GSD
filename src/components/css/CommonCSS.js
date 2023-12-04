@@ -11,6 +11,11 @@ export const styles = {
     flexDirection: "row",
     justifyContent: "center",
   },
+  flexDCC: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+  },
   flexDC: {
     display: "flex",
     flexDirection: "column",

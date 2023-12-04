@@ -12,6 +12,8 @@ import Career from "./components/pages/Career";
 import MeetTheTeam from "./components/pages/MeetTheTeam";
 import BlogPage from "./components/pages/Blog";
 import PaymentPage from "./components/pages/PaymentPage";
+import Demo from "./components/pages/Demo";
+import ContactUs from "./components/pages/ContactUs";
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -35,8 +37,10 @@ export default function App() {
             <Route exact path="/career" element={<Career />} />
             <Route exact path="/about-us" element={<AboutUs />} />
             <Route exact path="/meet-team" element={<MeetTheTeam />} />
-            <Route exact path="/blog-page" element={<BlogPage />} />
-            <Route exact path="/payment-page" element={<PaymentPage />} />
+            <Route exact path="/blogs" element={<BlogPage />} />
+            <Route exact path="/payments" element={<PaymentPage />} />
+            <Route exact path="/demo" element={<Demo />} />
+            <Route exact path="/contact-us" element={<ContactUs />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
