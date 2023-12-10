@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Typography, Box, Grid, Card } from "@mui/material";
+import { Container, Typography, Box, Grid, Card, Button, Divider } from "@mui/material";
 import { makeStyles } from "tss-react/mui";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { pallete } from "../css/Theme";
@@ -7,10 +7,11 @@ import { styles } from "../css/CommonCSS";
 import AvTimerIcon from "@mui/icons-material/AvTimer";
 import DisplaySettingsIcon from "@mui/icons-material/DisplaySettings";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
   const { classes } = useStyles();
-
+  const navigate = useNavigate();
   return (
     <>
       <Container maxWidth={false} className={classes.mainContainer}>
@@ -364,11 +365,14 @@ const Services = () => {
           visual form of a document or a typeface without <br /> relying on
           meaningful content.
         </Typography>
-        <Grid container sx={{...styles.flexDRC}}>
+        <Grid container sx={{ ...styles.flexDRC }}>
           <Grid container md={11}>
             {[...Array(4)].map((x) => (
-              <Grid item md={3} >
-                <Box position="relative" sx={{ height: "450px", margin: '20px 10px' }}>
+              <Grid item md={3}>
+                <Box
+                  position="relative"
+                  sx={{ height: "450px", margin: "20px 10px" }}
+                >
                   <Box
                     component="img"
                     className={classes.serviceImg0}
@@ -399,6 +403,56 @@ const Services = () => {
           </Grid>
         </Grid>
       </Container>
+      <Container maxWidth={false} className={classes.conatiner7}>
+        <Box>
+          <Typography variant="h4" color="white" align="center">
+            Lorem ipsum is a placeholder text
+            <br /> commonly used to demonstrate
+          </Typography>
+          <Typography variant="h6" color="white" align="center" padding="20px 0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros <br /> elementum tristique. Duis cursus, mi quis
+            viverra ornare, eros dolo
+          </Typography>
+        </Box>
+      </Container>
+      <Container maxWidth={false} className={classes.expertContainer}>
+        <Grid container className={classes.blogsGrid}>
+          <Grid
+            container
+            md={8}
+            sx={{
+              backgroundColor: pallete.primaryPurple,
+              borderRadius: "12px",
+            }}
+            className={classes.takeYourBusiness}
+          >
+            <Grid item md={9}>
+              <Box className={classes.expertLeftBox}>
+                <Typography className={classes.expetText}>
+                  Get Contact Me
+                </Typography>
+                <Divider variant="inset" className={classes.dividerMain} />
+                <Typography className={classes.expectPara}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu
+                  pharetra, ac purus diam leo eget. Sem a magna egestas
+                  ridiculus.Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit.{" "}
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item md={3} className={classes.experBtnGrodBottom}>
+              <Button
+                onClick={() => navigate("/book-demo")}
+                variant="contained"
+                className={classes.expertBtns}
+              >
+                Get Started
+              </Button>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Container>
     </>
   );
 };
@@ -407,6 +461,66 @@ export default Services;
 
 const useStyles = makeStyles()((theme) => {
   return {
+    blogsGrid: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
+      alignItems: "center",
+      alignContent: "center",
+    },
+    expetText: {
+      color: "#FFFFFF",
+      fontSize: "26px",
+      fontStyle: "normal",
+      fontWeight: 600,
+      lineHeight: "normal",
+      fontFamily: 'Montserrat'
+    },
+    expectPara: {
+      color: "#FFFFFF",
+      fontSize: "16px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal",
+      fontFamily: "Roboto",
+    },
+    expertBtns: {
+      ...styles.buttonMain,
+      backgroundColor: "#fff",
+      color: "#737373",
+      "&:hover": {
+        backgroundColor: "#fff",
+        color: "#737373",
+      },
+    },
+    experBtnGrodBottom: {
+      margin: "auto",
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-around",
+    },
+    dividerMain: {
+      width: "48px",
+      height: "4px",
+      backgroundColor: "#fff", // Replace with your desired color
+      margin: theme.spacing(1, 0),
+      borderRadius: "2px",
+    },
+    takeYourBusiness: {
+      [theme.breakpoints.down("sm")]: {
+        padding: "50px 0",
+      },
+    },
+    expertLeftBox: {
+      padding: "40px 40px",
+    },
+    expertGrid: {
+      padding: "200px 50px",
+      height: "300px",
+    },
+    expertContainer: {
+      margin: "100px 0",
+    },
     serviceImg0: {
       ...styles.imagesBox,
       position: "absolute",
@@ -424,6 +538,13 @@ const useStyles = makeStyles()((theme) => {
     },
     conatiner6: {
       padding: "50px 0",
+    },
+    conatiner7: {
+      margin: "50px 0",
+      backgroundImage: "url(assets/icons/services/lappyMan.png)",
+      backgroundRepeat: "no-repeat",
+      height: "600px",
+      ...styles.flexDCC,
     },
     transparentText: {
       fontFamily: "Montserrat",

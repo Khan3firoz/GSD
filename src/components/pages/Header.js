@@ -140,34 +140,34 @@ export default function ButtonAppBar() {
                 }}
               >
                 <List>
-                  <ListItem disablePadding>
+                  <ListItem disablePadding onClick={() => navigate("/services")}>
                     <ListItemButton>
                       <ListItemText primary="Virtual Private Assistant" />
                     </ListItemButton>
                   </ListItem>
                   <Divider />
-                  <ListItem disablePadding>
+                  <ListItem disablePadding onClick={() => navigate("/services")}>
                     <ListItemButton>
                       <ListItemText primary="Healthcare Services" />
                     </ListItemButton>
                   </ListItem>
                   <Divider />
-                  <ListItem disablePadding>
+                  <ListItem disablePadding onClick={() => navigate("/services")}>
                     <ListItemButton>
                       <ListItemText primary="Sales Development" />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem disablePadding>
+                  <ListItem disablePadding onClick={() => navigate("/services")}>
                     <ListItemButton>
                       <ListItemText primary="Virtual Receptionist" />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem disablePadding>
+                  <ListItem disablePadding onClick={() => navigate("/services")}>
                     <ListItemButton>
                       <ListItemText primary="Spanish translation" />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem disablePadding>
+                  <ListItem disablePadding onClick={() => navigate("/services")}>
                     <ListItemButton>
                       <ListItemText primary="Social Media Management" />
                     </ListItemButton>
