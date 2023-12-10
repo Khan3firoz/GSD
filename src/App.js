@@ -14,6 +14,7 @@ import BlogPage from "./components/pages/Blog";
 import PaymentPage from "./components/pages/PaymentPage";
 import Demo from "./components/pages/Demo";
 import ContactUs from "./components/pages/ContactUs";
+import Services from "./components/pages/Services";
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -41,6 +42,7 @@ export default function App() {
             <Route exact path="/payments" element={<PaymentPage />} />
             <Route exact path="/book-demo" element={<Demo />} />
             <Route exact path="/contact-us" element={<ContactUs />} />
+            <Route exact path="/services" element={<Services />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

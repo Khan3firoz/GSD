@@ -66,7 +66,14 @@ let theme = createTheme({
       letterSpacing: "0.03rem",
     },
     subtitle2: { fontSize: 12, letterSpacing: "0.03rem", fontWeight: "400" },
-    body1: { fontSize: 14, letterSpacing: "0.03rem" },
+    body1: {
+      color: "#030303",
+      fontFamily: "Roboto",
+      fontSize: "14px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: 1.5
+    },
     body2: { fontSize: 16, letterSpacing: "0.03rem" },
   },
 });
