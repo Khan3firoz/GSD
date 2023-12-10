@@ -1,7 +1,15 @@
 import React from "react";
-import { Container, Typography, Box, Grid, Card, Button, Divider } from "@mui/material";
+import {
+  Container,
+  Typography,
+  Box,
+  Grid,
+  Card,
+  Button,
+  Divider,
+  IconButton,
+} from "@mui/material";
 import { makeStyles } from "tss-react/mui";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { pallete } from "../css/Theme";
 import { styles } from "../css/CommonCSS";
 import AvTimerIcon from "@mui/icons-material/AvTimer";
@@ -12,6 +20,11 @@ import { useNavigate } from "react-router-dom";
 const Services = () => {
   const { classes } = useStyles();
   const navigate = useNavigate();
+
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+  
   return (
     <>
       <Container maxWidth={false} className={classes.mainContainer}>
@@ -409,12 +422,33 @@ const Services = () => {
             Lorem ipsum is a placeholder text
             <br /> commonly used to demonstrate
           </Typography>
-          <Typography variant="h6" color="white" align="center" padding="20px 0">
+          <Typography
+            variant="h6"
+            color="white"
+            align="center"
+            padding="20px 0"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             varius enim in eros <br /> elementum tristique. Duis cursus, mi quis
             viverra ornare, eros dolo
           </Typography>
-        </Box>
+        <IconButton sx={{
+          bottom:'10px',
+          right: '100px',
+          position:'absolute'
+        }}>
+          <Box
+            component="img"
+            sx={{
+              height:'152px',
+              width:'152px',
+              
+            }}
+            src="\assets\icons\services\playBtn.svg"
+            alt="Descriptive Alt Text"
+            />
+        </IconButton>
+            </Box>
       </Container>
       <Container maxWidth={false} className={classes.expertContainer}>
         <Grid container className={classes.blogsGrid}>
@@ -474,7 +508,7 @@ const useStyles = makeStyles()((theme) => {
       fontStyle: "normal",
       fontWeight: 600,
       lineHeight: "normal",
-      fontFamily: 'Montserrat'
+      fontFamily: "Montserrat",
     },
     expectPara: {
       color: "#FFFFFF",
@@ -545,6 +579,7 @@ const useStyles = makeStyles()((theme) => {
       backgroundRepeat: "no-repeat",
       height: "600px",
       ...styles.flexDCC,
+      position: "relative",
     },
     transparentText: {
       fontFamily: "Montserrat",

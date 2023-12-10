@@ -22,7 +22,7 @@ import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { useNavigate } from "react-router-dom";
 
 export default function ButtonAppBar() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { classes } = useStyles();
   const [anchorElServices, setAnchorElServices] = React.useState(null);
   const [anchorElCompany, setAnchorElCompany] = React.useState(null);
@@ -43,6 +43,12 @@ export default function ButtonAppBar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleNavigation = (route) => {
+    navigate(route);
+    setAnchorElCompany(null);
+    setAnchorElServices(null);
+  };
 
   const handleClickS = (event) => {
     setAnchorElServices(event.currentTarget);
@@ -78,7 +84,7 @@ export default function ButtonAppBar() {
         style={{
           backgroundColor: scrolled ? "#fff" : "transparent",
           boxShadow: scrolled ? "0px 2px 4px -1px rgba(0,0,0,0.4)" : "none",
-          padding: scrolled ? "10px" : "15px 10px"
+          padding: scrolled ? "10px" : "15px 10px",
         }}
       >
         <Toolbar className={classes.toolbar}>
@@ -140,34 +146,52 @@ export default function ButtonAppBar() {
                 }}
               >
                 <List>
-                  <ListItem disablePadding onClick={() => navigate("/services")}>
+                  <ListItem
+                    disablePadding
+                    onClick={() => handleNavigation("/services")}
+                  >
                     <ListItemButton>
                       <ListItemText primary="Virtual Private Assistant" />
                     </ListItemButton>
                   </ListItem>
                   <Divider />
-                  <ListItem disablePadding onClick={() => navigate("/services")}>
+                  <ListItem
+                    disablePadding
+                    onClick={() => handleNavigation("/services")}
+                  >
                     <ListItemButton>
                       <ListItemText primary="Healthcare Services" />
                     </ListItemButton>
                   </ListItem>
                   <Divider />
-                  <ListItem disablePadding onClick={() => navigate("/services")}>
+                  <ListItem
+                    disablePadding
+                    onClick={() => handleNavigation("/services")}
+                  >
                     <ListItemButton>
                       <ListItemText primary="Sales Development" />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem disablePadding onClick={() => navigate("/services")}>
+                  <ListItem
+                    disablePadding
+                    onClick={() => handleNavigation("/services")}
+                  >
                     <ListItemButton>
                       <ListItemText primary="Virtual Receptionist" />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem disablePadding onClick={() => navigate("/services")}>
+                  <ListItem
+                    disablePadding
+                    onClick={() => handleNavigation("/services")}
+                  >
                     <ListItemButton>
                       <ListItemText primary="Spanish translation" />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem disablePadding onClick={() => navigate("/services")}>
+                  <ListItem
+                    disablePadding
+                    onClick={() => handleNavigation("/services")}
+                  >
                     <ListItemButton>
                       <ListItemText primary="Social Media Management" />
                     </ListItemButton>
@@ -223,7 +247,10 @@ export default function ButtonAppBar() {
                 }}
               >
                 <List>
-                  <ListItem disablePadding onClick={() => navigate("/about-us")}>
+                  <ListItem
+                    disablePadding
+                    onClick={() => handleNavigation("/about-us")}
+                  >
                     <ListItemButton>
                       <ListItemText primary="About US" />
                     </ListItemButton>
@@ -231,27 +258,43 @@ export default function ButtonAppBar() {
                   <Divider />
                   <ListItem disablePadding>
                     <ListItemButton>
-                      <ListItemText primary="Career" onClick={() => navigate("/career")}/>
+                      <ListItemText
+                        primary="Career"
+                        onClick={() => handleNavigation("/career")}
+                      />
                     </ListItemButton>
                   </ListItem>
                   <Divider />
                   <ListItem disablePadding>
                     <ListItemButton>
-                      <ListItemText primary="Meet The Team" onClick={() => navigate("/meet-team")}/>
+                      <ListItemText
+                        primary="Meet The Team"
+                        onClick={() => handleNavigation("/meet-team")}
+                      />
                     </ListItemButton>
                   </ListItem>
                 </List>
               </Popover>
 
-              <Box className={classes.menuBox} onClick={() => navigate("/blogs")}>
+              <Box
+                className={classes.menuBox}
+                onClick={() => navigate("/blogs")}
+              >
                 <Typography className={classes.menuText}>Blog</Typography>
               </Box>
-              <Box className={classes.menuBox} onClick={() => navigate("/contact-us")}>
+              <Box
+                className={classes.menuBox}
+                onClick={() => navigate("/contact-us")}
+              >
                 <Typography className={classes.menuText}>Contact us</Typography>
               </Box>
             </Box>
             <Box className={classes.btnBox}>
-              <Button onClick={() => navigate("/book-demo")} className={classes.mainBtn} variant="contained">
+              <Button
+                onClick={() => navigate("/book-demo")}
+                className={classes.mainBtn}
+                variant="contained"
+              >
                 Get Started
               </Button>
             </Box>
@@ -269,8 +312,8 @@ export default function ButtonAppBar() {
 
 const useStyles = makeStyles()((theme) => {
   return {
-    gsdLogoBox:{
-      cursor :'pointer',
+    gsdLogoBox: {
+      cursor: "pointer",
     },
     btnBox: {
       margin: "auto 2px",
@@ -291,7 +334,7 @@ const useStyles = makeStyles()((theme) => {
       padding: "12px 40px",
       fontSize: "16px",
       fontWeight: "600",
-      fontFamily:'Roboto'
+      fontFamily: "Roboto",
     },
     popoverBox: {
       top: "100px !importent",
@@ -331,7 +374,7 @@ const useStyles = makeStyles()((theme) => {
       margin: "auto",
       padding: "0 5px",
       color: pallete.primaryBlack,
-        fontFamily: 'Roboto',
+      fontFamily: "Roboto",
       fontSize: "16px",
       fontStyle: "normal",
       fontWeight: 400,
@@ -345,7 +388,7 @@ const useStyles = makeStyles()((theme) => {
       margin: "auto",
       padding: "0 5px",
       color: pallete.primaryPink,
-        fontFamily: 'Roboto',
+      fontFamily: "Roboto",
       fontSize: "16px",
       fontStyle: "normal",
       fontWeight: 400,

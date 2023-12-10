@@ -17,7 +17,7 @@ const MeetTheTeam = () => {
   ];
 
   React.useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   return (
@@ -33,46 +33,48 @@ const MeetTheTeam = () => {
             </Typography>
           </Grid>
           <Grid item md={6} className={classes.columnsGridRight}>
-            <Box className={classes.homemenBox}>
               <Grid container>
-                <Grid item md={6}>
-
+                <Grid item md={6} className={classes.imgGridTop}>
+                  <Box
+                    component="img"
+                    src="assets/images/meetTheTeam/1.png"
+                    className={classes.firstImg}
+                    alt="Descriptive Alt Text"
+                  />
+                  <Box
+                    component="img"
+                    src="assets/images/meetTheTeam/2.png"
+                    className={classes.secondImg}
+                    alt="Descriptive Alt Text"
+                  />
+                  <Box
+                    component="img"
+                    src="assets/images/meetTheTeam/3.png"
+                    className={classes.thirdImg}
+                    alt="Descriptive Alt Text"
+                  />
                 </Grid>
-                <Grid item md={6}>
-                  
+                <Grid item md={6}  className={classes.imgGridTop}>
+                  <Box
+                    component="img"
+                    alt="boy"
+                    src="assets/images/meetTheTeam/4.png"
+                    className={classes.fourthImg}
+                  />
+                  <Box
+                    component="img"
+                    alt="boy"
+                    src="assets/images/meetTheTeam/5.png"
+                    className={classes.fifthImg}
+                  />
+                  <Box
+                    component="img"
+                    alt="boy"
+                    src="assets/images/meetTheTeam/6.png"
+                    className={classes.sixthImg}
+                  />
                 </Grid>
               </Grid>
-              <img
-                alt="1stBG"
-                src="assets/images/meetTheTeam/1.png"
-                className={classes.firstImg}
-              />
-              <img
-                alt="boy"
-                src="assets/images/meetTheTeam/2.png"
-                className={classes.secondImg}
-              />
-              <img
-                alt="boy"
-                src="assets/images/meetTheTeam/3.png"
-                className={classes.thirdImg}
-              />
-              <img
-                alt="boy"
-                src="assets/images/meetTheTeam/4.png"
-                className={classes.fourthImg}
-              />
-              <img
-                alt="boy"
-                src="assets/images/meetTheTeam/5.png"
-                className={classes.fifthImg}
-              />
-              <img
-                alt="boy"
-                src="assets/images/meetTheTeam/6.png"
-                className={classes.sixthImg}
-              />
-            </Box>
           </Grid>
         </Grid>
       </Container>
@@ -206,6 +208,9 @@ const MeetTheTeam = () => {
 export default MeetTheTeam;
 const useStyles = makeStyles()((theme) => {
   return {
+    imgGridTop:{
+      ...styles.flexDC
+    },
     columnsGrid: {
       margin: "100px 0px",
       paddingLeft: "60px",
@@ -347,10 +352,6 @@ const useStyles = makeStyles()((theme) => {
       right: 0,
       top: "50px",
     },
-    homemenBox: {
-      position: "relative",
-    },
-
     articalsPara: {
       color: "#2E2E2E",
       fontSize: "16px",
@@ -361,64 +362,60 @@ const useStyles = makeStyles()((theme) => {
     },
 
     firstImg: {
-      width: "219.167px",
-      height: "158.716px",
-      position: "relative",
+     ...styles.imagesBox,
+     width:'219px',
       [theme.breakpoints.down("sm")]: {
-        height: "00px",
-        width: "300px",
+        // height: "00px",
+        // width: "300px",
       },
-      border: "1px solid white", // 1px solid white border
+      border: "8px solid #F4EAFF", // 1px solid white border
     },
     secondImg: {
-      width: "125.751px",
-      height: "57.082px",
-      position: "relative",
+     ...styles.imagesBox,
+     width:'219px',
       [theme.breakpoints.down("sm")]: {
-        height: "00px",
-        width: "300px",
+        // height: "00px",
+        // width: "300px",
       },
-      border: "1px solid white", // 1px solid white border
+      border: "8px solid #F4EAFF", // 1px solid white border
     },
     thirdImg: {
-      width: "219.167px",
-      height: "158.716px",
-      position: "relative",
+      ...styles.imagesBox,
+      width:'140px',
+      height:'80px',
       [theme.breakpoints.down("sm")]: {
-        height: "00px",
-        width: "300px",
+        // height: "00px",
+        // width: "300px",
       },
-      border: "1px solid white", // 1px solid white border
+      border: "8px solid #F4EAFF", // 1px solid white border
     },
     fourthImg: {
-      width: "143.45px",
-      height: "79.324px",
-      position: "relative",
+     ...styles.imagesBox,
+     width:'125px',
+     height:'60px',
       [theme.breakpoints.down("sm")]: {
-        height: "00px",
-        width: "300px",
+        // height: "00px",
+        // width: "300px",
       },
-      border: "1px solid white", // 1px solid white border
+      border: "8px solid #F4EAFF", // 1px solid white border
     },
     fifthImg: {
-      width: "219.167px",
-      height: "158.716px",
-      position: "relative",
+     ...styles.imagesBox,
+     width:'219px',
       [theme.breakpoints.down("sm")]: {
-        height: "00px",
-        width: "300px",
+        // height: "00px",
+        // width: "300px",
       },
-      border: "1px solid white", // 1px solid white border
+      border: "8px solid #F4EAFF", // 1px solid white border
     },
     sixthImg: {
-      width: "219.167px",
-      height: "158.716px",
-      position: "relative",
+     ...styles.imagesBox,
+     width:'219px',
       [theme.breakpoints.down("sm")]: {
-        height: "00px",
-        width: "300px",
+        // height: "00px",
+        // width: "300px",
       },
-      border: "1px solid white", // 1px solid white border
+      border: "8px solid #F4EAFF", // 1px solid white border
     },
 
     efficiencyBoxLeft: {
@@ -559,45 +556,45 @@ const useStyles = makeStyles()((theme) => {
       fontSize: "18px",
       fontStyle: "normal",
       fontFamily: "Roboto",
-      fontWeight: 600,
+      fontWeight: 400,
       lineHeight: "40px",
       color: "#333333",
-      margin: "20px 0px",
+      margin: "10px 0px",
     },
     exploreBox: {
       display: "flex",
       flexDirection: "row",
       margin: "20px 0px",
     },
-    columnsGrid: {
-      margin: "auto 0px",
-    },
     columnsGridRight: {
       display: "flex",
-      flexDirection: "center",
+      flexDirection: "column",
+      // justifyContent:'center'
     },
     mainGrid: {
       height: "100%",
+      backgroundImage: "url(assets/images/GSDNewImages/GSD.png)",
+      backgroundRepeat: "no-repeat",
     },
     mainText: {
       background: "linear-gradient(93deg, #6800D7 0.68%, #DC0155 65.41%)",
       backgroundClip: "text",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
-      fontSize: "65px",
+      fontSize: "60px",
       fontStyle: "normal",
       fontWeight: 600,
       lineHeight: "normal",
+      fontFamily: "Montserrat",
       [theme.breakpoints.down("sm")]: {
         fontSize: "25px",
         // padding:'20px'
       },
     },
     mainContainer: {
-      marginTop: "110px",
-      height: "80vh",
+      paddingTop: "110px",
+      height: "100vh",
       background: "linear-Gradient(180deg,#DECAF4 0%,#EDC9DB 100%)",
-
       backgroundColor: "linear-gradint(180deg,#DECAF4 0%,#EDC9DB 100%)",
     },
     container2: {
