@@ -19,6 +19,7 @@ import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "../../index.css"
 
 const Home = () => {
   const navigate = useNavigate();
@@ -34,6 +35,11 @@ const Home = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    customPaging: i => (
+      <div className="ft-slick__dots--custom">
+        <div />
+      </div>
+    ),
     responsive: [
       {
         breakpoint: 768,
@@ -89,43 +95,43 @@ const Home = () => {
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
-  
+
   return (
-    <div>
-      <Slider {...settings} className="content-container">
-        {[...Array(6)].map((x) => (
-          <Container maxWidth={false} className={classes.mainContainer}>
-            <Grid container className={classes.mainGrid}>
-              <Grid item md={6} className={classes.columnsGrid}>
-                <Typography className={classes.mainText}>
-                  Virtual Private Assistant Services
-                </Typography>
-                <Typography className={classes.secondHeading}>
-                  We Make your business thrive.
-                </Typography>
-                <Box className={classes.exploreBox}>
-                  <Typography className={classes.exploreLink}>
-                    Explore
+    <div style={{ width: "100%", position: "relative" }}>
+        <Slider {...settings}>
+          {[...Array(6)].map((x) => (
+            <Container maxWidth={false} className={classes.mainContainer}>
+              <Grid container className={classes.mainGrid}>
+                <Grid item md={6} className={classes.columnsGrid}>
+                  <Typography className={classes.mainText}>
+                    Virtual Private Assistant Services
                   </Typography>
-                  <ArrowForwardIcon
-                    sx={{ color: pallete.parimayBlue, fontSize: "20px" }}
-                  />
-                </Box>
+                  <Typography className={classes.secondHeading}>
+                    We Make your business thrive.
+                  </Typography>
+                  <Box className={classes.exploreBox} onClick={() => navigate("services")}>
+                    <Typography className={classes.exploreLink}>
+                      Explore
+                    </Typography>
+                    <ArrowForwardIcon
+                      sx={{ color: pallete.parimayBlue, fontSize: "20px" }}
+                    />
+                  </Box>
+                </Grid>
+                <Grid item md={6} className={classes.columnsGridRight}>
+                  <Box className={classes.homemenBox}>
+                    <Box
+                      component="img"
+                      className={classes.pinIconBtn}
+                      src="assets\images\GSDNewImages\homeTOPImg.png"
+                      alt="Descriptive Alt Text"
+                    />
+                  </Box>
+                </Grid>
               </Grid>
-              <Grid item md={6} className={classes.columnsGridRight}>
-                <Box className={classes.homemenBox}>
-                  <Box
-                    component="img"
-                    className={classes.pinIconBtn}
-                    src="assets\images\GSDNewImages\homeTOPImg.png"
-                    alt="Descriptive Alt Text"
-                  />
-                </Box>
-              </Grid>
-            </Grid>
-          </Container>
-        ))}
-      </Slider>
+            </Container>
+          ))}
+        </Slider>
       <Container maxWidth={false} sx={{ marginTop: "40px" }}>
         <Box sx={{ margin: "10px 0" }} className={classes.serviceBox}>
           <Typography align="center" className={classes.serviceText}>
@@ -756,6 +762,7 @@ export default Home;
 
 const useStyles = makeStyles()((theme) => {
   return {
+
     pinIconBtn: {
       ...styles.imagesBox,
     },
@@ -1338,6 +1345,7 @@ const useStyles = makeStyles()((theme) => {
       display: "flex",
       flexDirection: "row",
       margin: "20px 0px",
+      cursor: 'pointer'
     },
     columnsGrid: {
       margin: "100px 0px",
