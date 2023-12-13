@@ -33,48 +33,98 @@ const MeetTheTeam = () => {
             </Typography>
           </Grid>
           <Grid item md={6} className={classes.columnsGridRight}>
-              <Grid container>
-                <Grid item md={6} className={classes.imgGridTop}>
+            <Grid container>
+              <Grid item md={6} className={classes.imgGridTop}>
+                <Box sx={{ ...styles.flexDR, justifyContent: "flex-end" }}>
                   <Box
                     component="img"
                     src="assets/images/meetTheTeam/1.png"
                     className={classes.firstImg}
                     alt="Descriptive Alt Text"
                   />
+                </Box>
+                {/* <Box className={classes.hLine1}>
+                  <Box 
+                    component="img"
+                    src="assets/images/meetTheTeam/hLine.svg"
+                    className={classes.hLine1Img}
+                    alt="Descriptive Alt Text"
+                  />
+                </Box> */}
+                <Box
+                  sx={{
+                    ...styles.flexDR,
+                    padding: "20px",
+                    justifyContent: "center",
+                  }}
+                >
                   <Box
                     component="img"
                     src="assets/images/meetTheTeam/2.png"
                     className={classes.secondImg}
                     alt="Descriptive Alt Text"
                   />
+                </Box>
+                <Box
+                  sx={{
+                    ...styles.flexDR,
+                    padding: "20px",
+                    justifyContent: "flex-end",
+                  }}
+                >
                   <Box
                     component="img"
                     src="assets/images/meetTheTeam/3.png"
                     className={classes.thirdImg}
                     alt="Descriptive Alt Text"
                   />
-                </Grid>
-                <Grid item md={6}  className={classes.imgGridTop}>
+                </Box>
+              </Grid>
+              <Grid item md={6} className={classes.imgGridTop}>
+                <Box
+                  sx={{
+                    ...styles.flexDR,
+                    padding: "20px",
+                    justifyContent: "flex-start",
+                  }}
+                >
                   <Box
                     component="img"
                     alt="boy"
                     src="assets/images/meetTheTeam/4.png"
                     className={classes.fourthImg}
                   />
+                </Box>
+                <Box
+                  sx={{
+                    ...styles.flexDR,
+                    padding: "20px",
+                    justifyContent: "center",
+                  }}
+                >
                   <Box
                     component="img"
                     alt="boy"
                     src="assets/images/meetTheTeam/5.png"
                     className={classes.fifthImg}
                   />
+                </Box>
+                <Box
+                  sx={{
+                    ...styles.flexDR,
+                    padding: "20px",
+                    justifyContent: "flex-start",
+                  }}
+                >
                   <Box
                     component="img"
                     alt="boy"
                     src="assets/images/meetTheTeam/6.png"
                     className={classes.sixthImg}
                   />
-                </Grid>
+                </Box>
               </Grid>
+            </Grid>
           </Grid>
         </Grid>
       </Container>
@@ -124,41 +174,63 @@ const MeetTheTeam = () => {
               <span style={{ color: pallete.primaryPurple }}>Meet </span> our
               Team
             </Typography>
-            <Typography
-              align="center"
-              fontSize="14px"
-              className={classes.section3paraText}
-            >
+            <Typography align="center" className={classes.section3paraText}>
               In publishing and graphic design, Lorem ipsum is a placeholder
-              text commonly used to demonstrate the visual form.In publishing
-              and graphic design.
+              text commonly used to <br /> demonstrate the visual form.In
+              publishing and graphic design.
             </Typography>
           </Box>
-          <Grid container justifyContent="center" spacing={2}>
-            {placeholderImages.slice(0, 5).map((placeholder, index) => (
-              <Grid item key={index}>
-                <div
-                  style={{
-                    width: "100px",
-                    height: "100px",
-                    borderRadius: "50%",
-                    overflow: "hidden",
-                    position: "relative",
-                    border: "2px solid #fff",
-                  }}
-                >
-                  <img
-                    src={placeholder}
-                    alt={`Placeholder ${index + 1}`}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                    }}
-                  />
-                </div>
-              </Grid>
-            ))}
+          <Grid container justifyContent="center">
+            <Grid item md={2}>
+             <Box className={classes.roundedBox}>
+              <Box
+                component="img"
+                alt="boy"
+                src="assets/images/meetTheTeam/9.png"
+                className={classes.roundOne1}
+              />
+              </Box>
+            </Grid>
+            <Grid item md={2}>
+             <Box className={classes.roundedBox}>
+              <Box
+                component="img"
+                alt="boy"
+                src="assets/images/meetTheTeam/10.png"
+                className={classes.roundOne2}
+              />
+              </Box>
+            </Grid>
+            <Grid item md={2}>
+             <Box className={classes.roundedBox}>
+              <Box
+                component="img"
+                alt="boy"
+                src="assets/images/meetTheTeam/11.png"
+                className={classes.roundOne3}
+              />
+              </Box>
+            </Grid>
+            <Grid item md={2}>
+             <Box className={classes.roundedBox}>
+              <Box
+                component="img"
+                alt="boy"
+                src="assets/images/meetTheTeam/12.png"
+                className={classes.roundOne2}
+              />
+              </Box>
+            </Grid>
+            <Grid item md={2}>
+             <Box className={classes.roundedBox}>
+              <Box
+                component="img"
+                alt="boy"
+                src="assets/images/meetTheTeam/9.png"
+                className={classes.roundOne1}
+              />
+              </Box>
+            </Grid>
           </Grid>
 
           <Grid container justifyContent="center" mt={2}>
@@ -208,8 +280,35 @@ const MeetTheTeam = () => {
 export default MeetTheTeam;
 const useStyles = makeStyles()((theme) => {
   return {
-    imgGridTop:{
-      ...styles.flexDC
+    roundedBox:{
+      padding: '20px'
+    },
+    roundOne1:{
+      borderRadius:'50%',
+      height:'217px',
+      width:'217px'
+    },
+    roundOne2:{
+      borderRadius:'50%',
+      height:'260px',
+      width:'260px'
+    },
+    roundOne3:{
+      borderRadius:'50%',
+      height:'320px',
+      width:'320px'
+    },
+    hLine1: {
+      position: "absolute",
+      top: "170px",
+      left: "260px",
+    },
+    hLine1Img: {
+      width: "280px",
+      height: "10px",
+    },
+    imgGridTop: {
+      ...styles.flexDC,
     },
     columnsGrid: {
       margin: "100px 0px",
@@ -290,28 +389,12 @@ const useStyles = makeStyles()((theme) => {
     section3paraText: {
       color: "#030303",
       fontSize: "14px",
-      marginLeft: "18.125rem",
-      marginTop: "10px",
-      marginBottom: "10px",
-      width: "692px",
-      display: "flex",
-      alignItems: "center",
-      textAlign: "center",
-
+      padding: "20px 0",
       fontfamily: "Roboto",
-
       fontStyle: "normal",
       fontWeight: "400",
       lineHeight: "20px" /* 133.333% */,
-      [theme.breakpoints.down("sm")]: {
-        height: "00px",
-        width: "300px",
-        margin: "0",
-        display: "flex",
-        alignItems: "center",
-        textAlign: "center",
-        justifyContent: "center",
-      },
+      [theme.breakpoints.down("sm")]: {},
     },
     section3heading: {
       color: "#FFF",
@@ -362,8 +445,8 @@ const useStyles = makeStyles()((theme) => {
     },
 
     firstImg: {
-     ...styles.imagesBox,
-     width:'219px',
+      ...styles.imagesBox,
+      width: "219px",
       [theme.breakpoints.down("sm")]: {
         // height: "00px",
         // width: "300px",
@@ -371,8 +454,8 @@ const useStyles = makeStyles()((theme) => {
       border: "8px solid #F4EAFF", // 1px solid white border
     },
     secondImg: {
-     ...styles.imagesBox,
-     width:'219px',
+      ...styles.imagesBox,
+      width: "219px",
       [theme.breakpoints.down("sm")]: {
         // height: "00px",
         // width: "300px",
@@ -381,8 +464,8 @@ const useStyles = makeStyles()((theme) => {
     },
     thirdImg: {
       ...styles.imagesBox,
-      width:'140px',
-      height:'80px',
+      width: "140px",
+      height: "80px",
       [theme.breakpoints.down("sm")]: {
         // height: "00px",
         // width: "300px",
@@ -390,9 +473,9 @@ const useStyles = makeStyles()((theme) => {
       border: "8px solid #F4EAFF", // 1px solid white border
     },
     fourthImg: {
-     ...styles.imagesBox,
-     width:'125px',
-     height:'60px',
+      ...styles.imagesBox,
+      width: "125px",
+      height: "60px",
       [theme.breakpoints.down("sm")]: {
         // height: "00px",
         // width: "300px",
@@ -400,8 +483,8 @@ const useStyles = makeStyles()((theme) => {
       border: "8px solid #F4EAFF", // 1px solid white border
     },
     fifthImg: {
-     ...styles.imagesBox,
-     width:'219px',
+      ...styles.imagesBox,
+      width: "219px",
       [theme.breakpoints.down("sm")]: {
         // height: "00px",
         // width: "300px",
@@ -409,8 +492,8 @@ const useStyles = makeStyles()((theme) => {
       border: "8px solid #F4EAFF", // 1px solid white border
     },
     sixthImg: {
-     ...styles.imagesBox,
-     width:'219px',
+      ...styles.imagesBox,
+      width: "219px",
       [theme.breakpoints.down("sm")]: {
         // height: "00px",
         // width: "300px",
@@ -535,6 +618,7 @@ const useStyles = makeStyles()((theme) => {
     serveceBelo: {
       fontSize: "40px",
       fontStyle: "normal",
+      fontFamily: "Montserrat",
       fontWeight: 600,
       lineHeight: "normal",
       letterSpacing: "-1px",
@@ -569,6 +653,7 @@ const useStyles = makeStyles()((theme) => {
     columnsGridRight: {
       display: "flex",
       flexDirection: "column",
+      position: "relative",
       // justifyContent:'center'
     },
     mainGrid: {
@@ -603,6 +688,7 @@ const useStyles = makeStyles()((theme) => {
     },
     container3: {
       marginTop: "110px",
+      padding: "50px 0",
       height: "80vh",
       background: "#F0E6FB",
     },
