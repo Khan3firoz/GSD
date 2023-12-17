@@ -77,15 +77,17 @@ const Career = () => {
             of work
           </Typography>
           <Typography variant="h6">
-            In publishing and graphic design, Lorem ipsum is a placeholder text
-            commonly used to demonstrate the visual form of a document or a
-            typeface without relying on meaningful content. Lorem ipsum may be
-            used as a placeholder before final copy is available.In publishing
-            and graphic design, Lorem ipsum is a placeholder text commonly used
-            to demonstrate the visual form of a document or a typeface without
-            relying on meaningful content. Lorem ipsum may be used as a
-            placeholder before final copy is available.
+          Are you ready to embark on an exciting journey with GSD? We're on a mission torevolutionize the way work is done, 
+          making it easier and more efficient. By joining theGSD team, you become a vital part of this transformation. 
+          We're not just about gettingthings done; we're about doing it better, faster, and smarter.
           </Typography>
+          <Typography variant="h6" marginTop={1}>
+          Our commitment to making work more seamless is unwavering, 
+          and we're looking forindividuals who share that passion. 
+          If you're ready to be a part of something bigger, 
+          toshape the future of work, and to enjoy a fulfilling and dynamic career, GSD is the placefor you.
+          </Typography>
+          <Typography variant="h6" marginTop={1}>Join us today and be a catalyst for change. Let's GET STUFF DONE, together!</Typography>
         </Grid>
       </Grid>
       <Box className={classes.benifitsBox}>

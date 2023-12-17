@@ -175,9 +175,9 @@ const MeetTheTeam = () => {
               Team
             </Typography>
             <Typography align="center" className={classes.section3paraText}>
-              In publishing and graphic design, Lorem ipsum is a placeholder
-              text commonly used to <br /> demonstrate the visual form.In
-              publishing and graphic design.
+            An exclusive look into the incredible individuals who make up the heart and soul of GSD. 
+            We're more than just a team; we're a diverse and passionate family committed totransforming 
+            the way work is approached.
             </Typography>
           </Box>
           <Grid container justifyContent="center">
@@ -255,12 +255,7 @@ const MeetTheTeam = () => {
                 Professional Individuals
               </Typography>
               <Typography className={classes.section4ParaText}>
-                Lorem ipsum is a placeholder text commonly used to demonstrate
-                the visual form of a document or a typeface without relying on
-                meaningful content. Lorem ipsum is a placeholder text commonly
-                used to demonstrate the visual form of a document or a typeface
-                without relying on meaningful content.Lorem ipsum is a
-                placeholder text commonly.
+              Behind the scenes, these exceptional professionals work tirelessly to simplify work, enhanceproductivity, and redefine what it means to truly excel. Their stories and journeys are a testament to thevalues that unite us in our shared mission to GET STUFF DONE.
               </Typography>
             </Box>
           </Grid>

@@ -35,7 +35,8 @@ const BlogPage = () => {
               How Virtual Private Assistants Transformed Businesses
             </Typography>
             <Typography className={classes.secondHeading}>
-              Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
+            Explore the remarkable journey of businesses that have harnessed the power of Virtual PrivateAssistants (VPAs) to revolutionize their operations and achieve unprecedented success. 
+            Dive into thestories of transformation, innovation, and the impactful role that VPAs have played in shaping thefuture of work and productivity."
             </Typography>
 
           </Grid>

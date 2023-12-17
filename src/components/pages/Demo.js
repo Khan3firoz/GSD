@@ -23,7 +23,7 @@ const Demo = () => {
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
-  
+
   return (
     <Container maxWidth={false} className={classes.demoComtainer}>
       <Card className={classes.demoCard}>
@@ -82,7 +82,9 @@ const Demo = () => {
             </Box>
           </Grid>
           <Grid item md={6} className={classes.calendarGrid}>
-            <Calendar onChange={onChange} value={value} />
+            <Box>
+              <Calendar onChange={onChange} value={value}/>
+            </Box>
           </Grid>
         </Grid>
       </Card>
@@ -94,55 +96,56 @@ export default Demo;
 
 const useStyles = makeStyles()((theme) => {
   return {
-    calendarGrid:{
-        display :'flex',
-        margin:'auto',
-        justifyContent: 'center'
+    calendarGrid: {
+      display: 'flex',
+      marginTop: '10px',
+      justifyContent: 'center'
     },
-    submitBtn: {
-      ...styles.buttonMain,
-      borderRadius: "24px",
-      alignContent: "center",
-      padding: "10px 50px",
-      marginBottom: "10px",
-    },
-    heading: {
-      color: "#6800D7",
-      textShadow: "0px 4px 4px rgba(104, 0, 215, 0.30)",
-    },
-    innerCOntainer: {
-      margin: "10px 0",
-    },
-    inputFields: {
-      margin: "10px 0",
-      width: "90%",
-      "& .MuiOutlinedInput-root": {
-        borderRadius: "12px", // Adjust as needed
-      },
-    },
-    inputFieldsFillWidth: {
-      margin: "10px 0",
-      width: "95%",
-      "& .MuiOutlinedInput-root": {
-        borderRadius: "12px", // Adjust as needed
-      },
-    },
-    demoComtainer: {
-      width: "100%",
-      height: "100vh",
-      paddingTop: '100px',
-      backgroundColor: "#e3dde5",
-      display: "flex",
-    },
-    demoCard: {
-    //   width: "1000px",
-      margin: "auto",
-      padding: "20px",
-      background: "transparent",
-      borderRadius: "3.283px",
-      //   opacity: "0.5",
-      //   background: "rgba(173, 159, 255, 0.30)",
-      //   filter: "blur(2px)",
-    },
+    
+  submitBtn: {
+  ...styles.buttonMain,
+  borderRadius: "24px",
+  alignContent: "center",
+  padding: "10px 50px",
+  marginBottom: "10px",
+},
+  heading: {
+  color: "#6800D7",
+  textShadow: "0px 4px 4px rgba(104, 0, 215, 0.30)",
+},
+  innerCOntainer: {
+  margin: "10px 0",
+},
+  inputFields: {
+  margin: "10px 0",
+  width: "90%",
+  "& .MuiOutlinedInput-root": {
+    borderRadius: "12px", // Adjust as needed
+  },
+},
+  inputFieldsFillWidth: {
+  margin: "10px 0",
+  width: "95%",
+  "& .MuiOutlinedInput-root": {
+    borderRadius: "12px", // Adjust as needed
+  },
+},
+  demoComtainer: {
+  width: "100%",
+  height: "100vh",
+  paddingTop: '100px',
+  backgroundColor: "#e3dde5",
+  display: "flex",
+},
+  demoCard: {
+  //   width: "1000px",
+  margin: "auto",
+  padding: "20px",
+  background: "transparent",
+  borderRadius: "3.283px",
+  //   opacity: "0.5",
+  //   background: "rgba(173, 159, 255, 0.30)",
+  //   filter: "blur(2px)",
+},
   };
 });

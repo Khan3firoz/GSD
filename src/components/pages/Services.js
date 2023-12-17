@@ -24,7 +24,7 @@ const Services = () => {
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
-  
+
   return (
     <>
       <Container maxWidth={false} className={classes.mainContainer}>
@@ -40,9 +40,11 @@ const Services = () => {
               Virtual Private Assistant Services
             </Typography>
             <Typography variant="h6">
-              Lorem ipsum is a placeholder text commonly used to demonstrate the
-              visual form of a document or a typeface without relying on
-              meaningful content.
+              Virtual Private Assistant
+              Healthcare Services
+              Sales Development
+              Virtual Receptionist Spanish translation
+              Social Media Management
             </Typography>
           </Grid>
           <Grid item md={6} className={classes.columnsGridRight}>
@@ -432,23 +434,23 @@ const Services = () => {
             varius enim in eros <br /> elementum tristique. Duis cursus, mi quis
             viverra ornare, eros dolo
           </Typography>
-        <IconButton sx={{
-          bottom:'10px',
-          right: '100px',
-          position:'absolute'
-        }}>
-          <Box
-            component="img"
-            sx={{
-              height:'152px',
-              width:'152px',
-              
-            }}
-            src="\assets\icons\services\playBtn.svg"
-            alt="Descriptive Alt Text"
+          <IconButton sx={{
+            bottom: '10px',
+            right: '100px',
+            position: 'absolute'
+          }}>
+            <Box
+              component="img"
+              sx={{
+                height: '152px',
+                width: '152px',
+
+              }}
+              src="\assets\icons\services\playBtn.svg"
+              alt="Descriptive Alt Text"
             />
-        </IconButton>
-            </Box>
+          </IconButton>
+        </Box>
       </Container>
       <Container maxWidth={false} className={classes.expertContainer}>
         <Grid container className={classes.blogsGrid}>

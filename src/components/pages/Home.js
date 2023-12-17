@@ -230,10 +230,7 @@ const Home = () => {
                 operations.
               </Typography>
               <Typography className={classes.paraText}>
-                We provide a range of services tailored to your needs, including
-                virtual private assistance services, virtual receptionist
-                services, healthcare admin services, and sales outsourcing
-                services.
+              At GSD, we take pride in offering comprehensive services designed to simplify yourworkload and help you achieve your goals efficiently. Each of our services is tailoredto your individual needs to ensure that.
               </Typography>
               <Button
                 onClick={() => navigate("about-us")}

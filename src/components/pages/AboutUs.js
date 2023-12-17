@@ -7,12 +7,12 @@ import { useNavigate } from "react-router-dom";
 
 const AboutUs = () => {
   const { classes } = useStyles();
-  const navigate  = useNavigate();
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
-  
+
   return (
     <div>
       <Container maxWidth={false} className={classes.mainContainer}>
@@ -29,10 +29,11 @@ const AboutUs = () => {
               in virtual private assistant service
             </Typography>
             <Typography className={classes.aboutusPara}>
-              We provide virtual assistant service, virtual receptionist
-              services, healthcare admin services, and sales outsourcing
-              service. Join Assistify today and Experience the benefits of
-              streamlined operations and Productional.
+              Welcome to GSD, where efficiency and productivity cometogether to propel business professionals towardssuccess. Founded by Dr. Amish Sura and entrepreneurDharmesh Shah, our company has a clear goal: to simplifyand streamline how you run your business.
+            </Typography>
+
+            <Typography className={classes.aboutusPara} marginTop={1}>
+              We offer a wide range of administrative assistance, sales,marketing, and related management services, all underthe motto "Get Stuff Done." With us, time-consumingand resource-draining tasks turn into quick and effectivesolutions, and allowing our clients to focus on what theydo best: providing customer and patient support.Together, let's make great things happen.
             </Typography>
           </Grid>
           <Grid md={6}>
